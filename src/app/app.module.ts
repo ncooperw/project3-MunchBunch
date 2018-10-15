@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { CommonService } from './common.service';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserInfoComponent,
-    NavbarComponent
+    NavbarComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule, HttpModule, FormsModule,

@@ -1,0 +1,12 @@
+<h2>Search Page</h2>
+<h3>Search by Cuisine</h3>
+<div *ngFor="let cuisine of cuisines" class="card" style="width: 18rem;">
+  <!-- <a routerLink="/detail/{{cuisine.id}}"> -->
+    <img class="card-img-top" src="{{cuisine.imgLink}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{cuisine.name}}</h5>
+    </div>
+<!-- </a> -->
+</div>
+<h3>Search by Map</h3>
+<h3>What's Hot</h3>
