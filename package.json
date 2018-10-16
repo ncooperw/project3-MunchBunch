@@ -22,6 +22,7 @@
     "@angular/router": "^6.1.0",
     "body-parser": "^1.18.3",
     "core-js": "^2.5.4",
+    "emoji-awesome": "0.0.2",
     "express": "^4.16.4",
     "mongoose": "^5.3.3",
     "rxjs": "~6.2.0",
