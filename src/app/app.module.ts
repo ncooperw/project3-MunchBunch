@@ -12,6 +12,9 @@ import { SearchComponent } from './search/search.component';
 import { UserpageComponent } from './userpage/userpage.component';
 import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { MapComponent } from './map/map.component';
+import { AuthComponent } from './auth/auth.component';
+import { CallbackComponent } from './callback/callback.component';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -20,12 +23,14 @@ import { MapComponent } from './map/map.component';
     SearchComponent,
     UserpageComponent,
     UserNavbarComponent,
-    MapComponent
+    MapComponent,
+    AuthComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule, HttpModule, FormsModule,
   ],
-  providers: [CommonService],
+  providers: [CommonService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
