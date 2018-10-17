@@ -9,18 +9,18 @@ import { AppComponent } from './app.component';
 import { CommonService } from './common.service';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { SearchComponent } from './search/search.component';
-import { UserpageComponent } from './userpage/userpage.component';
-import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { MapComponent } from './map/map.component';
+import { ConsumerNavbarComponent } from './consumer-navbar/consumer-navbar.component';
+import { ConsumerPageComponent } from './consumer-page/consumer-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserInfoComponent,
     SearchComponent,
-    UserpageComponent,
-    UserNavbarComponent,
-    MapComponent
+    MapComponent,
+    ConsumerNavbarComponent,
+    ConsumerPageComponent
   ],
   imports: [
     BrowserModule, HttpModule, FormsModule,

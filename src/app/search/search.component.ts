@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Cuisine } from '../cuisine';
 import { CUISINES } from '../mock-cuisines';
-import { SearchService } from '../search.service';
+import { SearchService } from '../truckSearch.service';
 
 @Component({
   selector: 'app-search',
