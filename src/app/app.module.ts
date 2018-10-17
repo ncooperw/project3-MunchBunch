@@ -12,6 +12,9 @@ import { SearchComponent } from './search/search.component';
 import { MapComponent } from './map/map.component';
 import { ConsumerNavbarComponent } from './consumer-navbar/consumer-navbar.component';
 import { ConsumerPageComponent } from './consumer-page/consumer-page.component';
+import { AuthComponent } from './auth/auth.component';
+import { CallbackComponent } from './callback/callback.component';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -20,12 +23,15 @@ import { ConsumerPageComponent } from './consumer-page/consumer-page.component';
     SearchComponent,
     MapComponent,
     ConsumerNavbarComponent,
-    ConsumerPageComponent
+    ConsumerPageComponent,
+    MapComponent,
+    AuthComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule, HttpModule, FormsModule,
   ],
-  providers: [CommonService],
+  providers: [CommonService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
