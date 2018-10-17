@@ -9,9 +9,9 @@ import { AppComponent } from './app.component';
 import { CommonService } from './common.service';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { SearchComponent } from './search/search.component';
-import { UserpageComponent } from './userpage/userpage.component';
-import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { MapComponent } from './map/map.component';
+import { ConsumerNavbarComponent } from './consumer-navbar/consumer-navbar.component';
+import { ConsumerPageComponent } from './consumer-page/consumer-page.component';
 import { AuthComponent } from './auth/auth.component';
 import { CallbackComponent } from './callback/callback.component';
 import { AuthService } from './auth.service';
@@ -21,8 +21,9 @@ import { AuthService } from './auth.service';
     AppComponent,
     UserInfoComponent,
     SearchComponent,
-    UserpageComponent,
-    UserNavbarComponent,
+    MapComponent,
+    ConsumerNavbarComponent,
+    ConsumerPageComponent,
     MapComponent,
     AuthComponent,
     CallbackComponent
