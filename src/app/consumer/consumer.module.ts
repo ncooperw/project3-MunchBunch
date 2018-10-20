@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 
-import { ConsumerRoutingModule, routingComponents } from './consumer-routing.module';
+import { ConsumerRoutingModule } from './consumer-routing.module';
 
 import { ConsumerPageComponent } from './consumer-page/consumer-page.component';
 import { ReviewComponent } from './review/review.component';
@@ -11,6 +11,7 @@ import { ConsumerNavbarComponent } from './consumer-navbar/consumer-navbar.compo
 import { UserInfoComponent } from './user-info/user-info.component';
 import { MapComponent } from './map/map.component';
 import { TruckSearchComponent } from './truck-search/truck-search.component';
+import { TruckDetailComponent } from './truck-detail/truck-detail.component';
 
 
 @NgModule({
@@ -19,6 +20,6 @@ import { TruckSearchComponent } from './truck-search/truck-search.component';
     CommonModule,
     ConsumerRoutingModule
   ],
-  declarations: [ConsumerPageComponent, ReviewComponent, ConsumerNavbarComponent, UserInfoComponent, MapComponent, TruckSearchComponent]
+  declarations: [ConsumerPageComponent, ReviewComponent, ConsumerNavbarComponent, UserInfoComponent, MapComponent, TruckSearchComponent, TruckDetailComponent]
 })
 export class ConsumerModule { }

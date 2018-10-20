@@ -1,11 +1,11 @@
 <div class="card-group">
     <div *ngFor="let cuisine of cuisines" class="row ">
-      <div class="col-sm-6 col-md-4 justify-content-center">
-        <div class="card p-3 cuisine-card" style="width: 18rem;">
+      <div class="col-sm-12 justify-content-center">
+        <div class="card p-3 cuisine-card">
           <!-- <a routerLink="/detail/{{cuisine.id}}"> -->
-          <img class="card-img-top" src="{{cuisine.imgLink}}" alt="{{cuisine.name}}">
+          <img class="card-img-top cuisine-image" src="{{cuisine.imgLink}}" alt="{{cuisine.name}}">
           <div class="card-body">
-            <h5 class="card-title">{{cuisine.name}}</h5>
+            <p class="card-title">{{cuisine.name}}</p>
           </div>
   
           <!-- </a> -->
@@ -13,6 +13,19 @@
       </div>
     </div>
   </div>
-  <h3>Search by Map</h3>
-  <h3>What's Hot</h3>
+<div class="row">
+  <div class="col-sm-6">
+    <h3>Search by Map</h3>
+  <app-map></app-map>
+  </div>
+  <div class="col-sm-6">
+    <h3>What's Hot</h3>
+     <span><i class="hot text-danger fas fa-fire"></i>
+    <i class="hot text-danger fas fa-fire"></i>
+    <i class="hot text-danger fas fa-fire"></i></span>
+  </div>
+  
+ 
+</div>
+  
   
