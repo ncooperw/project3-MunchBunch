@@ -1,4 +1,6 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { ConsumerModule } from './consumer.module';
+
 
 describe('ConsumerModule', () => {
   let consumerModule: ConsumerModule;
