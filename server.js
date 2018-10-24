@@ -18,7 +18,7 @@ app.use(bodyParser.json({limit: '5mb'}));
 app.use(bodyParser.urlencoded({extended:true}));
 
 //not sure if we need the static with Angular
-// app.use(express.static('./public'));
+app.use(express.static(path.join(__dirname, "js")));
 
 app.use(function (req, res, next){
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
