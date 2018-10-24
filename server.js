@@ -30,15 +30,15 @@ app.use(function (req, res, next){
 
 var Schema = mongo.Schema;
 
-var UsersSchema = new Schema({      
+var consumerSchema = new Schema({      
     name: { type: String   },       
     address: { type: String   },   
    },{ versionKey: false });  
       
      
-   var model = mongo.model('users', UsersSchema, 'users');  
+   var model = mongo.model('consumer', consumerSchema, 'consumer');  
      
-   app.post("/api/SaveUser",function(req,res){   
+   app.post("/api/saveConsumer",function(req,res){   
     var mod = new model(req.body);  
     if(req.body.mode =="Save")  
     {  
