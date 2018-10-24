@@ -7,6 +7,8 @@ import { TruckSearchComponent } from './truck-search/truck-search.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { TruckDetailComponent } from './truck-detail/truck-detail.component';
 import { ConsumerPageComponent } from './consumer-page/consumer-page.component';
+import { TruckListComponent } from './truck-list/truck-list.component';
+
 
 const consumerRoutes: Routes = [
   { path: '', 
@@ -14,7 +16,9 @@ const consumerRoutes: Routes = [
   { path: 'reviews', component: ReviewComponent },
   { path: 'truck-search', component: TruckSearchComponent},
   { path: 'account', component: UserInfoComponent },
-  { path: 'truck/:id', component: TruckDetailComponent }
+  { path: ':cuisineName', component: TruckListComponent},
+  { path: ':cuisineName/:truckId', component: TruckDetailComponent },
+  
 ];
 
 @NgModule({

@@ -25,6 +25,7 @@
     "core-js": "^2.5.4",
     "emoji-awesome": "0.0.2",
     "express": "^4.16.4",
+    "leaflet-routing-machine": "^3.2.12",
     "mongoose": "^5.3.3",
     "rxjs": "~6.2.0",
     "rxjs-compat": "^6.3.3",

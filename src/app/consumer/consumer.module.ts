@@ -12,6 +12,7 @@ import { UserInfoComponent } from './user-info/user-info.component';
 import { MapComponent } from './map/map.component';
 import { TruckSearchComponent } from './truck-search/truck-search.component';
 import { TruckDetailComponent } from './truck-detail/truck-detail.component';
+import { TruckListComponent } from './truck-list/truck-list.component';
 
 
 @NgModule({
@@ -20,6 +21,6 @@ import { TruckDetailComponent } from './truck-detail/truck-detail.component';
     CommonModule,
     ConsumerRoutingModule
   ],
-  declarations: [ConsumerPageComponent, ReviewComponent, ConsumerNavbarComponent, UserInfoComponent, MapComponent, TruckSearchComponent, TruckDetailComponent]
+  declarations: [ConsumerPageComponent, ReviewComponent, ConsumerNavbarComponent, UserInfoComponent, MapComponent, TruckSearchComponent, TruckDetailComponent,  TruckListComponent]
 })
 export class ConsumerModule { }
