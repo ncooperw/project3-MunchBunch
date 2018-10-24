@@ -14,7 +14,7 @@ import { TruckSearchComponent } from './truck-search/truck-search.component';
 import { TruckDetailComponent } from './truck-detail/truck-detail.component';
 import { TruckListComponent } from './truck-list/truck-list.component';
 import { AccountComponent } from './account/account.component';
-import { AppComponent } from '../app.component';
+//import { AppComponent } from '../app.component';
 import { CommonService } from './common.service';
 
 
@@ -24,8 +24,7 @@ import { CommonService } from './common.service';
     CommonModule,
     ConsumerRoutingModule
   ],
-  declarations: [ConsumerPageComponent, ReviewComponent, ConsumerNavbarComponent, UserInfoComponent, MapComponent, TruckSearchComponent, TruckDetailComponent,  TruckListComponent, AccountComponent, AppComponent],
-  providers: [CommonService],
-  bootstrap: [AppComponent]
+  declarations: [ConsumerPageComponent, ReviewComponent, ConsumerNavbarComponent, UserInfoComponent, MapComponent, TruckSearchComponent, TruckDetailComponent,  TruckListComponent, AccountComponent],
+  providers: [CommonService]
 })
 export class ConsumerModule { }

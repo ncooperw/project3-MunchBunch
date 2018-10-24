@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-//import { ConsumerModule } from './consumer/consumer.module';
 
 import { CommonService } from './consumer/common.service';
 
@@ -12,7 +11,7 @@ import { AuthService } from './auth.service';
 
 const appRoutes: Routes = [
   { path: 'consumer', loadChildren: './consumer/consumer.module#ConsumerModule' },
-  //{ path: 'owner', loadChildren:}
+  { path: 'owner', loadChildren: './owner/owner.module#OwnerModule' },
   { path: '', redirectTo: '', pathMatch: 'full' }
 ];
 
