@@ -1,0 +1,70 @@
+<app-owner-navbar></app-owner-navbar>
+<h1>Welcome to the Bunch!</h1>
+<h2>Update your location and hours so that people can find your awesome truck!</h2>
+
+
+<div>
+  <form>
+    <div class="form-group col-md-6">
+      <label for="inputLatitude">Latitude</label>
+      <input type="text" class="form-control" id="latitude" placeholder="Put in the latitude of your current truck location">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputLongitude">Longitude</label>
+      <input type="text" class="form-control" id="longitude" placeholder="Put in the longitude of your current truck location">
+    </div>
+
+    <!-- <form class="form-inline"> -->
+      <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Opening Time</label>
+      <select class="custom-select my-1 mr-sm-2" id="openingTime">
+        <option selected>Choose...</option>
+        <option value="1">1:00</option>
+        <option value="2">2:00</option>
+        <option value="3">3:00</option>
+        <option value="4">4:00</option>
+        <option value="5">5:00</option>
+        <option value="6">6:00</option>
+        <option value="7">7:00</option>
+        <option value="8">8:00</option>
+        <option value="9">9:00</option>
+        <option value="10">10:00</option>
+        <option value="11">11:00</option>
+        <option value="12">12:00</option>
+      </select>
+
+      <div class="custom-control custom-checkbox my-1 mr-sm-2">
+        <input type="checkbox" class="custom-control-input" id="customControlInline">
+        <label class="custom-control-label" for="customControlInline">a.m.</label>
+
+        <input type="checkbox" class="custom-control-input" id="customControlInline">
+        <label class="custom-control-label" for="customControlInline">p.m.</label>
+      </div>
+
+      <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Closing Time</label>
+      <select class="custom-select my-1 mr-sm-2" id="closingTime">
+        <option selected>Choose...</option>
+        <option value="1">1:00</option>
+        <option value="2">2:00</option>
+        <option value="3">3:00</option>
+        <option value="4">4:00</option>
+        <option value="5">5:00</option>
+        <option value="6">6:00</option>
+        <option value="7">7:00</option>
+        <option value="8">8:00</option>
+        <option value="9">9:00</option>
+        <option value="10">10:00</option>
+        <option value="11">11:00</option>
+        <option value="12">12:00</option>
+      </select>
+
+      <div class="custom-control custom-checkbox my-1 mr-sm-2">
+        <input type="checkbox" class="custom-control-input" id="customControlInline">
+        <label class="custom-control-label" for="customControlInline">a.m.</label>
+
+        <input type="checkbox" class="custom-control-input" id="customControlInline">
+        <label class="custom-control-label" for="customControlInline">p.m.</label>
+      </div>
+
+      <button class="btn btn-danger" type="submit">Update Location</button>
+    </form>
+</div>

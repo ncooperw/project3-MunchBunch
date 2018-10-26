@@ -17,11 +17,11 @@ export class UserInfoComponent implements OnInit {
   valbutton = "Save";
 
   ngOnInit() {
-    this.newService.getUser().subscribe(data => this.Repdata = data)
+    this.newService.getConsumer().subscribe(data => this.Repdata = data)
   }
-  onSave = function(user, isValid: boolean) {
-    user.mode = this.valbutton;
-    this.newService.saveUser(user).subscribe(data => { alert(data.data);
+  onSave = function(consumer, isValid: boolean) {
+    consumer.mode = this.valbutton;
+    this.newService.saveConsumer(consumer).subscribe(data => { alert(data.data);
     this.ngOnInit();
     },
     error => this.errorMessage = error)
@@ -33,6 +33,6 @@ export class UserInfoComponent implements OnInit {
     this.valbutton = "Update";
   }
   delete = function(id) {
-    this.newService.deleteUser(id).subscribe(data => { alert(data.data); this.ngOnInit();}, error => this.errorMessage = error)
+    this.newService.deleteConsumer(id).subscribe(data => { alert(data.data); this.ngOnInit();}, error => this.errorMessage = error)
   }
 }

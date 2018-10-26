@@ -14,15 +14,15 @@ import 'rxjs/add/operator/do';
 export class CommonService {
 
   constructor(private http: Http) { }
-  saveUser(user){
-    return this.http.post('/api/SaveUser/', user).map((response: Response) => response.json());
+  saveConsumer(consumer){
+    return this.http.post('/api/SaveConsumer/', consumer).map((response: Response) => response.json());
   }
 
-  getUser(){
-    return this.http.get('/api/getUser/').map((response: Response) => response.json());
+  getConsumer(){
+    return this.http.get('/api/getConsumer/').map((response: Response) => response.json());
   }
   
-  deleteUser(id){
-    return this.http.get('/api/deleteUser/', id).map((response: Response) => response.json());
+  deleteConsumer(id){
+    return this.http.get('/api/deleteConsumer/', id).map((response: Response) => response.json());
   }
 }
