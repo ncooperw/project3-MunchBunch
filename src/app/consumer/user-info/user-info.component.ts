@@ -17,22 +17,22 @@ export class UserInfoComponent implements OnInit {
   valbutton = "Save";
 
   ngOnInit() {
-    this.newService.getConsumer().subscribe(data => this.Repdata = data)
-  }
-  onSave = function(consumer, isValid: boolean) {
-    consumer.mode = this.valbutton;
-    this.newService.saveConsumer(consumer).subscribe(data => { alert(data.data);
-    this.ngOnInit();
-    },
-    error => this.errorMessage = error)
-  }
-  edit = function (kk) {
-    this.id = kk._id;
-    this.name = kk.name;
-    this.address = kk.address;
-    this.valbutton = "Update";
-  }
-  delete = function(id) {
-    this.newService.deleteConsumer(id).subscribe(data => { alert(data.data); this.ngOnInit();}, error => this.errorMessage = error)
+  //   this.newService.getConsumer().subscribe(data => this.Repdata = data)
+  // }
+  // onSave = function(consumer, isValid: boolean) {
+  //   consumer.mode = this.valbutton;
+  //   this.newService.saveConsumer(consumer).subscribe(data => { alert(data.data);
+  //   this.ngOnInit();
+  //   },
+  //   error => this.errorMessage = error)
+  // }
+  // edit = function (kk) {
+  //   this.id = kk._id;
+  //   this.name = kk.name;
+  //   this.address = kk.address;
+  //   this.valbutton = "Update";
+  // }
+  // delete = function(id) {
+  //   this.newService.deleteConsumer(id).subscribe(data => { alert(data.data); this.ngOnInit();}, error => this.errorMessage = error)
   }
 }
