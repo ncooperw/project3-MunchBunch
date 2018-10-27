@@ -1,0 +1,60 @@
+<form [formGroup]="truckForm" (ngSubmit)="onSubmit()">
+
+  <label>
+    Truck Name:
+    <input type="text" formControlName="truckName" required>
+    <!-- <div *ngIf="truckName.invalid && (truckName.dirty || truckName.touched)" class="alert alert-danger">
+
+      <div *ngIf="truckName.errors.required">
+       Truck Name is required.
+      </div>
+    </div> -->
+  </label>
+
+  <label>
+    Image Link:
+    <input type="text" formControlName="imgLink">
+  </label>
+
+  <label>
+    Type of Cuisine:
+    <input type="text" formControlName="cuisine" required>
+  </label>
+
+  <label>
+    Description
+    <input type="text" formControlName="description">
+  </label>
+
+  <label>
+    Menu Link
+    <input type="text" formControlName="menuLink">
+  </label>
+
+  <label>
+    Price:
+    <input type="text" formControlName="price" required>
+  </label>
+
+  <div formGroupName="location">
+    <h3>Location</h3>
+
+    <label>
+      Latitude:
+      <input type="text" formControlName="latitude">
+    </label>
+
+    <label>
+      Longitude:
+      <input type="text" formControlName="longitude">
+    </label>
+
+
+  </div>
+  <button type="submit" [disabled]="!truckForm.valid">Submit</button>
+
+  <p>
+    Form Status: {{ truckForm.status }}
+  </p>
+
+</form>

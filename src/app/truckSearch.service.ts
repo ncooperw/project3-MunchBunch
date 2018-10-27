@@ -21,7 +21,6 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-
 export class SearchService {
   
   private trucksUrl = 'api/trucks';

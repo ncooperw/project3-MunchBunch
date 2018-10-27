@@ -18,6 +18,7 @@ import { CallbackComponent } from './callback/callback.component';
 import { AuthService } from './auth.service';
 import { MessagesComponent } from './messages/messages.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MessagesComponent } from './messages/messages.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [CommonService, AuthService],
   bootstrap: [AppComponent]
