@@ -12,6 +12,7 @@ import { AuthComponent } from './auth/auth.component';
 import { CallbackComponent } from './callback/callback.component';
 import { AuthService } from './auth.service';
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AgmCoreModule } from '@agm/core';
 
@@ -34,6 +35,7 @@ import { MapComponent } from './map/map.component';
       apiKey: 'AIzaSyCX37S57WrEFKAJO02W493eHYHBQD_uTMQ'
     })
     
+    ReactiveFormsModule
   ],
   providers: [CommonService, AuthService],
   bootstrap: [AppComponent]

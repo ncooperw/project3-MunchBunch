@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 import { Cuisine } from './cuisine';
 import { CUISINES } from './mock-cuisines';
 
@@ -11,8 +13,10 @@ import { TRUCKS } from './mock-trucks';
 @Injectable({
   providedIn: 'root'
 })
-
 export class SearchService {
+
+  constructor(private http: HttpClient) { }
+
   getCuisines(): Observable<Cuisine[]> {
     return of (CUISINES);
   }
@@ -27,5 +31,5 @@ export class SearchService {
     return of (TRUCKS.find(truck => truck.id === id));
   }
 
-  constructor() { }
+ 
 }
