@@ -14,17 +14,27 @@ import { AuthService } from './auth.service';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { AgmCoreModule } from '@agm/core';
+
+
+import { MapComponent } from './map/map.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
     CallbackComponent,
+    
   ],
   imports: [
     BrowserModule, 
     HttpModule, 
     FormsModule,
     AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCX37S57WrEFKAJO02W493eHYHBQD_uTMQ'
+    })
+    
     ReactiveFormsModule
   ],
   providers: [CommonService, AuthService],
