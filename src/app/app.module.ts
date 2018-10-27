@@ -20,6 +20,11 @@ import { MessagesComponent } from './messages/messages.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { AgmCoreModule } from '@agm/core';
+
+
+import { MapComponent } from './map/map.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +38,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCX37S57WrEFKAJO02W493eHYHBQD_uTMQ'
+    }),
     ReactiveFormsModule
   ],
   providers: [CommonService, AuthService],

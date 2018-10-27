@@ -1,0 +1,21 @@
+<div class="container">
+
+
+  <agm-map [latitude]="lat" 
+  [longitude]="lng" 
+  [zoom] ="zoom" 
+  [disableDefaultUI]="false" 
+  [zoomControl]="false"
+  (mapClick)="OnChoseLocation($event)">
+
+  <agm-marker *ngFor= "let m of markers; let i = index"
+  [latitude]="lat" 
+  [longitude]="lng"
+  [markerDraggable]="m.draggable"
+  (dragEnd)="markerDraggable(m,event)">
+  
+  <agm-info-window>Information when you click the pin</agm-info-window></agm-marker>
+      
+  </agm-map>
+
+</div>

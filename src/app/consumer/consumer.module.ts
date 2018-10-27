@@ -16,8 +16,8 @@ import { TruckListComponent } from './truck-list/truck-list.component';
 import { AccountComponent } from './account/account.component';
 
 import { CommonService } from './common.service';
-// import { MessagesComponent } from '../messages/messages.component';
-
+import { MapComponent } from '../map/map.component';
+import { AgmCoreModule } from '@agm/core';
 
 
 
@@ -26,6 +26,7 @@ import { CommonService } from './common.service';
     CommonModule,
     ConsumerRoutingModule,
     HttpClientModule,
+    AgmCoreModule
   ],
   declarations: [ConsumerPageComponent, ReviewComponent, ConsumerNavbarComponent, UserInfoComponent, TruckSearchComponent, TruckDetailComponent,  TruckListComponent, AccountComponent, ],
   providers: [CommonService]
