@@ -12,6 +12,7 @@ import { AuthComponent } from './auth/auth.component';
 import { CallbackComponent } from './callback/callback.component';
 import { AuthService } from './auth.service';
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule, 
     HttpModule, 
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [CommonService, AuthService],
   bootstrap: [AppComponent]

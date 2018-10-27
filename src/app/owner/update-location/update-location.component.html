@@ -1,0 +1,14 @@
+<form [formGroup]="locationForm" (ngSubmit)="onSubmit()">
+  <h4>Location:</h4>
+  <label>
+    Latitude:
+    <input type="text" formControlName="latitude">
+  </label>
+<br>
+  <label>
+    Longitude:
+    <input type="text" formControlName="longitude">
+  </label>
+<br>
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
