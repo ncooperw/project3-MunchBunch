@@ -198,11 +198,6 @@
   dependencies:
     tslib "^1.9.0"
 
-"@asymmetrik/ngx-leaflet@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@asymmetrik/ngx-leaflet/-/ngx-leaflet-4.0.0.tgz#9e8b991b13e433de8bf3d3163aea02e5e1658f1d"
-  integrity sha512-DT+uOaysb01Egmhd58ftR6BOKI0JD7Uwt8/g6uRthFKGjWwmnOpmXJpPa2eF/lEhl2DAHx61XqJK2t/fmIlmJA==
-
 "@babel/code-frame@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0.tgz#06e2ab19bdb535385559aabb5ba59729482800f8"
@@ -337,11 +332,6 @@
   resolved "https://registry.yarnpkg.com/@types/auth0-js/-/auth0-js-8.11.6.tgz#7ef798c69a2aa31bb0b4971c452ddb5a0bb2c29d"
   integrity sha512-8vdvMSkc9io8lq85QG8ch/5Ivo5qkgIo2kBPEaJNJMR8qsX1Hx57hPnLFK278DKp5ZEiy+HFDkl3yHG5p1LzVw==
 
-"@types/geojson@*":
-  version "7946.0.4"
-  resolved "https://registry.yarnpkg.com/@types/geojson/-/geojson-7946.0.4.tgz#4e049756383c3f055dd8f3d24e63fb543e98eb07"
-  integrity sha512-MHmwBtCb7OCv1DSivz2UNJXPGU/1btAWRKlqJ2saEhVJkpkvqHMMaOpKg0v4sAbDWSQekHGvPVMM8nQ+Jen03Q==
-
 "@types/jasmine@*", "@types/jasmine@~2.8.8":
   version "2.8.9"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.8.9.tgz#e028c891e8551fdf6de905d959581fc4fa0b5509"
@@ -353,13 +343,6 @@
   integrity sha512-1awkm/O4pQCR9hI2F80HmIOda/L+ogkSL8Arj1k00eue5VLY5ooewhSOyF/cUJE0S+/34uD5EYY3zmd6fu2OCA==
   dependencies:
     "@types/jasmine" "*"
-
-"@types/leaflet@^1.2.11":
-  version "1.2.11"
-  resolved "https://registry.yarnpkg.com/@types/leaflet/-/leaflet-1.2.11.tgz#a80f6d49a200698a24351e93dae654308cacf239"
-  integrity sha512-mFr7FkRvxtf9KvensAlss/o78CJ5UumvckwM+0xqF9jxgbMh0gVZq57kUe6jTqybQEavFgqIlSXzTnx3CRG/QQ==
-  dependencies:
-    "@types/geojson" "*"
 
 "@types/node@^6.0.46":
   version "6.14.0"

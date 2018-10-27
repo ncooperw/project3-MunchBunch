@@ -13,17 +13,27 @@ import { CallbackComponent } from './callback/callback.component';
 import { AuthService } from './auth.service';
 import { AppRoutingModule } from './app-routing.module';
 
+import { AgmCoreModule } from '@agm/core';
+
+
+import { MapComponent } from './map/map.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
     CallbackComponent,
+    
   ],
   imports: [
     BrowserModule, 
     HttpModule, 
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCX37S57WrEFKAJO02W493eHYHBQD_uTMQ'
+    })
+    
   ],
   providers: [CommonService, AuthService],
   bootstrap: [AppComponent]
