@@ -1,10 +1,10 @@
-//import bodyParser from 'body-parser';
-var express = require('express');
-var path = require('path');
-var bodyParser = require('body-parser');
-var mongo = require('mongoose');
 
-var db = mongo.connect("mongodb://localhost:27017/MunchBunch", { useNewUrlParser: true }, function(err, response){
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const mongo = require('mongoose');
+
+const db = mongo.connect("mongodb://localhost:27017/MunchBunch", { useNewUrlParser: true }, function(err, response){
     if (err){
         console.log(err);
     } else {
@@ -12,20 +12,16 @@ var db = mongo.connect("mongodb://localhost:27017/MunchBunch", { useNewUrlParser
     }
 });
 
-var app = express();
-//create application/json parser
-var jsonParser = bodyParser.json();
+const app = express();
 
-// create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 
 //Serve static files
-app.use(express.static(__dirname + '/dist/munchBunch'));
+app.use(express.static( './dist/project3-munchBunch'));
 
 //Send all requests to index.html
 app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname + '/dist/munchBunch/index.html'));
+    res.sendFile(path.join( './dist/project3-munchBunch/index.html'));
 });
 
 app.use(function (req, res, next){
