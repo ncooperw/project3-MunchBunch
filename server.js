@@ -13,18 +13,21 @@ var db = mongo.connect("mongodb://localhost:27017/MunchBunch", { useNewUrlParser
 });
 
 var app = express();
-app.use(bodyParser());
-app.use(bodyParser.json({limit: '5mb'}));
-app.use(bodyParser.urlencoded({extended:true}));
+//create application/json parser
+var jsonParser = bodyParser.json();
+
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
 
 //Serve static files
-app.use(express.static(__dirname + "/dist/munchBunch"));
+app.use(express.static(__dirname + '/dist/munchBunch'));
 
-//send all requests to index.html
+//Send all requests to index.html
 app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname + '/dist/munchBunch/index.html'));
+});
 
-})
 
 app.use(function (req, res, next){
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
@@ -73,7 +76,7 @@ var consumerSchema = new Schema({
    }  
     })  
      
-    app.post("/api/deleteUser",function(req,res){      
+    app.post("/api/deleteConsumer",function(req,res){      
        model.remove({ _id: req.body.id }, function(err) {    
         if(err){    
             res.send(err);    
@@ -86,7 +89,7 @@ var consumerSchema = new Schema({
      
      
      
-    app.get("/api/getUser",function(req,res){  
+    app.get("/api/getConsumer",function(req,res){  
        model.find({},function(err,data){  
                  if(err){  
                      res.send(err);  
@@ -97,7 +100,9 @@ var consumerSchema = new Schema({
              });  
      })  
      
-//default Herorku port
+
+    //default Heroku port
+
    app.listen(process.env.PORT || 5000, function () {  
        
     console.log('Example app listening on port 5000!')  
