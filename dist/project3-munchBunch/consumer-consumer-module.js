@@ -144,7 +144,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Welcome to Munch Bunch</h2>\n\n<app-consumer-navbar></app-consumer-navbar>\n\n<!-- <div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-12\"> -->\n      \n      <app-truck-search></app-truck-search>\n    <!-- <app-map></app-map> -->\n    <!-- <div class=\"col-sm-12\">\n      <h4>Search by Location</h4>\n      <app-map></app-map>\n    </div>\n    <div class=\"col-sm-12 col-md-6\">\n      <h4>Search by What's Hot!</h4>\n      \n    </div>\n  </div> -->\n  \n\n\n\n"
+module.exports = "<h2>Welcome to Munch Bunch</h2>\n\n<app-consumer-navbar></app-consumer-navbar>\n\n<!-- <div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-12\"> -->\n      \n      <app-truck-search></app-truck-search>\n    \n  \n\n\n\n"
 
 /***/ }),
 
@@ -270,13 +270,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _truck_list_truck_list_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./truck-list/truck-list.component */ "./src/app/consumer/truck-list/truck-list.component.ts");
 /* harmony import */ var _account_account_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./account/account.component */ "./src/app/consumer/account/account.component.ts");
 /* harmony import */ var _common_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./common.service */ "./src/app/consumer/common.service.ts");
-/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
+/* harmony import */ var _map_map_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../map/map.component */ "./src/app/map/map.component.ts");
+/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -300,9 +302,10 @@ var ConsumerModule = /** @class */ (function () {
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
                 _consumer_routing_module__WEBPACK_IMPORTED_MODULE_3__["ConsumerRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
-                _agm_core__WEBPACK_IMPORTED_MODULE_13__["AgmCoreModule"]
+                _agm_core__WEBPACK_IMPORTED_MODULE_14__["AgmCoreModule"]
             ],
-            declarations: [_consumer_page_consumer_page_component__WEBPACK_IMPORTED_MODULE_4__["ConsumerPageComponent"], _review_review_component__WEBPACK_IMPORTED_MODULE_5__["ReviewComponent"], _consumer_navbar_consumer_navbar_component__WEBPACK_IMPORTED_MODULE_6__["ConsumerNavbarComponent"], _user_info_user_info_component__WEBPACK_IMPORTED_MODULE_7__["UserInfoComponent"], _truck_search_truck_search_component__WEBPACK_IMPORTED_MODULE_8__["TruckSearchComponent"], _truck_detail_truck_detail_component__WEBPACK_IMPORTED_MODULE_9__["TruckDetailComponent"], _truck_list_truck_list_component__WEBPACK_IMPORTED_MODULE_10__["TruckListComponent"], _account_account_component__WEBPACK_IMPORTED_MODULE_11__["AccountComponent"],],
+            declarations: [_consumer_page_consumer_page_component__WEBPACK_IMPORTED_MODULE_4__["ConsumerPageComponent"], _review_review_component__WEBPACK_IMPORTED_MODULE_5__["ReviewComponent"], _consumer_navbar_consumer_navbar_component__WEBPACK_IMPORTED_MODULE_6__["ConsumerNavbarComponent"], _user_info_user_info_component__WEBPACK_IMPORTED_MODULE_7__["UserInfoComponent"], _truck_search_truck_search_component__WEBPACK_IMPORTED_MODULE_8__["TruckSearchComponent"], _truck_detail_truck_detail_component__WEBPACK_IMPORTED_MODULE_9__["TruckDetailComponent"], _truck_list_truck_list_component__WEBPACK_IMPORTED_MODULE_10__["TruckListComponent"], _account_account_component__WEBPACK_IMPORTED_MODULE_11__["AccountComponent"],
+                _map_map_component__WEBPACK_IMPORTED_MODULE_13__["MapComponent"]],
             providers: [_common_service__WEBPACK_IMPORTED_MODULE_12__["CommonService"]]
         })
     ], ConsumerModule);
@@ -681,6 +684,99 @@ var UserInfoComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_common_service__WEBPACK_IMPORTED_MODULE_1__["CommonService"]])
     ], UserInfoComponent);
     return UserInfoComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/map/map.component.css":
+/*!***************************************!*\
+  !*** ./src/app/map/map.component.css ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "agm-map {\n    height: 500px;\n  }"
+
+/***/ }),
+
+/***/ "./src/app/map/map.component.html":
+/*!****************************************!*\
+  !*** ./src/app/map/map.component.html ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n\n\n  <agm-map [latitude]=\"lat\" \n  [longitude]=\"lng\" \n  [zoom] =\"zoom\" \n  [disableDefaultUI]=\"false\" \n  [zoomControl]=\"false\"\n  (mapClick)=\"OnChoseLocation($event)\">\n\n  <agm-marker *ngFor= \"let m of markers; let i = index\"\n  [latitude]=\"lat\" \n  [longitude]=\"lng\"\n  [markerDraggable]=\"m.draggable\"\n  (dragEnd)=\"markerDraggable(m,event)\">\n  \n  <agm-info-window>Information when you click the pin</agm-info-window></agm-marker>\n      \n  </agm-map>\n\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/map/map.component.ts":
+/*!**************************************!*\
+  !*** ./src/app/map/map.component.ts ***!
+  \**************************************/
+/*! exports provided: MapComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapComponent", function() { return MapComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MapComponent = /** @class */ (function () {
+    function MapComponent() {
+        this.zoom = 12;
+        this.lat = 39.6768129;
+        this.lng = -104.9578801;
+        this.markers = [
+            {
+                lat: 39.6768129,
+                lng: -104.9578801,
+                label: 'A',
+                draggable: true
+            }
+        ];
+    }
+    MapComponent.prototype.clickedMarker = function (label, index) {
+        console.log("clicked the marker: " + (label || index));
+    };
+    MapComponent.prototype.OnChoseLocation = function (event) {
+        this.lat = event.coords.lat;
+        this.lng = event.coords.lng;
+        console.log("lat", event.coords.lat);
+        console.log("lng", event.coords.lng);
+    };
+    MapComponent.prototype.mapClicked = function (event) {
+        this.markers.push({
+            lat: event.coords.lat,
+            lng: event.coords.lng,
+            draggable: true
+        });
+    };
+    MapComponent.prototype.markerDragEnd = function (m, event) {
+        console.log('dragEnd', m, event);
+    };
+    MapComponent.prototype.ngOnInit = function () {
+    };
+    MapComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-map',
+            template: __webpack_require__(/*! ./map.component.html */ "./src/app/map/map.component.html"),
+            styles: [__webpack_require__(/*! ./map.component.css */ "./src/app/map/map.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], MapComponent);
+    return MapComponent;
 }());
 
 
