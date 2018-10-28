@@ -29,6 +29,6 @@ export class TruckFormComponent implements OnInit {
   }
   onSubmit() {
     // TODO: Use EventEmitter with form value
-    console.warn(this.profileForm.value);
+    console.warn(this.truckForm.value);
   }
 }
