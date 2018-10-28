@@ -8,9 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --aot --target=production",
+    "heroku-postbuild": "ng build --aot -prod"
   },
-  
   "private": true,
   "dependencies": {
     "@agm/core": "^1.0.0-beta.5",
@@ -30,6 +30,7 @@
     "core-js": "^2.5.4",
     "emoji-awesome": "0.0.2",
     "express": "^4.16.4",
+    "heroku": "^7.18.3",
     "mongoose": "^5.3.3",
     "rxjs": "~6.2.0",
     "rxjs-compat": "^6.3.3",
