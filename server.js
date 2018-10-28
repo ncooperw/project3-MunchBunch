@@ -17,8 +17,14 @@ app.use(bodyParser());
 app.use(bodyParser.json({limit: '5mb'}));
 app.use(bodyParser.urlencoded({extended:true}));
 
-//not sure if we need the static with Angular
-app.use(express.static(path.join(__dirname, "js")));
+//Serve static files
+app.use(express.static(__dirname + "/dist/munchBunch"));
+
+//send all requests to index.html
+app.get('/*', function(req, res) {
+    res.sendFile(path.join(__dirname + '/dist/munchBunch/index.html'));
+
+})
 
 app.use(function (req, res, next){
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
@@ -91,9 +97,9 @@ var consumerSchema = new Schema({
              });  
      })  
      
-     
-   app.listen(8080, function () {  
+//default Herorku port
+   app.listen(process.env.PORT || 5000, function () {  
        
-    console.log('Example app listening on port 8080!')  
+    console.log('Example app listening on port 5000!')  
    })  
 
