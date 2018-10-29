@@ -25,7 +25,7 @@ private subscription: Subscription;
   ) { }
 
   ngOnInit() {
-    // this.truck = this.route.paramMap.pipe(switchMap((params: ParamMap) => this.searchService.getTruck(params.get('id'))));
+    //this.truck = this.route.paramMap.pipe(switchMap((params: ParamMap) => this.searchService.getTruck(params.get('id'))));
   }
 
 
