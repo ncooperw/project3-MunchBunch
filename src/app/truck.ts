@@ -1,5 +1,5 @@
-export class Truck {
-    id: number;
+export class Trucks {
+    _id: number;
     name: string;
     imgLink: string;
     cuisine: string;

@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Trucks } from './truck';
+import { Http, Response } from '@angular/http';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable, of} from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import { Truck } from './truck';
+
 import { MessageService } from './message.service';
 
 import { Cuisine } from './cuisine';
@@ -26,115 +28,157 @@ export class SearchService {
   private trucksUrl = 'api/trucks';
   
   constructor(
-    private http: HttpClient,
+    private http: Http,
     private messageService: MessageService
     ) { };
 
+// get("/api/Truckss")
+getTruckss(): Promise<void | Trucks[]> {
+  return this.http.get(this.trucksUrl)
+             .toPromise()
+             .then(response => response.json() as Trucks[])
+             .catch(this.handleError);
+}
+
+// post("/api/Truckss")
+createTrucks(newTrucks: Trucks): Promise<void | Trucks> {
+  return this.http.post(this.trucksUrl, newTrucks)
+             .toPromise()
+             .then(response => response.json() as Trucks)
+             .catch(this.handleError);
+}
+
+// get("/api/Truckss/:id") endpoint not used by Angular app
+
+// delete("/api/Truckss/:id")
+deleteTrucks(delTrucksId: String): Promise<void | String> {
+  return this.http.delete(this.trucksUrl + '/' + delTrucksId)
+             .toPromise()
+             .then(response => response.json() as String)
+             .catch(this.handleError);
+}
+
+// put("/api/Truckss/:id")
+updateTrucks(putTrucks: Trucks): Promise<void | Trucks> {
+  var putUrl = this.trucksUrl + '/' + putTrucks._id;
+  return this.http.put(putUrl, putTrucks)
+             .toPromise()
+             .then(response => response.json() as Trucks)
+             .catch(this.handleError);
+}
+
+private handleError (error: any) {
+  let errMsg = (error.message) ? error.message :
+  error.status ? `${error.status} - ${error.statusText}` : 'Server error';
+  console.error(errMsg); // log to console instead
+}
+}
+
   /** GET trucks from the server */
-  getTrucks (): Observable<Truck[]> {
-    return this.http.get<Truck[]>(this.trucksUrl)
-      .pipe(
-        tap(trucks => this.log('fetched trucks')),
-        catchError(this.handleError('gettrucks', []))
-      );
-  }
+  // getTrucks (): Observable<Truck[]> {
+  //   return this.http.get<Truck[]>(this.trucksUrl)
+  //     .pipe(
+  //       tap(trucks => this.log('fetched trucks')),
+  //       catchError(this.handleError('gettrucks', []))
+  //     );
+  // }
  
   /** GET Truck by id. Return `undefined` when id not found */
-  getTruckNo404<Data>(id: number): Observable<Truck> {
-    const url = `${this.trucksUrl}/?id=${id}`;
-    return this.http.get<Truck[]>(url)
-      .pipe(
-        map(trucks => trucks[0]), // returns a {0|1} element array
-        tap(h => {
-          const outcome = h ? `fetched` : `did not find`;
-          this.log(`${outcome} Truck id=${id}`);
-        }),
-        catchError(this.handleError<Truck>(`getTruck id=${id}`))
-      );
-  }
+  // getTruckNo404<Data>(id: number): Observable<Truck> {
+  //   const url = `${this.trucksUrl}/?id=${id}`;
+  //   return this.http.get<Truck[]>(url)
+  //     .pipe(
+  //       map(trucks => trucks[0]), // returns a {0|1} element array
+  //       tap(h => {
+  //         const outcome = h ? `fetched` : `did not find`;
+  //         this.log(`${outcome} Truck id=${id}`);
+  //       }),
+  //       catchError(this.handleError<Truck>(`getTruck id=${id}`))
+  //     );
+  // }
  
-  /** GET Truck by id. Will 404 if id not found */
-  getTruck(id: number): Observable<Truck> {
-    const url = `${this.trucksUrl}/${id}`;
-    return this.http.get<Truck>(url).pipe(
-      tap(_ => this.log(`fetched Truck id=${id}`)),
-      catchError(this.handleError<Truck>(`getTruck id=${id}`))
-    );
-  }
+  // /** GET Truck by id. Will 404 if id not found */
+  // getTruck(id: number): Observable<Truck> {
+  //   const url = `${this.trucksUrl}/${id}`;
+  //   return this.http.get<Truck>(url).pipe(
+  //     tap(_ => this.log(`fetched Truck id=${id}`)),
+  //     catchError(this.handleError<Truck>(`getTruck id=${id}`))
+  //   );
+  // }
  
-  /* GET trucks whose name contains search term */
-  searchtrucks(term: string): Observable<Truck[]> {
-    if (!term.trim()) {
-      // if not search term, return empty Truck array.
-      return of([]);
-    }
-    return this.http.get<Truck[]>(`${this.trucksUrl}/?name=${term}`).pipe(
-      tap(_ => this.log(`found trucks matching "${term}"`)),
-      catchError(this.handleError<Truck[]>('searchtrucks', []))
-    );
-  }
+  // /* GET trucks whose name contains search term */
+  // searchtrucks(term: string): Observable<Truck[]> {
+  //   if (!term.trim()) {
+  //     // if not search term, return empty Truck array.
+  //     return of([]);
+  //   }
+  //   return this.http.get<Truck[]>(`${this.trucksUrl}/?name=${term}`).pipe(
+  //     tap(_ => this.log(`found trucks matching "${term}"`)),
+  //     catchError(this.handleError<Truck[]>('searchtrucks', []))
+  //   );
+  // }
  
-  //////// Save methods //////////
+  // //////// Save methods //////////
  
-  /** POST: add a new Truck to the server */
-  addTruck (Truck: Truck): Observable<Truck> {
-    return this.http.post<Truck>(this.trucksUrl, Truck, httpOptions).pipe(
-      tap((Truck: Truck) => this.log(`added Truck w/ id=${Truck.id}`)),
-      catchError(this.handleError<Truck>('addTruck'))
-    );
-  }
+  // /** POST: add a new Truck to the server */
+  // addTruck (Truck: Truck): Observable<Truck> {
+  //   return this.http.post<Truck>(this.trucksUrl, Truck, httpOptions).pipe(
+  //     tap((Truck: Truck) => this.log(`added Truck w/ id=${Truck.id}`)),
+  //     catchError(this.handleError<Truck>('addTruck'))
+  //   );
+  // }
  
-  /** DELETE: delete the Truck from the server */
-  deleteTruck (Truck: Truck | number): Observable<Truck> {
-    const id = typeof Truck === 'number' ? Truck : Truck.id;
-    const url = `${this.trucksUrl}/${id}`;
+  // /** DELETE: delete the Truck from the server */
+  // deleteTruck (Truck: Truck | number): Observable<Truck> {
+  //   const id = typeof Truck === 'number' ? Truck : Truck.id;
+  //   const url = `${this.trucksUrl}/${id}`;
  
-    return this.http.delete<Truck>(url, httpOptions).pipe(
-      tap(_ => this.log(`deleted Truck id=${id}`)),
-      catchError(this.handleError<Truck>('deleteTruck'))
-    );
-  }
+  //   return this.http.delete<Truck>(url, httpOptions).pipe(
+  //     tap(_ => this.log(`deleted Truck id=${id}`)),
+  //     catchError(this.handleError<Truck>('deleteTruck'))
+  //   );
+  // }
  
-  /** PUT: update the Truck on the server */
-  updateTruck (Truck: Truck): Observable<any> {
-    return this.http.put(this.trucksUrl, Truck, httpOptions).pipe(
-      tap(_ => this.log(`updated Truck id=${Truck.id}`)),
-      catchError(this.handleError<any>('updateTruck'))
-    );
-  }
+  // /** PUT: update the Truck on the server */
+  // updateTruck (Truck: Truck): Observable<any> {
+  //   return this.http.put(this.trucksUrl, Truck, httpOptions).pipe(
+  //     tap(_ => this.log(`updated Truck id=${Truck.id}`)),
+  //     catchError(this.handleError<any>('updateTruck'))
+  //   );
+  // }
  
-  /**
-   * Handle Http operation that failed.
-   * Let the app continue.
-   * @param operation - name of the operation that failed
-   * @param result - optional value to return as the observable result
-   */
-  private handleError<T> (operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
+  // /**
+  //  * Handle Http operation that failed.
+  //  * Let the app continue.
+  //  * @param operation - name of the operation that failed
+  //  * @param result - optional value to return as the observable result
+  //  */
+  // private handleError<T> (operation = 'operation', result?: T) {
+  //   return (error: any): Observable<T> => {
  
-      // TODO: send the error to remote logging infrastructure
-      console.error(error); // log to console instead
+  //     // TODO: send the error to remote logging infrastructure
+  //     console.error(error); // log to console instead
  
-      // TODO: better job of transforming error for user consumption
-      this.log(`${operation} failed: ${error.message}`);
+  //     // TODO: better job of transforming error for user consumption
+  //     this.log(`${operation} failed: ${error.message}`);
  
-      // Let the app keep running by returning an empty result.
-      return of(result as T);
-    };
-  }
+  //     // Let the app keep running by returning an empty result.
+  //     return of(result as T);
+  //   };
+  // }
  
-  /** Log a TruckService message with the MessageService */
-  private log(message: string) {
-    this.messageService.add(`TruckService: ${message}`);
-  }
+  // /** Log a TruckService message with the MessageService */
+  // private log(message: string) {
+  //   this.messageService.add(`TruckService: ${message}`);
+  // }
 
-  getCuisines(): Observable<Cuisine[]> {
-    return of (CUISINES);
-  }
-  getCuisine(id: number):
-  Observable<Cuisine> {
-    return of (CUISINES.find(cuisine => cuisine.id === id));
-  }
+  // getCuisines(): Observable<Cuisine[]> {
+  //   return of (CUISINES);
+  // }
+  // getCuisine(id: number):
+  // Observable<Cuisine> {
+  //   return of (CUISINES.find(cuisine => cuisine.id === id));
+  // }
   // getTrucks(): Observable<Truck[]> {
   //   return this.http.get<Truck[]>(
   //     this.trucksUrl, { observe: 'response'}
@@ -147,4 +191,4 @@ export class SearchService {
   // }
 
   
-}
+//}
