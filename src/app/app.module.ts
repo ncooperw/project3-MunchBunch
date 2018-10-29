@@ -42,7 +42,8 @@ import { ConsumerAccountComponent } from './consumer-account/consumer-account.co
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCX37S57WrEFKAJO02W493eHYHBQD_uTMQ'
     }),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ConsumerAccountComponent
   ],
   providers: [CommonService, AuthService],
   bootstrap: [AppComponent]
