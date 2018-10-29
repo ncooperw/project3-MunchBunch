@@ -81,7 +81,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <div class=\"container-fluid\">\n    <a class=\"navbar-brand\" href=\"#\">Let's Eat!</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n      <ul class=\"navbar-nav\">\n        <li class=\"nav-item active\">\n          <a class=\"nav-link\" href=\"/consumer\">Home <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/account\">Account</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLink=\"/reviews\">Reviews</a>\n        </li>\n        <li class=\"nav-item\">\n          <a routerLink= \"/search\"class=\"nav-link\" href=\"/truck-search\">Search</a>\n        </li>\n        <li class=\"nav-item\">\n            <button class=\"btn btn-primary\" (click)=\"onLogin()\">Tweet</button>\n          <!-- <a class=\"nav-link\" href=\"#\">Tweet</a> -->\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link disabled\" href=\"#\">Fav Updates!</a>\n        </li>\n      </ul>\n    </div>\n    </div>\n  </nav>\n  <div class = \"container\">\n    <router-outlet></router-outlet>\n  </div>\n  \n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <div class=\"container-fluid\">\n    <a class=\"navbar-brand\" href=\"#\">Let's Eat!</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n      <ul class=\"navbar-nav\">\n        <li class=\"nav-item active\">\n          <a class=\"nav-link\" href=\"/consumer\">Home <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/account\">Account</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLink=\"/reviews\">Reviews</a>\n        </li>\n        <li class=\"nav-item\">\n          <a routerLink= \"/search\"class=\"nav-link\" href=\"/truck-search\">Search</a>\n        </li>\n        <li class=\"nav-item\">\n            <!-- <button class=\"btn btn-primary\" (click)=\"onLogin()\">Tweet</button> -->\n          <a class=\"nav-link\" href=\"#\">Tweet</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link disabled\" href=\"#\">Fav Updates!</a>\n        </li>\n      </ul>\n    </div>\n    </div>\n  </nav>\n  <div class = \"container\">\n    <router-outlet></router-outlet>\n  </div>\n  \n"
 
 /***/ }),
 
@@ -397,7 +397,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>{{truck.name}}</h2>\n<\n"
+module.exports = "<h2>truck name</h2>\n\n"
 
 /***/ }),
 
@@ -434,7 +434,7 @@ var TruckDetailComponent = /** @class */ (function () {
         this.searchService = searchService;
     }
     TruckDetailComponent.prototype.ngOnInit = function () {
-        // this.truck = this.route.paramMap.pipe(switchMap((params: ParamMap) => this.searchService.getTruck(params.get('id'))));
+        //this.truck = this.route.paramMap.pipe(switchMap((params: ParamMap) => this.searchService.getTruck(params.get('id'))));
     };
     TruckDetailComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({

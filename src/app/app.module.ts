@@ -24,6 +24,7 @@ import { AgmCoreModule } from '@agm/core';
 
 
 import { MapComponent } from './map/map.component';
+import { ConsumerAccountComponent } from './consumer-account/consumer-account.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { MapComponent } from './map/map.component';
     AuthComponent,
     CallbackComponent,
     MessagesComponent,
-   // HttpClientModule,
+    ConsumerAccountComponent
   ],
   imports: [
     BrowserModule,  

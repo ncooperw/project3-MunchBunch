@@ -1,4 +1,3 @@
-
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -13,8 +12,6 @@ const db = mongo.connect("mongodb://localhost:27017/MunchBunch", { useNewUrlPars
 });
 
 const app = express();
-
-
 
 //Serve static files
 app.use(express.static( './dist/project3-munchBunch'));
