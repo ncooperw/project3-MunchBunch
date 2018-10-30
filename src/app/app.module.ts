@@ -33,7 +33,7 @@ import { MapComponent } from './map/map.component';
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCX37S57WrEFKAJO02W493eHYHBQD_uTMQ'
-    })
+    }),
     
     ReactiveFormsModule
   ],
