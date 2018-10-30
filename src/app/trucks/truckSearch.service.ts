@@ -10,8 +10,8 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import { MessageService } from '../message.service';
 
-import { Cuisine } from '../cuisine';
-import { CUISINES } from '../mock-cuisines';
+import { Cuisine } from '../consumer/cusines/cuisine';
+import { CUISINES } from '../consumer/cusines/mock-cuisines';
 import { Truck } from './truck';
 
 

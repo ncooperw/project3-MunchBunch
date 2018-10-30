@@ -18,7 +18,7 @@ const httpOptions = {
 })
 // CRUD for consumer accounts
 
-export class CommonService {
+export class ConsumerService {
   private consumerUrl = 'api/account/consumer';
   
   constructor(

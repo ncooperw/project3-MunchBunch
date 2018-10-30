@@ -81,7 +81,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <div class=\"container-fluid\">\n    <a class=\"navbar-brand\" href=\"#\">Let's Eat!</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n      <ul class=\"navbar-nav\">\n        <li class=\"nav-item active\">\n          <a class=\"nav-link\" href=\"/consumer\">Home <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/account\">Account</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLink=\"/reviews\">Reviews</a>\n        </li>\n        <li class=\"nav-item\">\n          <a routerLink= \"/search\"class=\"nav-link\" href=\"/truck-search\">Search</a>\n        </li>\n        <li class=\"nav-item\">\n            <!-- <button class=\"btn btn-primary\" (click)=\"onLogin()\">Tweet</button> -->\n          <a class=\"nav-link\" href=\"#\">Tweet</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link disabled\" href=\"#\">Fav Updates!</a>\n        </li>\n      </ul>\n    </div>\n    </div>\n  </nav>\n  <div class = \"container\">\n    <router-outlet></router-outlet>\n  </div>\n  \n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <div class=\"container-fluid\">\n    <a class=\"navbar-brand\" href=\"#\">Let's Eat!</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n      <ul class=\"navbar-nav\">\n        <li class=\"nav-item active\">\n          <a routerLink=\"/consumer\" class=\"nav-link\" href=\"/consumer\">Home <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a routerLink= \"/account\" class=\"nav-link\" href=\"/account\">Account</a>\n        </li>\n        <li class=\"nav-item\">\n          <a routerLink=\"/reviews\" class=\"nav-link\"  href=\"/review\">Reviews</a>\n        </li>\n        <li class=\"nav-item\">\n          <a routerLink= \"/search\" class=\"nav-link\" href=\"/truck-search\">Search</a>\n        </li>\n        <li class=\"nav-item\">\n            <!-- <button class=\"btn btn-primary\" (click)=\"onLogin()\">Tweet</button> -->\n          <a routerLink=\"/tweet\" class=\"nav-link\" href=\"/\">Tweet</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link disabled\" href=\"#\">Fav Updates!</a>\n        </li>\n      </ul>\n    </div>\n    </div>\n  </nav>\n  <div class = \"container\">\n    <router-outlet></router-outlet>\n  </div>\n  \n"
 
 /***/ }),
 
@@ -144,7 +144,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Welcome to Munch Bunch</h2>\n\n<app-consumer-navbar></app-consumer-navbar>\n\n<!-- <div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-12\"> -->\n      \n      <app-truck-search></app-truck-search>\n    \n  \n\n\n\n"
+module.exports = "<h2>Welcome to Munch Bunch</h2>\n\n<app-consumer-navbar></app-consumer-navbar>\n<div class=\"container bg-light\">\n  <div class=\"row\">\n    <div class=\"col-sm-6\">\n      <h5>What's Hot</h5>\n          <span><i class=\"hot text-danger fas fa-fire\"></i>\n            <i class=\"hot text-danger fas fa-fire\"></i>\n            <i class=\"hot text-danger fas fa-fire\"></i></span>\n    </div>\n    <div class=\"col-sm-6\">\n      <button class=\"btn btn-success\">Search for Food</button>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-6\">\n      <button class=\"btn btn-primary\">Tweet</button>\n    </div>\n  <div class=\"row\">\n    <div class=\"col-sm-6\">\n      <button class=\"btn btn-warning\">Find Your Friends</button>\n    </div>\n  </div>\n\n</div>\n\n\n      \n      <app-truck-search></app-truck-search>\n    \n  \n\n\n\n"
 
 /***/ }),
 
@@ -223,7 +223,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 var consumerRoutes = [
-    { path: '',
+    { path: '', pathMatch: 'full',
         component: _consumer_page_consumer_page_component__WEBPACK_IMPORTED_MODULE_5__["ConsumerPageComponent"] },
     { path: 'reviews', component: _review_review_component__WEBPACK_IMPORTED_MODULE_2__["ReviewComponent"] },
     { path: 'truck-search', component: _truck_search_truck_search_component__WEBPACK_IMPORTED_MODULE_3__["TruckSearchComponent"] },
@@ -310,8 +310,10 @@ var ConsumerModule = /** @class */ (function () {
                 _agm_core__WEBPACK_IMPORTED_MODULE_14__["AgmCoreModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"]
             ],
-            declarations: [_consumer_page_consumer_page_component__WEBPACK_IMPORTED_MODULE_6__["ConsumerPageComponent"], _review_review_component__WEBPACK_IMPORTED_MODULE_7__["ReviewComponent"], _consumer_navbar_consumer_navbar_component__WEBPACK_IMPORTED_MODULE_8__["ConsumerNavbarComponent"], _user_info_user_info_component__WEBPACK_IMPORTED_MODULE_9__["UserInfoComponent"], _truck_search_truck_search_component__WEBPACK_IMPORTED_MODULE_10__["TruckSearchComponent"], _trucks_truck_detail_truck_detail_component__WEBPACK_IMPORTED_MODULE_16__["TruckDetailComponent"], _trucks_truck_list_truck_list_component__WEBPACK_IMPORTED_MODULE_15__["TruckListComponent"], _account_account_component__WEBPACK_IMPORTED_MODULE_11__["AccountComponent"],
-                _map_map_component__WEBPACK_IMPORTED_MODULE_13__["MapComponent"]],
+            declarations: [
+                _consumer_page_consumer_page_component__WEBPACK_IMPORTED_MODULE_6__["ConsumerPageComponent"], _review_review_component__WEBPACK_IMPORTED_MODULE_7__["ReviewComponent"], _consumer_navbar_consumer_navbar_component__WEBPACK_IMPORTED_MODULE_8__["ConsumerNavbarComponent"], _user_info_user_info_component__WEBPACK_IMPORTED_MODULE_9__["UserInfoComponent"], _truck_search_truck_search_component__WEBPACK_IMPORTED_MODULE_10__["TruckSearchComponent"], _trucks_truck_detail_truck_detail_component__WEBPACK_IMPORTED_MODULE_16__["TruckDetailComponent"], _trucks_truck_list_truck_list_component__WEBPACK_IMPORTED_MODULE_15__["TruckListComponent"], _account_account_component__WEBPACK_IMPORTED_MODULE_11__["AccountComponent"],
+                _map_map_component__WEBPACK_IMPORTED_MODULE_13__["MapComponent"]
+            ],
             providers: [_common_service__WEBPACK_IMPORTED_MODULE_12__["CommonService"]]
         })
     ], ConsumerModule);
@@ -403,7 +405,7 @@ module.exports = ".cuisine-card {\n    width: 150px;\n    height: 150px;\n    ma
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n  <div class=\"row\">\n      <div class=\"col-sm-12 col-md-3\">\n          <h5>What's Hot</h5>\n          <span><i class=\"hot text-danger fas fa-fire\"></i>\n            <i class=\"hot text-danger fas fa-fire\"></i>\n            <i class=\"hot text-danger fas fa-fire\"></i></span>\n        </div>\n    <div class=\"col-sm-12 col-md-9\">\n      <h5>Search by cuisine</h5>\n      <div class=\"card-deck\">\n        <div *ngFor=\"let cuisine of cuisines\" class=\"row \">\n          <div class=\"col-sm-4 justify-content-center\">\n            <div class=\"card p-3 cuisine-card\">\n              <a routerLink=\"{{cuisine.name}}\">\n                <img class=\"card-img-top cuisine-image\" src=\"{{cuisine.imgLink}}\" alt=\"{{cuisine.name}}\">\n                <div class=\"card-body p-0\">\n                  <p class=\"cuisine-name\">{{cuisine.name}}</p>\n                </div>\n\n              </a>\n            </div>\n          </div>\n        </div>\n      </div>\n      \n    </div>\n  </div>\n</div>\n<div class=\"container\">\n  <app-truck-list></app-truck-list>\n</div>\n<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <h3>Search by Map</h3>\n    \n    <app-map></app-map>\n  </div>\n\n</div>\n"
+module.exports = "<div class=\"container-fluid\">\n  <div class=\"row\">\n      \n    <div class=\"col-sm-12 col-md-9\">\n      <h5>Search by cuisine</h5>\n      <div class=\"card-deck\">\n        <div *ngFor=\"let cuisine of cuisines\" class=\"row \">\n          <div class=\"col-sm-4 justify-content-center\">\n            <div class=\"card p-3 cuisine-card\">\n              <a routerLink=\"{{cuisine.name}}\">\n                <img class=\"card-img-top cuisine-image\" src=\"{{cuisine.imgLink}}\" alt=\"{{cuisine.name}}\">\n                <div class=\"card-body p-0\">\n                  <p class=\"cuisine-name\">{{cuisine.name}}</p>\n                </div>\n\n              </a>\n            </div>\n          </div>\n        </div>\n      </div>\n      \n    </div>\n  </div>\n</div>\n<div class=\"container\">\n  <app-truck-list></app-truck-list>\n</div>\n<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <h3>Search by Map</h3>\n    \n    <app-map></app-map>\n  </div>\n\n</div>\n"
 
 /***/ }),
 

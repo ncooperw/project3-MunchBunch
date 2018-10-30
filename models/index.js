@@ -1,1 +1,3 @@
-export const Truck = require('./Truck');
+module.exports = {
+    Truck: require('./Truck')
+}

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormsModule } from '@angular/forms';
 
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import { CommonService } from './consumer/common.service';
+import { CommonService } from './consumer/consumer.service';
 
 
 

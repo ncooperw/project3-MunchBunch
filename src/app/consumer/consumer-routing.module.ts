@@ -12,7 +12,7 @@ import { TruckListComponent } from '../trucks/truck-list/truck-list.component';
 
 
 const consumerRoutes: Routes = [
-  { path: '', 
+  { path: '', pathMatch: 'full',
   component: ConsumerPageComponent },
   { path: 'reviews', component: ReviewComponent },
   { path: 'truck-search', component: TruckSearchComponent},

@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
-import { CommonService } from './consumer/common.service';
+import { CommonService } from './consumer/consumer.service';
 
 import { AuthComponent } from './auth/auth.component';
 import { CallbackComponent } from './callback/callback.component';
@@ -21,6 +21,8 @@ import { AgmCoreModule } from '@agm/core';
 
 import { MapComponent } from './map/map.component';
 import { ConsumerAccountComponent } from './consumer-account/consumer-account.component';
+import { OwnerModule } from './owner/owner.module';
+import { ConsumerModule } from './consumer/consumer.module';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { ConsumerAccountComponent } from './consumer-account/consumer-account.co
       apiKey: 'AIzaSyCX37S57WrEFKAJO02W493eHYHBQD_uTMQ'
     }),
     ReactiveFormsModule,
+  
+   
   ],
   providers: [CommonService, AuthService],
   bootstrap: [AppComponent]
