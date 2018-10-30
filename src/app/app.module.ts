@@ -33,6 +33,7 @@ import { ConsumerAccountComponent } from './consumer-account/consumer-account.co
     CallbackComponent,
     MessagesComponent,
     ConsumerAccountComponent
+
   ],
   imports: [
     BrowserModule,  
