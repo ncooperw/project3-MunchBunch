@@ -1,15 +1,12 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-//import { HttpModule } from '@angular/http';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-
 
 import { AppComponent } from './app.component';
 
-
 import { AppRoutingModule } from './app-routing.module';
-
 
 import { CommonService } from './consumer/common.service';
 
@@ -21,7 +18,6 @@ import { MessagesComponent } from './messages/messages.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AgmCoreModule } from '@agm/core';
-
 
 import { MapComponent } from './map/map.component';
 import { ConsumerAccountComponent } from './consumer-account/consumer-account.component';
@@ -43,13 +39,8 @@ import { ConsumerAccountComponent } from './consumer-account/consumer-account.co
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCX37S57WrEFKAJO02W493eHYHBQD_uTMQ'
     }),
-<<<<<<< HEAD
     ReactiveFormsModule,
     ConsumerAccountComponent
-=======
-
-    ReactiveFormsModule
->>>>>>> master
   ],
   providers: [CommonService, AuthService],
   bootstrap: [AppComponent]

@@ -33,7 +33,7 @@ export class SearchService {
     ) { };
 
 // get("/api/Truckss")
-getTruckss(): Promise<void | Trucks[]> {
+getTrucks(): Promise<void | Trucks[]> {
   return this.http.get(this.trucksUrl)
              .toPromise()
              .then(response => response.json() as Trucks[])
@@ -73,6 +73,16 @@ private handleError (error: any) {
   console.error(errMsg); // log to console instead
 }
 }
+
+// getCuisines(): Observable<Cuisine[]> {
+//   return of (CUISINES);
+// }
+// getCuisine(id: number):
+// Observable<Cuisine> {
+//   return of (CUISINES.find(cuisine => cuisine.id === id));
+// }
+
+
 
   /** GET trucks from the server */
   // getTrucks (): Observable<Truck[]> {
@@ -172,19 +182,13 @@ private handleError (error: any) {
   //   this.messageService.add(`TruckService: ${message}`);
   // }
 
-  // getCuisines(): Observable<Cuisine[]> {
-  //   return of (CUISINES);
-  // }
-  // getCuisine(id: number):
-  // Observable<Cuisine> {
-  //   return of (CUISINES.find(cuisine => cuisine.id === id));
-  // }
+ 
   // getTrucks(): Observable<Truck[]> {
   //   return this.http.get<Truck[]>(
   //     this.trucksUrl, { observe: 'response'}
   //   );
 
-    //return of (TRUCKS);
+  //   return of (TRUCKS);
   // }
   // getTruck(id: number): Observable<Truck>{
   //   return of (TRUCKS.find(truck => truck.id === id));

@@ -8,6 +8,12 @@ var PORT = 8080;
 
 // Require all models
 var db = require("./models");
+//Serve static files
+// app.use(express.static( './dist/project3-munchBunch'));
+
+// Create link to Angular build directory
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
 
 // Initialize Express
 var app = express();
@@ -31,7 +37,7 @@ app.get("/api/trucks", function(req,res){
 
     .then(function(dbTruck) {
         console.log("db" + dbTruck);
-      // If any Books are found, send them to the client
+      // If any Trucks are found, send them to the client
       res.json(dbTruck);
      
     })

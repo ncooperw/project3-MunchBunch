@@ -4,7 +4,7 @@ import { switchMap } from 'rxjs/operators';
 import { SearchService } from 'src/app/truckSearch.service';
 import { Subscription } from 'rxjs';
 import { TRUCKS } from '../../mock-trucks';
-import { Truck } from 'src/app/truck';
+import { Trucks } from 'src/app/truck';
 
 //Gives info for one truck on click from search
 
