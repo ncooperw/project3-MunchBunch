@@ -1,20 +1,19 @@
 import { Injectable } from '@angular/core';
-import { Trucks } from './truck';
+//import { Truck } from './truck';
 import { Http, Response } from '@angular/http';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClientModule, HttpHeaders } from '@angular/common/http';
+
 
 import { Observable, of} from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 
-import { MessageService } from './message.service';
+import { MessageService } from '../message.service';
 
-import { Cuisine } from './cuisine';
-import { CUISINES } from './mock-cuisines';
+import { Cuisine } from '../cuisine';
+import { CUISINES } from '../mock-cuisines';
+import { Truck } from './truck';
 
-
-
-//import { TRUCKS } from './mock-trucks';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -25,45 +24,44 @@ const httpOptions = {
 })
 export class SearchService {
   
-  private trucksUrl = 'api/trucks';
+  private trucksUrl = '/api/trucks';
   
   constructor(
     private http: Http,
     private messageService: MessageService
     ) { };
 
-// get("/api/Truckss")
-getTrucks(): Promise<void | Trucks[]> {
+// get("/api/Trucks")
+getTrucks(): Promise<void | Truck[]> {
   return this.http.get(this.trucksUrl)
              .toPromise()
-             .then(response => response.json() as Trucks[])
+             .then(response => response.json() as Truck[])
              .catch(this.handleError);
 }
 
-// post("/api/Truckss")
-createTrucks(newTrucks: Trucks): Promise<void | Trucks> {
-  return this.http.post(this.trucksUrl, newTrucks)
+// post("/api/Trucks")
+createTruck(newTruck: Truck): Promise<void | Truck> {
+  return this.http.post(this.trucksUrl, newTruck)
              .toPromise()
-             .then(response => response.json() as Trucks)
+             .then(response => response.json() as Truck)
              .catch(this.handleError);
 }
 
-// get("/api/Truckss/:id") endpoint not used by Angular app
 
-// delete("/api/Truckss/:id")
-deleteTrucks(delTrucksId: String): Promise<void | String> {
-  return this.http.delete(this.trucksUrl + '/' + delTrucksId)
+// delete("/api/Trucks/:id")
+deleteTruck(delTruckId: String): Promise<void | String> {
+  return this.http.delete(this.trucksUrl + '/' + delTruckId)
              .toPromise()
              .then(response => response.json() as String)
              .catch(this.handleError);
 }
 
-// put("/api/Truckss/:id")
-updateTrucks(putTrucks: Trucks): Promise<void | Trucks> {
-  var putUrl = this.trucksUrl + '/' + putTrucks._id;
-  return this.http.put(putUrl, putTrucks)
+// put("/api/Trucks/:id")
+updateTruck(putTruck: Truck): Promise<void | Truck> {
+  var putUrl = this.trucksUrl + '/' + putTruck._id;
+  return this.http.put(putUrl, putTruck)
              .toPromise()
-             .then(response => response.json() as Trucks)
+             .then(response => response.json() as Truck)
              .catch(this.handleError);
 }
 

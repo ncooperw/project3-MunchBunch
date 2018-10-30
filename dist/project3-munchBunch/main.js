@@ -5479,7 +5479,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "body {\n    font-family: 'Spicy Rice', cursive;\n}\n"
+module.exports = "\nbody{\n    /* background-image: linear-gradient(#f1676b,white);\n     */\n  }\n\n\n\nh1{\n    font-size: 89px;\n    font-family: 'Luckiest Guy', cursive;\n    text-align: center;\n}\n\n\n\nh6{\n    font-size: 40px;\n    font-family: 'Luckiest Guy', cursive;\n    text-align: center;\n}\n\n\n\n.card-img-top {\nheight: 100px;\nwidth: 100px;\ntext-align: center;\n}\n\n\n\n.card{\n    position: relative;\n    display: flex;\n    border: none;\n    min-width: 0;\n    word-wrap: break-word;\n    /* background-color: #e8ebef; */\n    border-radius: .25rem;\n    /* opacity: .4; */\n}\n\n\n\n.container,.conatinerheader{\n    align-content: center;\n}\n\n\n\n.jumbotron{\n   background-image: url('https://cdn.dribbble.com/users/76620/screenshots/1909179/foodpattern-drbl800.gif');\n   /* background-repeat: no-repeat; */\n   width: 100%;\n   -ms-grid-row-align: auto;\n       align-self: auto;\n}\n\n\n\n.animated{\n    /* animation-delay: 2s; */\n}\n\n"
 
 /***/ }),
 
@@ -5490,7 +5490,7 @@ module.exports = "body {\n    font-family: 'Spicy Rice', cursive;\n}\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Munch Bunch\n\n</h1>\n<div class=\"spacer\"></div>\n<div class=\"container\">\n\n<button routerLinkActive=\"active\" routerLink=\"./consumer\" ng-click=\"\">Consumer</button>\n<button routerLink=\"/owner\">Owner</button>\n\n<button routerLink=\"\">Home</button>\n<router-outlet></router-outlet>\n\n</div>\n\n<div class=\"container\">\n   \n</div>\n\n   "
+module.exports = "<div class=\"animated fadeInUp\">\n  <h1>Munch Bunch</h1>\n  <br>\n  <h6>What are you going to munch on today.</h6>\n</div>\n<br>\n<br>\n\n<div class=\"spacer\"></div>\n<div class=\"jumbotron jumbotron-fluid animated fadeInUp\">\n  <div class=\"container\">\n    <div class=\"row\">\n      \n      <div class=\"col-sm\">\n        <div class=\"card\" style=\"width: 6rem;\">\n          <img class=\"card-img-top\" src=\"../assets/images/pexels-photo-693267 (1).jpeg\" alt=\"Card image cap\">\n          <div class=\"card-body\">\n            <button class=\"consumer\" routerLinkActive=\"active\" routerLink=\"./consumer\" ng-click=\"\">Consumer</button>\n          </div>\n        </div>\n      </div>\n      <div class=\"col sm\"></div>\n      <div class=\"col-sm\">\n        <div class=\"card\" style=\"width: 6rem;\">\n          <img class=\"card-img-top\" src=\"../assets/images/owner photo for munch bunch.jpeg\" alt=\"Card image cap\">\n          <div class=\"card-body\">\n            <button class=\"owner\" routerLink=\"./owner\">Owner</button>\n          </div>\n        </div>\n      </div>\n      <div class=\"col sm\"></div>\n      <div class=\"col-sm\">\n        <div class=\"card\" style=\"width: 6rem;\">\n          <img class=\"card-img-top\" src=\"https://thumbs.dreamstime.com/z/wallpaper-theme-fast-food-takeaway-every-taste-107879612.jpg\"\n            alt=\"Card image cap\">\n          <div class=\"card-body\">\n            <button class=\"home\" routerLink=\"\">Home</button>\n          <!-- </div> -->\n        </div>\n      </div>\n      <router-outlet></router-outlet>\n    </div>\n  </div>\n"
 
 /***/ }),
 
@@ -5550,16 +5550,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _consumer_common_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./consumer/common.service */ "./src/app/consumer/common.service.ts");
-/* harmony import */ var _auth_auth_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./auth/auth.component */ "./src/app/auth/auth.component.ts");
-/* harmony import */ var _callback_callback_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./callback/callback.component */ "./src/app/callback/callback.component.ts");
-/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./auth.service */ "./src/app/auth.service.ts");
-/* harmony import */ var _messages_messages_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./messages/messages.component */ "./src/app/messages/messages.component.ts");
-/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
-/* harmony import */ var _consumer_account_consumer_account_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./consumer-account/consumer-account.component */ "./src/app/consumer-account/consumer-account.component.ts");
+/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _consumer_common_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./consumer/common.service */ "./src/app/consumer/common.service.ts");
+/* harmony import */ var _auth_auth_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./auth/auth.component */ "./src/app/auth/auth.component.ts");
+/* harmony import */ var _callback_callback_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./callback/callback.component */ "./src/app/callback/callback.component.ts");
+/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./auth.service */ "./src/app/auth.service.ts");
+/* harmony import */ var _messages_messages_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./messages/messages.component */ "./src/app/messages/messages.component.ts");
+/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
+/* harmony import */ var _consumer_account_consumer_account_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./consumer-account/consumer-account.component */ "./src/app/consumer-account/consumer-account.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5580,30 +5581,32 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _auth_auth_component__WEBPACK_IMPORTED_MODULE_7__["AuthComponent"],
-                _callback_callback_component__WEBPACK_IMPORTED_MODULE_8__["CallbackComponent"],
-                _messages_messages_component__WEBPACK_IMPORTED_MODULE_10__["MessagesComponent"],
-                _consumer_account_consumer_account_component__WEBPACK_IMPORTED_MODULE_12__["ConsumerAccountComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+                _auth_auth_component__WEBPACK_IMPORTED_MODULE_8__["AuthComponent"],
+                _callback_callback_component__WEBPACK_IMPORTED_MODULE_9__["CallbackComponent"],
+                _messages_messages_component__WEBPACK_IMPORTED_MODULE_11__["MessagesComponent"],
+                _consumer_account_consumer_account_component__WEBPACK_IMPORTED_MODULE_13__["ConsumerAccountComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
-                _agm_core__WEBPACK_IMPORTED_MODULE_11__["AgmCoreModule"].forRoot({
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+                _angular_http__WEBPACK_IMPORTED_MODULE_3__["HttpModule"],
+                _agm_core__WEBPACK_IMPORTED_MODULE_12__["AgmCoreModule"].forRoot({
                     apiKey: 'AIzaSyCX37S57WrEFKAJO02W493eHYHBQD_uTMQ'
                 }),
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
             ],
-            providers: [_consumer_common_service__WEBPACK_IMPORTED_MODULE_6__["CommonService"], _auth_service__WEBPACK_IMPORTED_MODULE_9__["AuthService"]],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            providers: [_consumer_common_service__WEBPACK_IMPORTED_MODULE_7__["CommonService"], _auth_service__WEBPACK_IMPORTED_MODULE_10__["AuthService"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;

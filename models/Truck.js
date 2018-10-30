@@ -9,8 +9,9 @@ const truckSchema = new Schema({
     description: String,
     menuLink: String,
     price: String,
-    latitude: Number,
-    longitude: Number
+    location: {
+        latitude: Number,
+        longitude: Number}
 })
 const Truck = mongoose.model('Truck', truckSchema)
 module.exports = Truck

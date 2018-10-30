@@ -280,7 +280,6 @@ var routes = [
     { path: '',
         component: _owner_home_owner_home_component__WEBPACK_IMPORTED_MODULE_2__["OwnerHomeComponent"] },
     { path: 'account', component: _owner_account_owner_account_component__WEBPACK_IMPORTED_MODULE_3__["OwnerAccountComponent"] },
-    { path: '' }
 ];
 var OwnerRoutingModule = /** @class */ (function () {
     function OwnerRoutingModule() {

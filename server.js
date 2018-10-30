@@ -6,6 +6,9 @@ var mongoose = require("mongoose");
 
 var PORT = 8080;
 
+// Initialize Express
+var app = express();
+
 // Require all models
 var db = require("./models");
 //Serve static files
@@ -15,8 +18,7 @@ var db = require("./models");
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
 
-// Initialize Express
-var app = express();
+
 
 // Configure middleware
 

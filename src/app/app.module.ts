@@ -36,11 +36,11 @@ import { ConsumerAccountComponent } from './consumer-account/consumer-account.co
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    HttpModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCX37S57WrEFKAJO02W493eHYHBQD_uTMQ'
     }),
     ReactiveFormsModule,
-    ConsumerAccountComponent
   ],
   providers: [CommonService, AuthService],
   bootstrap: [AppComponent]

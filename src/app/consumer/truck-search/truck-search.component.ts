@@ -4,8 +4,8 @@ import { OnDestroy } from '@angular/core';
 import { ISubscription } from 'rxjs/Subscription';
 // import { Cuisine } from '../../cuisine';
 // import { CUISINES } from '../../mock-cuisines';
-import { SearchService } from '../../truckSearch.service';
-import { Trucks } from 'src/app/truck';
+import { SearchService } from '../../trucks/truckSearch.service';
+import { Truck } from 'src/app/trucks/truck';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -17,9 +17,9 @@ import { Observable } from 'rxjs';
 
 export class TruckSearchComponent implements OnInit {
 
-  selectedTruck: Trucks;
+  selectedTruck: Truck;
 
-  trucks: Trucks[];
+  trucks: Truck[];
 
 constructor(
   private searchService: SearchService,
@@ -42,7 +42,7 @@ constructor(
     //this.getCuisines();
     this.getTrucks();
   }
-  onSelect(trucks: Trucks): void{
+  onSelect(trucks: Truck): void{
     this.selectedTruck = trucks;
   }
 }
