@@ -1,99 +1,56 @@
-//import bodyParser from 'body-parser';
-var express = require('express');
-var path = require('path');
-var bodyParser = require('body-parser');
-var mongo = require('mongoose');
+var express = require("express");
+var bodyParser = require("body-parser");
+// var logger = require("morgan");
+var mongoose = require("mongoose");
 
-var db = mongo.connect("mongodb://localhost:27017/MunchBunch", { useNewUrlParser: true }, function(err, response){
-    if (err){
-        console.log(err);
-    } else {
-        console.log('Connected to ' + db, '+', response);
-    }
-});
+var PORT = 8080;
 
+// Require all models
+var db = require("./models");
+
+// Initialize Express
 var app = express();
-app.use(bodyParser());
-app.use(bodyParser.json({limit: '5mb'}));
-app.use(bodyParser.urlencoded({extended:true}));
 
-//not sure if we need the static with Angular
-app.use(express.static(path.join(__dirname, "js")));
+// Configure middleware
 
-app.use(function (req, res, next){
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
-    res.setHeader("Access-Control-Allow-Methods", 'GET, POST, OPTIONS, PUT, PATCH, DELETE');    
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');      
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    next();  
+// Use morgan logger for logging requests
+// app.use(logger("dev"));
+// Use body-parser for handling form submissions
+app.use(bodyParser.urlencoded({ extended: true }));
+// Use express.static to serve the public folder as a static directory
+app.use(express.static("public"));
+
+// Connect to the Mongo DB
+mongoose.connect("mongodb://localhost/MunchBunchTrucks", { useNewUrlParser: true });
+
+
+
+
+// Routes
+// db.Truck.create({
+//     name = req.body
+// })
+// app.post("api/new", function(req,res){
+
+// });
+
+app.get("/api/trucks", function(req,res){  
+    console.log("Truck" + db.Truck);
+    db.Truck.find({})
+
+    .then(function(dbTruck) {
+        console.log("db" + dbTruck);
+      // If any Books are found, send them to the client
+      res.json(dbTruck);
+     
+    })
+    .catch(function(err) {
+      // If an error occurs, send it back to the client
+      res.json(err);
+    });
+})
+
+// Start the server
+app.listen(PORT, function() {
+  console.log("App running on port " + PORT + "!");
 });
-
-var Schema = mongo.Schema;
-
-var consumerSchema = new Schema({      
-    name: { type: String   },       
-    address: { type: String   },   
-   },{ versionKey: false });  
-      
-     
-   var model = mongo.model('consumer', consumerSchema, 'consumer');  
-     
-   app.post("/api/saveConsumer",function(req,res){   
-    var mod = new model(req.body);  
-    if(req.body.mode =="Save")  
-    {  
-       mod.save(function(err,data){  
-         if(err){  
-            res.send(err);                
-         }  
-         else{        
-             res.send({data:"Record has been Inserted..!!"});  
-         }  
-    });  
-   }  
-   else   
-   {  
-    model.findByIdAndUpdate(req.body.id, { name: req.body.name, address: req.body.address},  
-      function(err,data) {  
-      if (err) {  
-      res.send(err);         
-      }  
-      else{        
-             res.send({data:"Record has been Updated..!!"});  
-        }  
-    });  
-     
-     
-   }  
-    })  
-     
-    app.post("/api/deleteUser",function(req,res){      
-       model.remove({ _id: req.body.id }, function(err) {    
-        if(err){    
-            res.send(err);    
-        }    
-        else{      
-               res.send({data:"Record has been Deleted..!!"});               
-           }    
-    });    
-      })  
-     
-     
-     
-    app.get("/api/getUser",function(req,res){  
-       model.find({},function(err,data){  
-                 if(err){  
-                     res.send(err);  
-                 }  
-                 else{                
-                     res.send(data);  
-                     }  
-             });  
-     })  
-     
-     
-   app.listen(8080, function () {  
-       
-    console.log('Example app listening on port 8080!')  
-   })  
-

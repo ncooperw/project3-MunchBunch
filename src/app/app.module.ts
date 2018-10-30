@@ -31,7 +31,7 @@ import { MapComponent } from './map/map.component';
     AuthComponent,
     CallbackComponent,
     MessagesComponent,
-   // HttpClientModule,
+  //  HttpClientModule,
   ],
   imports: [
     BrowserModule,  
