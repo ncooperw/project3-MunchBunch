@@ -14,7 +14,7 @@ export class TruckSearchComponent implements OnInit {
   cuisines: Cuisine[];
 
   getCuisines(): void {
-    this.searchService.getCuisines().subscribe(cuisines => this.cuisines = cuisines);
+   this.searchService.getCuisines().subscribe(cuisines => this.cuisines = cuisines);
   }
 
   trucks: Truck[];
@@ -25,6 +25,7 @@ export class TruckSearchComponent implements OnInit {
 
   ngOnInit() {
     this.getCuisines();
+    this.getTrucks();
   }
 
 }

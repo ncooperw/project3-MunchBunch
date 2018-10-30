@@ -1,10 +1,9 @@
-//import bodyParser from 'body-parser';
-var express = require('express');
-var path = require('path');
-var bodyParser = require('body-parser');
-var mongo = require('mongoose');
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const mongo = require('mongoose');
 
-var db = mongo.connect("mongodb://localhost:27017/MunchBunch", { useNewUrlParser: true }, function(err, response){
+const db = mongo.connect("mongodb://localhost:27017/MunchBunch", { useNewUrlParser: true }, function(err, response){
     if (err){
         console.log(err);
     } else {
@@ -12,13 +11,16 @@ var db = mongo.connect("mongodb://localhost:27017/MunchBunch", { useNewUrlParser
     }
 });
 
-var app = express();
-app.use(bodyParser());
-app.use(bodyParser.json({limit: '5mb'}));
-app.use(bodyParser.urlencoded({extended:true}));
+const app = express();
 
-//not sure if we need the static with Angular
-app.use(express.static(path.join(__dirname, "js")));
+//Serve static files
+app.use(express.static( './dist/project3-munchBunch'));
+
+//Send all requests to index.html
+app.get('/*', function(req, res) {
+    res.sendFile(path.join( './dist/project3-munchBunch/index.html'));
+});
+
 
 app.use(function (req, res, next){
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
@@ -67,7 +69,7 @@ var consumerSchema = new Schema({
    }  
     })  
      
-    app.post("/api/deleteUser",function(req,res){      
+    app.post("/api/deleteConsumer",function(req,res){      
        model.remove({ _id: req.body.id }, function(err) {    
         if(err){    
             res.send(err);    
@@ -80,7 +82,7 @@ var consumerSchema = new Schema({
      
      
      
-    app.get("/api/getUser",function(req,res){  
+    app.get("/api/getConsumer",function(req,res){  
        model.find({},function(err,data){  
                  if(err){  
                      res.send(err);  
@@ -91,9 +93,11 @@ var consumerSchema = new Schema({
              });  
      })  
      
-     
-   app.listen(8080, function () {  
+
+    //default Heroku port
+
+   app.listen(process.env.PORT || 5000, function () {  
        
-    console.log('Example app listening on port 8080!')  
+    console.log('Example app listening on port 5000!')  
    })  
 
