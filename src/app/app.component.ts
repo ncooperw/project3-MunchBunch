@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormsModule } from '@angular/forms';
 
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import { CommonService } from './consumer/consumer.service';
+
 
 
 
@@ -13,9 +13,8 @@ import { CommonService } from './consumer/consumer.service';
 })
 
 export class AppComponent {
-  constructor(private newService: CommonService) {}
-  Repdata;
-  valbutton = "Save";
+  constructor() {}
+  
 
  
 

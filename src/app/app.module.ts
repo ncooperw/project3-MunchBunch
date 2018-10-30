@@ -8,8 +8,6 @@ import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
-import { CommonService } from './consumer/consumer.service';
-
 import { AuthComponent } from './auth/auth.component';
 import { CallbackComponent } from './callback/callback.component';
 import { AuthService } from './auth.service';
@@ -23,6 +21,8 @@ import { MapComponent } from './map/map.component';
 import { ConsumerAccountComponent } from './consumer-account/consumer-account.component';
 import { OwnerModule } from './owner/owner.module';
 import { ConsumerModule } from './consumer/consumer.module';
+import { SearchService } from './trucks/truckSearch.service';
+import { ConsumerService } from './consumer/consumer.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +46,7 @@ import { ConsumerModule } from './consumer/consumer.module';
   
    
   ],
-  providers: [CommonService, AuthService],
+  providers: [ConsumerService, AuthService, SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

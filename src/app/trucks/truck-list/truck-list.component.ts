@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { ActivatedRoute, Router } from '@angular/router';
 import { Truck } from 'src/app/trucks/truck';
 import { SearchService } from 'src/app/trucks/truckSearch.service';
-//import { TruckDetailComponent } from '../trucks/truck-detail/truck-detail.component';
+import { Cuisine } from '../../consumer/cusines/cuisine';
 
+//import { TruckDetailComponent } from '../trucks/truck-detail/truck-detail.component';
 @Component({
   selector: 'app-truck-list',
   templateUrl: './truck-list.component.html',
@@ -12,6 +13,8 @@ import { SearchService } from 'src/app/trucks/truckSearch.service';
   providers: [SearchService]
 })
 export class TruckListComponent implements OnInit {
+
+  //@Input() cuisine: Cuisine;
 
   trucks: Truck[];
   selectedTruck: Truck;

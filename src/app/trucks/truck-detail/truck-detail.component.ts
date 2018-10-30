@@ -13,7 +13,7 @@ import { Subscription } from 'rxjs';
 export class TruckDetailComponent implements OnInit {
   @Input()
   truck: Truck;
-
+  
   @Input()
   createHandler: Function;
   @Input()

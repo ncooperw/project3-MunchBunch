@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
-import { CommonService } from './consumer/consumer.service';
+
 
 import { AuthComponent } from './auth/auth.component';
 import { CallbackComponent } from './callback/callback.component';

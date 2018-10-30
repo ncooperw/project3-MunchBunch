@@ -1,17 +1,12 @@
 import { Injectable } from '@angular/core';
-//import { Truck } from './truck';
 import { Http, Response } from '@angular/http';
 import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 
-
-import { Observable, of} from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 
 import { MessageService } from '../message.service';
 
-import { Cuisine } from '../consumer/cusines/cuisine';
-import { CUISINES } from '../consumer/cusines/mock-cuisines';
 import { Truck } from './truck';
 
 
@@ -72,13 +67,7 @@ private handleError (error: any) {
 }
 }
 
-// getCuisines(): Observable<Cuisine[]> {
-//   return of (CUISINES);
-// }
-// getCuisine(id: number):
-// Observable<Cuisine> {
-//   return of (CUISINES.find(cuisine => cuisine.id === id));
-// }
+
 
 
 

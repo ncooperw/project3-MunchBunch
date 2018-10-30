@@ -23,6 +23,7 @@ import { AgmCoreModule } from '@agm/core';
 import { TruckListComponent } from '../trucks/truck-list/truck-list.component';
 import { TruckDetailComponent } from '../trucks/truck-detail/truck-detail.component';
 import { CuisineComponent } from './cusines/cuisine/cuisine.component';
+import { SearchDetailComponent } from './search-detail/search-detail.component';
 
 
 
@@ -39,7 +40,8 @@ import { CuisineComponent } from './cusines/cuisine/cuisine.component';
   declarations: [
     ConsumerPageComponent, ReviewComponent, ConsumerNavbarComponent, UserInfoComponent, TruckSearchComponent, TruckDetailComponent,  TruckListComponent, AccountComponent,
   MapComponent,
-  CuisineComponent 
+  CuisineComponent,
+  SearchDetailComponent 
 ],
   providers: [ConsumerService]
 })
