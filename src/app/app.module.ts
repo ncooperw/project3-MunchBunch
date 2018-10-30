@@ -33,6 +33,7 @@ import { ConsumerAccountComponent } from './consumer-account/consumer-account.co
     CallbackComponent,
     MessagesComponent,
     ConsumerAccountComponent
+
   ],
   imports: [
     BrowserModule,  
@@ -42,8 +43,13 @@ import { ConsumerAccountComponent } from './consumer-account/consumer-account.co
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCX37S57WrEFKAJO02W493eHYHBQD_uTMQ'
     }),
+<<<<<<< HEAD
     ReactiveFormsModule,
     ConsumerAccountComponent
+=======
+
+    ReactiveFormsModule
+>>>>>>> master
   ],
   providers: [CommonService, AuthService],
   bootstrap: [AppComponent]
