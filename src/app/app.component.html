@@ -1,19 +1,43 @@
-<h1>Munch Bunch
+<div class="animated fadeInUp">
+  <h1>Munch Bunch</h1>
+  <br>
+  <h6>What are you going to munch on today.</h6>
+</div>
+<br>
+<br>
 
-</h1>
 <div class="spacer"></div>
-<div class="container">
-
-<button routerLinkActive="active" routerLink="./consumer" ng-click="">Consumer</button>
-<button routerLink="/owner">Owner</button>
-
-<button routerLink="">Home</button>
-<router-outlet></router-outlet>
-
-</div>
-
-<div class="container">
-   
-</div>
-
-   
+<div class="jumbotron jumbotron-fluid animated fadeInUp">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-sm">
+        <div class="card" style="width: 6rem;">
+          <img class="card-img-top" src="../assets/images/pexels-photo-693267 (1).jpeg" alt="Card image cap">
+          <div class="card-body">
+            <button class="consumer" routerLinkActive="active" routerLink="./consumer" ng-click="">Consumer</button>
+          </div>
+        </div>
+      </div>
+      <div class="col sm"></div>
+      <div class="col-sm">
+        <div class="card" style="width: 6rem;">
+          <img class="card-img-top" src="../assets/images/owner photo for munch bunch.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <button class="owner" routerLink="/owner">Owner</button>
+          </div>
+        </div>
+      </div>
+      <div class="col sm"></div>
+      <div class="col-sm">
+        <div class="card" style="width: 6rem;">
+          <img class="card-img-top" src="https://thumbs.dreamstime.com/z/wallpaper-theme-fast-food-takeaway-every-taste-107879612.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <button class="home" routerLink="">Home</button>
+          <!-- </div> -->
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
