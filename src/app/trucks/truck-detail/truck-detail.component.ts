@@ -3,6 +3,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Truck } from '../truck';
 import { SearchService } from 'src/app/trucks/truckSearch.service';
 import { Subscription } from 'rxjs';
+import { CommonService } from 'src/app/services/common.service';
 
 
 @Component({
@@ -25,26 +26,27 @@ export class TruckDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private searchService: SearchService
+    //private searchService: SearchService,
+    private commonService: CommonService
   ) { }
 
-  createTruck(truck: Truck) {
-    this.searchService.createTruck(truck).then((newTruck: Truck) => {
-      this.createHandler(newTruck);
-    });
-  }
+  // createTruck(truck: Truck) {
+  //   this.searchService.createTruck(truck).then((newTruck: Truck) => {
+  //     this.createHandler(newTruck);
+  //   });
+  // }
 
-  updateTruck(truck: Truck): void {
-    this.searchService.updateTruck(truck).then((updatedTruck: Truck) => {
-      this.updateHandler(updatedTruck);
-    });
-  }
+  // updateTruck(truck: Truck): void {
+  //   this.searchService.updateTruck(truck).then((updatedTruck: Truck) => {
+  //     this.updateHandler(updatedTruck);
+  //   });
+  // }
 
-  deleteTruck(TruckId: String): void {
-    this.searchService.deleteTruck(TruckId).then((deletedTruckId: String) => {
-      this.deleteHandler(deletedTruckId);
-    });
-  }
+  // deleteTruck(TruckId: String): void {
+  //   this.searchService.deleteTruck(TruckId).then((deletedTruckId: String) => {
+  //     this.deleteHandler(deletedTruckId);
+  //   });
+  // }
 
   ngOnInit() {
     
