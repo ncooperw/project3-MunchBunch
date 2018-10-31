@@ -30,9 +30,27 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/MunchBunchTrucks", { useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost/MunchBunchTrucks", { useNewUrlParser: true });
+
+let databaseUri = "mongodb://localhost/MunchBunchTrucks";
+
+if (process.env.MONGODB_URI){
+  
+  mongoose.connect(process.env.MONGODB_URI,{ useNewUrlParser: true });
+}else{
+  mongoose.connect(databaseUri,{ useNewUrlParser: true });
+}
+
+db = mongoose.connection;
+
+db.on("error", function(err){
+  console.log("Mongoose Error: ", err);
+});
 
 
+db.once("open", function(){
+  console.log("Mongoose connection successful.")
+});
 // app.get("/api/trucks", function(req,res){  
 //     console.log("Truck" + db.Truck);
 //     db.Truck.find({})
