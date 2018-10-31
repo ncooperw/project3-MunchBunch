@@ -28,7 +28,8 @@ import { AgmCoreModule } from '@agm/core';
     HttpClientModule,
     AgmCoreModule
   ],
-  declarations: [ConsumerPageComponent, ReviewComponent, ConsumerNavbarComponent, UserInfoComponent, TruckSearchComponent, TruckDetailComponent,  TruckListComponent, AccountComponent, ],
+  declarations: [ConsumerPageComponent, ReviewComponent, ConsumerNavbarComponent, UserInfoComponent, TruckSearchComponent, TruckDetailComponent,  TruckListComponent, AccountComponent,
+  MapComponent ],
   providers: [CommonService]
 })
 export class ConsumerModule { }

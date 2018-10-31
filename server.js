@@ -1,3 +1,4 @@
+
 var express = require("express");
 var bodyParser = require("body-parser");
 // var logger = require("morgan");
@@ -22,7 +23,6 @@ app.use(express.static("public"));
 
 // Connect to the Mongo DB
 mongoose.connect("mongodb://localhost/MunchBunchTrucks", { useNewUrlParser: true });
-
 
 
 

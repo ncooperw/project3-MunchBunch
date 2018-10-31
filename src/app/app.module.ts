@@ -24,6 +24,7 @@ import { AgmCoreModule } from '@agm/core';
 
 
 import { MapComponent } from './map/map.component';
+import { ConsumerAccountComponent } from './consumer-account/consumer-account.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MapComponent } from './map/map.component';
     AuthComponent,
     CallbackComponent,
     MessagesComponent,
-  //  HttpClientModule,
+    ConsumerAccountComponent
+
   ],
   imports: [
     BrowserModule,  
@@ -41,6 +43,7 @@ import { MapComponent } from './map/map.component';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCX37S57WrEFKAJO02W493eHYHBQD_uTMQ'
     }),
+
     ReactiveFormsModule
   ],
   providers: [CommonService, AuthService],
