@@ -18,6 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 
 import { MapComponent } from './map/map.component';
+
+
 import { LoginComponent } from './login/login.component';
 import { ConsumerService } from './consumer/consumer.service';
 import { SearchService } from './trucks/truckSearch.service';
