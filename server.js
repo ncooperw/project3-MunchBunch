@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 // var logger = require("morgan");
 var mongoose = require("mongoose");
 
-var PORT = 8080;
+var PORT = 5000;
 
 // Require all models
 var db = require("./models");
