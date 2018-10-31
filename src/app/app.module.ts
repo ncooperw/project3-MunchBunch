@@ -18,7 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 
 import { MapComponent } from './map/map.component';
-import { ConsumerAccountComponent } from './consumer-account/consumer-account.component';
+
 import { OwnerModule } from './owner/owner.module';
 import { ConsumerModule } from './consumer/consumer.module';
 import { SearchService } from './trucks/truckSearch.service';
@@ -30,7 +30,7 @@ import { ConsumerService } from './consumer/consumer.service';
     AuthComponent,
     CallbackComponent,
     MessagesComponent,
-    ConsumerAccountComponent
+    
 
   ],
   imports: [
@@ -44,7 +44,6 @@ import { ConsumerService } from './consumer/consumer.service';
     }),
     ReactiveFormsModule,
   
-   
   ],
   providers: [ConsumerService, AuthService, SearchService],
   bootstrap: [AppComponent]

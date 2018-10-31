@@ -26,7 +26,7 @@ export class SearchService {
     private messageService: MessageService
     ) { };
 
-// get("/api/Trucks")
+// get("/api/Truckss")
 getTrucks(): Promise<void | Truck[]> {
   return this.http.get(this.trucksUrl)
              .toPromise()
@@ -68,6 +68,13 @@ private handleError (error: any) {
 }
 
 
+// getCuisines(): Observable<Cuisine[]> {
+//   return of (CUISINES);
+// }
+// getCuisine(id: number):
+// Observable<Cuisine> {
+//   return of (CUISINES.find(cuisine => cuisine.id === id));
+// }
 
 
 

@@ -18,6 +18,10 @@ var db = require("./models");
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
 
+// Create link to Angular build directory
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
+
 
 
 // Configure middleware
@@ -73,41 +77,146 @@ function handleError(res, reason, message, code) {
   res.status(code || 500).json({"error": message});
 }
 
-// app.get("/api/trucks", function(req, res) {
-//   db.collection(TRUCKS_COLLECTION).find({}).toArray(function(err, docs) {
-//     if (err) {
-//       handleError(res, err.message, "Failed to get trucks.");
-//     } else {
-//       res.status(200).json(docs);
-//     }
-//   });
-// });
+app.get("/api/trucks", function(req, res) {
+  db.collection(TRUCKS_COLLECTION).find({}).toArray(function(err, docs) {
+    if (err) {
+      handleError(res, err.message, "Failed to get trucks.");
+    } else {
+      res.status(200).json(docs);
+    }
+  });
+});
 
-// app.post("/api/trucks", function(req, res) {
-//   var newTruck = req.body;
-//   newTruck.createDate = new Date();
+app.post("/api/trucks", function(req, res) {
+  var newTruck = req.body;
+  newTruck.createDate = new Date();
 
-//   if (!req.body.name) {
-//     handleError(res, "Invalid user input", "Must provide a name.", 400);
-//   } else {
-//     db.collection(TRUCKS_COLLECTION).insertOne(newTruck, function(err, doc) {
-//       if (err) {
-//         handleError(res, err.message, "Failed to create new Truck.");
-//       } else {
-//         res.status(201).json(doc.ops[0]);
-//       }
-//     });
-//   }
-// });
-// app.get("/api/trucks/:id", function(req, res) {
-//   db.collection(trucks_COLLECTION).findOne({ _id: new ObjectID(req.params.id) }, function(err, doc) {
-//     if (err) {
-//       handleError(res, err.message, "Failed to get truck");
-//     } else {
-//       res.status(200).json(doc);
-//     }
-//   });
-// });
+  if (!req.body.name) {
+    handleError(res, "Invalid user input", "Must provide a name.", 400);
+  } else {
+    db.collection(TRUCKS_COLLECTION).insertOne(newTruck, function(err, doc) {
+      if (err) {
+        handleError(res, err.message, "Failed to create new Truck.");
+      } else {
+        res.status(201).json(doc.ops[0]);
+      }
+    });
+  }
+});
+app.get("/api/trucks/:id", function(req, res) {
+  db.collection(trucks_COLLECTION).findOne({ _id: new ObjectID(req.params.id) }, function(err, doc) {
+    if (err) {
+      handleError(res, err.message, "Failed to get truck");
+    } else {
+      res.status(200).json(doc);
+    }
+  });
+});
+  app.post("/api/trucks", function(req, res) {
+    var newTruck = req.body;
+    newTruck.createDate = new Date();
+  
+    if (!req.body.name) {
+      handleError(res, "Invalid user input", "Must provide a name.", 400);
+    } else {
+      db.collection(TRUCKS_COLLECTION).insertOne(newTruck, function(err, doc) {
+        if (err) {
+          handleError(res, err.message, "Failed to create new Truck.");
+        } else {
+          res.status(201).json(doc.ops[0]);
+        }
+      });
+    }
+  });
+  app.get("/api/trucks/:id", function(req, res) {
+    db.collection(trucks_COLLECTION).findOne({ _id: new ObjectID(req.params.id) }, function(err, doc) {
+      if (err) {
+        handleError(res, err.message, "Failed to get truck");
+      } else {
+        res.status(200).json(doc);
+      }
+    });
+  });
+  
+  app.put("/api/trucks/:id", function(req, res) {
+    var updateDoc = req.body;
+    delete updateDoc._id;
+  
+    db.collection(TRUCKS_COLLECTION).updateOne({_id: new ObjectID(req.params.id)}, updateDoc, function(err, doc) {
+      if (err) {
+        handleError(res, err.message, "Failed to update truck");
+      } else {
+        updateDoc._id = req.params.id;
+        res.status(200).json(updateDoc);
+      }
+    });
+  });
+  
+  app.delete("/api/trucks/:id", function(req, res) {
+    db.collection(TRUCKS_COLLECTION).deleteOne({_id: new ObjectID(req.params.id)}, function(err, result) {
+      if (err) {
+        handleError(res, err.message, "Failed to delete truck");
+      } else {
+        res.status(200).json(req.params.id);
+      }
+    });
+  });
+
+  
+
+//    app.post("/api/saveConsumer",function(req,res){   
+//     var mod = new model(req.body);  
+//     if(req.body.mode =="Save")  
+//     {  
+//        mod.save(function(err,data){  
+//          if(err){  
+//             res.send(err);                
+//          }  
+//          else{        
+//              res.send({data:"Record has been Inserted..!!"});  
+//          }  
+//     });  
+//    }  
+//    else   
+//    {  
+//     model.findByIdAndUpdate(req.body.id, { name: req.body.name, address: req.body.address},  
+//       function(err,data) {  
+//       if (err) {  
+//       res.send(err);         
+//       }  
+//       else{        
+//              res.send({data:"Record has been Updated..!!"});  
+//         }  
+//     });  
+     
+     
+//    }  
+//     })  
+     
+//     app.post("/api/deleteConsumer",function(req,res){      
+//        model.remove({ _id: req.body.id }, function(err) {    
+//         if(err){    
+//             res.send(err);    
+//         }    
+//         else{      
+//                res.send({data:"Record has been Deleted..!!"});               
+//            }    
+//     });    
+//       })  
+     
+     
+     
+//     app.get("/api/getConsumer",function(req,res){  
+//        model.find({},function(err,data){  
+//                  if(err){  
+//                      res.send(err);  
+//                  }  
+//                  else{                
+//                      res.send(data);  
+//                      }  
+//              });  
+//      })  
+     
 
 // app.put("/api/trucks/:id", function(req, res) {
 //   var updateDoc = req.body;
