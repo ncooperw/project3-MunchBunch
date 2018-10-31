@@ -18,7 +18,7 @@ const appRoutes: Routes = [
   },
   { path: 'owner', loadChildren: './owner/owner.module#OwnerModule' },
   { path: '', redirectTo: '', pathMatch: 'full' },
-  { path: '/api/trucks', }
+  
 ];
 
 @NgModule({

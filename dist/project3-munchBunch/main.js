@@ -5451,7 +5451,6 @@ var appRoutes = [
     },
     { path: 'owner', loadChildren: './owner/owner.module#OwnerModule' },
     { path: '', redirectTo: '', pathMatch: 'full' },
-    { path: '/api/trucks', }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
