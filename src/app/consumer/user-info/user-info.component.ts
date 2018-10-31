@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonService } from '../common.service';
+import { ConsumerService } from '../consumer.service';
 import { FormGroup, FormControl, Validators, FormsModule } from '@angular/forms';
 
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
@@ -12,7 +12,7 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 })
 export class UserInfoComponent implements OnInit {
 
-  constructor(private newService: CommonService){ }
+  constructor(private newService: ConsumerService){ }
   Repdata;
   valbutton = "Save";
 

@@ -1,0 +1,45 @@
+<div *ngIf="truck" class="row">
+  <div class="col-md-12">
+    <h2 *ngIf="truck._id">Truck Details</h2>
+    <h2 *ngIf="!truck._id">New Truck</h2>
+  </div>
+</div>
+<div *ngIf="truck" class="row">
+  <form class="col-md-12">
+    <div class="form-group">
+      <label for="truck-name">Name</label>
+      <input class="form-control" name="truck-name" [(ngModel)]="truck.name" placeholder="Name"/>
+    </div>
+    <div class="form-group">
+      <label for="truck-imgLink">Image</label>
+      <input class="form-control" name="truck-imgLink" [(ngModel)]="truck.truck-imgLink" placeholder="image"/>
+    </div>
+    <div class="form-group">
+      <label for="truck-cuisine">Cuisine</label>
+      <input class="form-control" name="truck-cuisine" [(ngModel)]="truck.cuisine" placeholder="cuisine"/>
+    </div>
+    <div class="form-group">
+      <label for="truck-description">Brief Description</label>
+      <input class="form-control" name="truck-description" [(ngModel)]="truck.description" placeholder="description"/>
+    </div>
+    <div class="form-group">
+      <label for="truck-menuLink">Menu</label>
+      <input class="form-control" name="truck-menuLink" [(ngModel)]="truck.menuLink" placeholder="menu"/>
+    </div>
+    <div class="form-group">
+      <label for="truck-price">Price</label>
+      <input class="form-control" name="truck-price" [(ngModel)]="truck.price" placeholder="$$$"/>
+    </div>
+    <div class="form-group">
+      <label for="truck-latitude">Latitude</label>
+      <input class="form-control" name="truck-latitude" [(ngModel)]="truck.latitude" placeholder="latitude"/>
+    </div>
+    <div class="form-group">
+      <label for="truck-longitude">Longitude</label>
+      <input class="form-control" name="truck-longitude" [(ngModel)]="truck.longitude" placeholder="longitude"/>
+    </div>
+    <button class="btn btn-primary" *ngIf="!truck._id" (click)="createtruck(truck)">Create</button>
+    <button class="btn btn-info" *ngIf="truck._id" (click)="updatetruck(truck)">Update</button>
+    <button class="btn btn-danger" *ngIf="truck._id" (click)="deletetruck(truck._id)">Delete</button>
+  </form>
+</div>

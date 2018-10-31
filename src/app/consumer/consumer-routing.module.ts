@@ -5,13 +5,14 @@ import { ReviewComponent } from './review/review.component';
 import { TruckSearchComponent } from './truck-search/truck-search.component';
 
 import { UserInfoComponent } from './user-info/user-info.component';
-import { TruckDetailComponent } from './truck-detail/truck-detail.component';
 import { ConsumerPageComponent } from './consumer-page/consumer-page.component';
-import { TruckListComponent } from './truck-list/truck-list.component';
+import { TruckDetailComponent } from '../trucks/truck-detail/truck-detail.component';
+import { TruckListComponent } from '../trucks/truck-list/truck-list.component';
+
 
 
 const consumerRoutes: Routes = [
-  { path: '', 
+  { path: '', pathMatch: 'full',
   component: ConsumerPageComponent },
   { path: 'reviews', component: ReviewComponent },
   { path: 'truck-search', component: TruckSearchComponent},

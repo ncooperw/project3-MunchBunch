@@ -1,9 +1,9 @@
-import { Truck } from './truck'
+import { Truck } from './trucks/truck';
 
 export const TRUCKS: Truck[] = [
 
 {
-  id: 1,
+  _id: "1",
   name: 'MC2 Ice Cream Co.',
   imgLink: 'https://static.wixstatic.com/media/b8ae15_984dfafccdb14aaea1fa0193ec572e02~mv2_d_5915_3089_s_4_2.jpg/v1/fill/w_1024,h_1024,al_c,q_85,usm_0.66_1.00_0.01/b8ae15_984dfafccdb14aaea1fa0193ec572e02~mv2_d_5915_3089_s_4_2.webp',
   cuisine: 'desserts',
@@ -17,7 +17,7 @@ export const TRUCKS: Truck[] = [
 
 },
 {
-  id: 2,
+  _id: "2",
   name: "Rollin' Bones BBQ",
   imgLink: 'https://rh-vendoradmin.s3.amazonaws.com/trucks/original/19005/5a947d86-9250-456f-9272-5cce46204482.jpg',
   cuisine: 'BBQ',

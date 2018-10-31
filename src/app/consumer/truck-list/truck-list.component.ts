@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Truck } from 'src/app/truck';
+import { Truck } from 'src/app/trucks/truck';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SearchService } from 'src/app/truckSearch.service';
+import { SearchService } from 'src/app/trucks/truckSearch.service';
+//import { SearchService } from 'src/app/truckSearch.service';
 
 @Component({
   selector: 'app-truck-list',
@@ -12,7 +13,7 @@ export class TruckListComponent implements OnInit {
 
   trucks: Truck[];
   getTrucks(): void {
-    this.searchService.getTrucks().subscribe(trucks => this.trucks = trucks);
+    // this.searchService.getTrucks().subscribe(trucks => this.trucks = trucks);
   }
   constructor(
     private route: ActivatedRoute,

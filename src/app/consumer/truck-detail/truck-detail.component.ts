@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
-import { SearchService } from 'src/app/truckSearch.service';
+//import { SearchService } from 'src/app/truck/truckSearch.service';
 import { Subscription } from 'rxjs';
 import { TRUCKS } from '../../mock-trucks';
-import { Truck } from 'src/app/truck';
+import { Truck } from 'src/app/trucks/truck';
+import { SearchService } from 'src/app/trucks/truckSearch.service';
 
 //Gives info for one truck on click from search
 

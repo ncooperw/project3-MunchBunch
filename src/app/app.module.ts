@@ -1,17 +1,12 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-//import { HttpModule } from '@angular/http';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-
 
 import { AppComponent } from './app.component';
 
-
 import { AppRoutingModule } from './app-routing.module';
-
-
-import { CommonService } from './consumer/common.service';
 
 import { AuthComponent } from './auth/auth.component';
 import { CallbackComponent } from './callback/callback.component';
@@ -22,9 +17,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AgmCoreModule } from '@agm/core';
 
-
 import { MapComponent } from './map/map.component';
-import { ConsumerAccountComponent } from './consumer-account/consumer-account.component';
+
+import { OwnerModule } from './owner/owner.module';
+import { ConsumerModule } from './consumer/consumer.module';
+import { SearchService } from './trucks/truckSearch.service';
+import { ConsumerService } from './consumer/consumer.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +30,7 @@ import { ConsumerAccountComponent } from './consumer-account/consumer-account.co
     AuthComponent,
     CallbackComponent,
     MessagesComponent,
-    ConsumerAccountComponent
+    
 
   ],
   imports: [
@@ -40,13 +38,14 @@ import { ConsumerAccountComponent } from './consumer-account/consumer-account.co
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    HttpModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCX37S57WrEFKAJO02W493eHYHBQD_uTMQ'
     }),
-
-    ReactiveFormsModule
+    ReactiveFormsModule,
+  
   ],
-  providers: [CommonService, AuthService],
+  providers: [ConsumerService, AuthService, SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

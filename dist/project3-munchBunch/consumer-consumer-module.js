@@ -81,7 +81,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <div class=\"container-fluid\">\n    <a class=\"navbar-brand\" href=\"#\">Let's Eat!</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n      <ul class=\"navbar-nav\">\n        <li class=\"nav-item active\">\n          <a class=\"nav-link\" href=\"/consumer\">Home <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"/account\">Account</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" routerLink=\"/reviews\">Reviews</a>\n        </li>\n        <li class=\"nav-item\">\n          <a routerLink= \"/search\"class=\"nav-link\" href=\"/truck-search\">Search</a>\n        </li>\n        <li class=\"nav-item\">\n            <!-- <button class=\"btn btn-primary\" (click)=\"onLogin()\">Tweet</button> -->\n          <a class=\"nav-link\" href=\"#\">Tweet</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link disabled\" href=\"#\">Fav Updates!</a>\n        </li>\n      </ul>\n    </div>\n    </div>\n  </nav>\n  <div class = \"container\">\n    <router-outlet></router-outlet>\n  </div>\n  \n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <div class=\"container-fluid\">\n    <a class=\"navbar-brand\" href=\"#\">Let's Eat!</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n      <ul class=\"navbar-nav\">\n        <li class=\"nav-item active\">\n          <a routerLink=\"/consumer\" class=\"nav-link\" href=\"/consumer\">Home <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a routerLink= \"/account\" class=\"nav-link\" href=\"/account\">Account</a>\n        </li>\n        <li class=\"nav-item\">\n          <a routerLink=\"/reviews\" class=\"nav-link\"  href=\"/review\">Reviews</a>\n        </li>\n        <li class=\"nav-item\">\n          <a routerLink= \"/search\" class=\"nav-link\" href=\"/truck-search\">Search</a>\n        </li>\n        <li class=\"nav-item\">\n            <!-- <button class=\"btn btn-primary\" (click)=\"onLogin()\">Tweet</button> -->\n          <a routerLink=\"/tweet\" class=\"nav-link\" href=\"/\">Tweet</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link disabled\" href=\"#\">Fav Updates!</a>\n        </li>\n      </ul>\n    </div>\n    </div>\n  </nav>\n  <div class = \"container\">\n    <router-outlet></router-outlet>\n  </div>\n  \n"
 
 /***/ }),
 
@@ -144,7 +144,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Welcome to Munch Bunch</h2>\n\n<app-consumer-navbar></app-consumer-navbar>\n\n<!-- <div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-12\"> -->\n      \n      <app-truck-search></app-truck-search>\n    \n  \n\n\n\n"
+module.exports = "<h2>Welcome to Munch Bunch</h2>\n\n<app-consumer-navbar></app-consumer-navbar>\n<div class=\"container bg-light\">\n  <div class=\"row\">\n    <div class=\"col-sm-6\">\n      <h5>What's Hot</h5>\n          <span><i class=\"hot text-danger fas fa-fire\"></i>\n            <i class=\"hot text-danger fas fa-fire\"></i>\n            <i class=\"hot text-danger fas fa-fire\"></i></span>\n    </div>\n    <div class=\"col-sm-6\">\n      <button class=\"btn btn-success\">Search for Food</button>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-6\">\n      <button class=\"btn btn-primary\">Tweet</button>\n    </div>\n  <div class=\"row\">\n    <div class=\"col-sm-6\">\n      <button class=\"btn btn-warning\">Find Your Friends</button>\n    </div>\n  </div>\n\n</div>\n\n\n      \n      <app-truck-search></app-truck-search>\n    \n  \n\n\n\n"
 
 /***/ }),
 
@@ -204,9 +204,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _review_review_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./review/review.component */ "./src/app/consumer/review/review.component.ts");
 /* harmony import */ var _truck_search_truck_search_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./truck-search/truck-search.component */ "./src/app/consumer/truck-search/truck-search.component.ts");
 /* harmony import */ var _user_info_user_info_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./user-info/user-info.component */ "./src/app/consumer/user-info/user-info.component.ts");
-/* harmony import */ var _truck_detail_truck_detail_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./truck-detail/truck-detail.component */ "./src/app/consumer/truck-detail/truck-detail.component.ts");
-/* harmony import */ var _consumer_page_consumer_page_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./consumer-page/consumer-page.component */ "./src/app/consumer/consumer-page/consumer-page.component.ts");
-/* harmony import */ var _truck_list_truck_list_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./truck-list/truck-list.component */ "./src/app/consumer/truck-list/truck-list.component.ts");
+/* harmony import */ var _consumer_page_consumer_page_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./consumer-page/consumer-page.component */ "./src/app/consumer/consumer-page/consumer-page.component.ts");
+/* harmony import */ var _trucks_truck_detail_truck_detail_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../trucks/truck-detail/truck-detail.component */ "./src/app/trucks/truck-detail/truck-detail.component.ts");
+/* harmony import */ var _trucks_truck_list_truck_list_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../trucks/truck-list/truck-list.component */ "./src/app/trucks/truck-list/truck-list.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -223,13 +223,13 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 var consumerRoutes = [
-    { path: '',
-        component: _consumer_page_consumer_page_component__WEBPACK_IMPORTED_MODULE_6__["ConsumerPageComponent"] },
+    { path: '', pathMatch: 'full',
+        component: _consumer_page_consumer_page_component__WEBPACK_IMPORTED_MODULE_5__["ConsumerPageComponent"] },
     { path: 'reviews', component: _review_review_component__WEBPACK_IMPORTED_MODULE_2__["ReviewComponent"] },
     { path: 'truck-search', component: _truck_search_truck_search_component__WEBPACK_IMPORTED_MODULE_3__["TruckSearchComponent"] },
     { path: 'account', component: _user_info_user_info_component__WEBPACK_IMPORTED_MODULE_4__["UserInfoComponent"] },
-    { path: ':cuisineName', component: _truck_list_truck_list_component__WEBPACK_IMPORTED_MODULE_7__["TruckListComponent"] },
-    { path: ':cuisineName/:truckId', component: _truck_detail_truck_detail_component__WEBPACK_IMPORTED_MODULE_5__["TruckDetailComponent"] },
+    { path: ':cuisineName', component: _trucks_truck_list_truck_list_component__WEBPACK_IMPORTED_MODULE_7__["TruckListComponent"] },
+    { path: ':cuisineName/:truckId', component: _trucks_truck_detail_truck_detail_component__WEBPACK_IMPORTED_MODULE_6__["TruckDetailComponent"] },
 ];
 var ConsumerRoutingModule = /** @class */ (function () {
     function ConsumerRoutingModule() {
@@ -260,24 +260,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _consumer_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./consumer-routing.module */ "./src/app/consumer/consumer-routing.module.ts");
-/* harmony import */ var _consumer_page_consumer_page_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./consumer-page/consumer-page.component */ "./src/app/consumer/consumer-page/consumer-page.component.ts");
-/* harmony import */ var _review_review_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./review/review.component */ "./src/app/consumer/review/review.component.ts");
-/* harmony import */ var _consumer_navbar_consumer_navbar_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./consumer-navbar/consumer-navbar.component */ "./src/app/consumer/consumer-navbar/consumer-navbar.component.ts");
-/* harmony import */ var _user_info_user_info_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./user-info/user-info.component */ "./src/app/consumer/user-info/user-info.component.ts");
-/* harmony import */ var _truck_search_truck_search_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./truck-search/truck-search.component */ "./src/app/consumer/truck-search/truck-search.component.ts");
-/* harmony import */ var _truck_detail_truck_detail_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./truck-detail/truck-detail.component */ "./src/app/consumer/truck-detail/truck-detail.component.ts");
-/* harmony import */ var _truck_list_truck_list_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./truck-list/truck-list.component */ "./src/app/consumer/truck-list/truck-list.component.ts");
+/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _consumer_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./consumer-routing.module */ "./src/app/consumer/consumer-routing.module.ts");
+/* harmony import */ var _consumer_page_consumer_page_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./consumer-page/consumer-page.component */ "./src/app/consumer/consumer-page/consumer-page.component.ts");
+/* harmony import */ var _review_review_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./review/review.component */ "./src/app/consumer/review/review.component.ts");
+/* harmony import */ var _consumer_navbar_consumer_navbar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./consumer-navbar/consumer-navbar.component */ "./src/app/consumer/consumer-navbar/consumer-navbar.component.ts");
+/* harmony import */ var _user_info_user_info_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./user-info/user-info.component */ "./src/app/consumer/user-info/user-info.component.ts");
+/* harmony import */ var _truck_search_truck_search_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./truck-search/truck-search.component */ "./src/app/consumer/truck-search/truck-search.component.ts");
 /* harmony import */ var _account_account_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./account/account.component */ "./src/app/consumer/account/account.component.ts");
-/* harmony import */ var _common_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./common.service */ "./src/app/consumer/common.service.ts");
+/* harmony import */ var _consumer_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./consumer.service */ "./src/app/consumer/consumer.service.ts");
 /* harmony import */ var _map_map_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../map/map.component */ "./src/app/map/map.component.ts");
 /* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
+/* harmony import */ var _trucks_truck_list_truck_list_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../trucks/truck-list/truck-list.component */ "./src/app/trucks/truck-list/truck-list.component.ts");
+/* harmony import */ var _trucks_truck_detail_truck_detail_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../trucks/truck-detail/truck-detail.component */ "./src/app/trucks/truck-detail/truck-detail.component.ts");
+/* harmony import */ var _cusines_cuisine_cuisine_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./cusines/cuisine/cuisine.component */ "./src/app/consumer/cusines/cuisine/cuisine.component.ts");
+/* harmony import */ var _search_detail_search_detail_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./search-detail/search-detail.component */ "./src/app/consumer/search-detail/search-detail.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
 
 
 
@@ -300,18 +308,172 @@ var ConsumerModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
-                _consumer_routing_module__WEBPACK_IMPORTED_MODULE_3__["ConsumerRoutingModule"],
+                _consumer_routing_module__WEBPACK_IMPORTED_MODULE_5__["ConsumerRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
-                _agm_core__WEBPACK_IMPORTED_MODULE_14__["AgmCoreModule"]
+                _angular_http__WEBPACK_IMPORTED_MODULE_3__["HttpModule"],
+                _agm_core__WEBPACK_IMPORTED_MODULE_14__["AgmCoreModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"]
             ],
-            declarations: [_consumer_page_consumer_page_component__WEBPACK_IMPORTED_MODULE_4__["ConsumerPageComponent"], _review_review_component__WEBPACK_IMPORTED_MODULE_5__["ReviewComponent"], _consumer_navbar_consumer_navbar_component__WEBPACK_IMPORTED_MODULE_6__["ConsumerNavbarComponent"], _user_info_user_info_component__WEBPACK_IMPORTED_MODULE_7__["UserInfoComponent"], _truck_search_truck_search_component__WEBPACK_IMPORTED_MODULE_8__["TruckSearchComponent"], _truck_detail_truck_detail_component__WEBPACK_IMPORTED_MODULE_9__["TruckDetailComponent"], _truck_list_truck_list_component__WEBPACK_IMPORTED_MODULE_10__["TruckListComponent"], _account_account_component__WEBPACK_IMPORTED_MODULE_11__["AccountComponent"],
-                _map_map_component__WEBPACK_IMPORTED_MODULE_13__["MapComponent"]],
-            providers: [_common_service__WEBPACK_IMPORTED_MODULE_12__["CommonService"]]
+            declarations: [
+                _consumer_page_consumer_page_component__WEBPACK_IMPORTED_MODULE_6__["ConsumerPageComponent"], _review_review_component__WEBPACK_IMPORTED_MODULE_7__["ReviewComponent"], _consumer_navbar_consumer_navbar_component__WEBPACK_IMPORTED_MODULE_8__["ConsumerNavbarComponent"], _user_info_user_info_component__WEBPACK_IMPORTED_MODULE_9__["UserInfoComponent"], _truck_search_truck_search_component__WEBPACK_IMPORTED_MODULE_10__["TruckSearchComponent"], _trucks_truck_detail_truck_detail_component__WEBPACK_IMPORTED_MODULE_16__["TruckDetailComponent"], _trucks_truck_list_truck_list_component__WEBPACK_IMPORTED_MODULE_15__["TruckListComponent"], _account_account_component__WEBPACK_IMPORTED_MODULE_11__["AccountComponent"],
+                _map_map_component__WEBPACK_IMPORTED_MODULE_13__["MapComponent"],
+                _cusines_cuisine_cuisine_component__WEBPACK_IMPORTED_MODULE_17__["CuisineComponent"],
+                _search_detail_search_detail_component__WEBPACK_IMPORTED_MODULE_18__["SearchDetailComponent"]
+            ],
+            providers: [_consumer_service__WEBPACK_IMPORTED_MODULE_12__["ConsumerService"]]
         })
     ], ConsumerModule);
     return ConsumerModule;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/consumer/cusines/cuisine.service.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/consumer/cusines/cuisine.service.ts ***!
+  \*****************************************************/
+/*! exports provided: CuisineService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CuisineService", function() { return CuisineService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_message_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/message.service */ "./src/app/message.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _mock_cuisines__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./mock-cuisines */ "./src/app/consumer/cusines/mock-cuisines.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var CuisineService = /** @class */ (function () {
+    function CuisineService(messageService) {
+        this.messageService = messageService;
+    }
+    CuisineService.prototype.getCuisines = function () {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(_mock_cuisines__WEBPACK_IMPORTED_MODULE_3__["CUISINES"]);
+    };
+    ;
+    CuisineService.prototype.getCuisine = function (id) {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(_mock_cuisines__WEBPACK_IMPORTED_MODULE_3__["CUISINES"].find(function (cuisine) { return cuisine.id === id; }));
+    };
+    CuisineService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [src_app_message_service__WEBPACK_IMPORTED_MODULE_1__["MessageService"]])
+    ], CuisineService);
+    return CuisineService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/consumer/cusines/cuisine/cuisine.component.css":
+/*!****************************************************************!*\
+  !*** ./src/app/consumer/cusines/cuisine/cuisine.component.css ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".cuisine-card {\n    width: 150px;\n    height: 150px;\n    margin: 3px;\n    border: solid 1px red;\n    box-shadow: 0 10px 18px 0 rgba(0,0,0,0.2), 0 8px 22px 0 rgba(0,0,0,0.19);\n    cursor: pointer;\n}\n.cuisine-card:hover {\n    background-color: red;\n    color: white;\n}\n.cuisine-name {\n    text-align: center;\n    font-size: 20px;\n    font-size-adjust: inherit;\n    \n}\n.cuisine-image {\n    height: 100px;\n\n}\n.hot {\n    padding: 3px;\n    font-size: 24px;\n}\n@media screen and (min-width: 300px) and (max-width: 600px) {\n.cuisine-card{\n    height: auto;\n    width: auto;\n}\nimg{\n    height: auto;\n    width: auto;\n    align-content: center;\n}\n.cuisine-name{\n    display: none;\n}\n}"
+
+/***/ }),
+
+/***/ "./src/app/consumer/cusines/cuisine/cuisine.component.html":
+/*!*****************************************************************!*\
+  !*** ./src/app/consumer/cusines/cuisine/cuisine.component.html ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-12 col-md-9\">\n      <h5>Search by cuisine</h5>\n      <div class=\"card-deck\">\n        <div class=\"row\" *ngFor=\"let cuisine of cuisines\" [class.selected]=\"cuisine === selectedCuisine\" (click)=\"onSelect(cuisine)\" >\n          <div class=\"col-sm-4 justify-content-center\">\n            <div class=\"card p-3 cuisine-card\">\n              <a routerLink=\"{{cuisine.name}}\">\n                <img class=\"card-img-top cuisine-image\" src=\"{{cuisine.imgLink}}\" alt=\"{{cuisine.name}}\">\n                <div class=\"card-body p-0\">\n                  <p class=\"cuisine-name\">{{cuisine.name}}</p>\n                </div>\n\n              </a>\n            </div>\n          </div>\n        </div>\n      </div>\n      \n    </div>\n  </div>\n</div>\n<!-- <a routerLink=\"{{cuisine.name}}\">\n  <img class=\"card-img-top cuisine-image\" src=\"../cuisineImages/salad.png\" alt=\"\">\n  <div class=\"card-body p-0\">\n    <p class=\"cuisine-name\">{{cuisine.name}}</p>\n  </div> -->\n"
+
+/***/ }),
+
+/***/ "./src/app/consumer/cusines/cuisine/cuisine.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/consumer/cusines/cuisine/cuisine.component.ts ***!
+  \***************************************************************/
+/*! exports provided: CuisineComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CuisineComponent", function() { return CuisineComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _cuisine_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../cuisine.service */ "./src/app/consumer/cusines/cuisine.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var CuisineComponent = /** @class */ (function () {
+    function CuisineComponent(cuisineService) {
+        this.cuisineService = cuisineService;
+    }
+    CuisineComponent.prototype.getCuisines = function () {
+        var _this = this;
+        this.cuisineService.getCuisines().subscribe(function (cuisines) { return _this.cuisines = cuisines; });
+    };
+    CuisineComponent.prototype.ngOnInit = function () {
+        this.getCuisines();
+    };
+    CuisineComponent.prototype.OnSelect = function (cuisines) {
+        this.selectedCuisine = cuisines;
+    };
+    CuisineComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-cuisine',
+            template: __webpack_require__(/*! ./cuisine.component.html */ "./src/app/consumer/cusines/cuisine/cuisine.component.html"),
+            styles: [__webpack_require__(/*! ./cuisine.component.css */ "./src/app/consumer/cusines/cuisine/cuisine.component.css")]
+        }),
+        __metadata("design:paramtypes", [_cuisine_service__WEBPACK_IMPORTED_MODULE_1__["CuisineService"]])
+    ], CuisineComponent);
+    return CuisineComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/consumer/cusines/mock-cuisines.ts":
+/*!***************************************************!*\
+  !*** ./src/app/consumer/cusines/mock-cuisines.ts ***!
+  \***************************************************/
+/*! exports provided: CUISINES */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CUISINES", function() { return CUISINES; });
+var CUISINES = [
+    { id: 1, name: 'American', imgLink: '../cuisineImages/american.png' },
+    { id: 2, name: 'BBQ', imgLink: '../cuisineImages/bbq.jpg' },
+    { id: 3, name: 'Italian', imgLink: '../cuisineImages/spaghetti.jpg' },
+    { id: 4, name: 'Dessert', imgLink: '../cuisineImages/cupcake.png' },
+    { id: 5, name: 'Asian', imgLink: '../cuisineImages/asian.png' },
+    { id: 5, name: 'Pizza', imgLink: '../cuisineImages/pizza.png' },
+    { id: 5, name: 'Vegetarian', imgLink: '../cuisineImages/salad.png' },
+];
 
 
 /***/ }),
@@ -379,10 +541,10 @@ var ReviewComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/consumer/truck-detail/truck-detail.component.css":
-/*!******************************************************************!*\
-  !*** ./src/app/consumer/truck-detail/truck-detail.component.css ***!
-  \******************************************************************/
+/***/ "./src/app/consumer/search-detail/search-detail.component.css":
+/*!********************************************************************!*\
+  !*** ./src/app/consumer/search-detail/search-detail.component.css ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -390,30 +552,28 @@ module.exports = ""
 
 /***/ }),
 
-/***/ "./src/app/consumer/truck-detail/truck-detail.component.html":
+/***/ "./src/app/consumer/search-detail/search-detail.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/consumer/search-detail/search-detail.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"cuisine\">\n\n  <h2>{{cuisine.name | uppercase}} Search</h2>\n  \n  <div *ngFor=\"let truck of Trucks\">\n    \n  </div>\n\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/consumer/search-detail/search-detail.component.ts":
 /*!*******************************************************************!*\
-  !*** ./src/app/consumer/truck-detail/truck-detail.component.html ***!
+  !*** ./src/app/consumer/search-detail/search-detail.component.ts ***!
   \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h2>truck name</h2>\n\n"
-
-/***/ }),
-
-/***/ "./src/app/consumer/truck-detail/truck-detail.component.ts":
-/*!*****************************************************************!*\
-  !*** ./src/app/consumer/truck-detail/truck-detail.component.ts ***!
-  \*****************************************************************/
-/*! exports provided: TruckDetailComponent */
+/*! exports provided: SearchDetailComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TruckDetailComponent", function() { return TruckDetailComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchDetailComponent", function() { return SearchDetailComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var src_app_truckSearch_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/truckSearch.service */ "./src/app/truckSearch.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -424,106 +584,20 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
-
-//Gives info for one truck on click from search
-var TruckDetailComponent = /** @class */ (function () {
-    function TruckDetailComponent(route, router, searchService) {
-        this.route = route;
-        this.router = router;
-        this.searchService = searchService;
+var SearchDetailComponent = /** @class */ (function () {
+    function SearchDetailComponent() {
     }
-    TruckDetailComponent.prototype.ngOnInit = function () {
-        //this.truck = this.route.paramMap.pipe(switchMap((params: ParamMap) => this.searchService.getTruck(params.get('id'))));
+    SearchDetailComponent.prototype.ngOnInit = function () {
     };
-    TruckDetailComponent = __decorate([
+    SearchDetailComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-truck-detail',
-            template: __webpack_require__(/*! ./truck-detail.component.html */ "./src/app/consumer/truck-detail/truck-detail.component.html"),
-            styles: [__webpack_require__(/*! ./truck-detail.component.css */ "./src/app/consumer/truck-detail/truck-detail.component.css")]
+            selector: 'app-search-detail',
+            template: __webpack_require__(/*! ./search-detail.component.html */ "./src/app/consumer/search-detail/search-detail.component.html"),
+            styles: [__webpack_require__(/*! ./search-detail.component.css */ "./src/app/consumer/search-detail/search-detail.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
-            src_app_truckSearch_service__WEBPACK_IMPORTED_MODULE_2__["SearchService"]])
-    ], TruckDetailComponent);
-    return TruckDetailComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/consumer/truck-list/truck-list.component.css":
-/*!**************************************************************!*\
-  !*** ./src/app/consumer/truck-list/truck-list.component.css ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/consumer/truck-list/truck-list.component.html":
-/*!***************************************************************!*\
-  !*** ./src/app/consumer/truck-list/truck-list.component.html ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "    <div class=\"container\">\n        <div class=\"card-deck\">\n          <!-- ngonit for gettrucks() -->\n            <div *ngFor=\"let truck of trucks\" class=\"row \">\n              <div class=\"col-sm-4 justify-content-center\">\n                <div class=\"card p-3 truck-card\">\n                  <a routerLink=\"{{cuisine.name}}/{{truck.id}}\">\n                  <img class=\"card-img-top truck-image\" src=\"{{truck.imgLink}}\" alt=\"{{truck.name}}\">\n                  <div class=\"card-body p-0\">\n                    <p class=\"text-center font-weight-bold\">{{truck.name}}\n                      <br>\n                      {{truck.price}}\n                      <br>\n                      <a href=\"{{truck.menuLink}}\">Website</a>\n                    </p>\n                  </div>\n          \n                  </a>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>"
-
-/***/ }),
-
-/***/ "./src/app/consumer/truck-list/truck-list.component.ts":
-/*!*************************************************************!*\
-  !*** ./src/app/consumer/truck-list/truck-list.component.ts ***!
-  \*************************************************************/
-/*! exports provided: TruckListComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TruckListComponent", function() { return TruckListComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var src_app_truckSearch_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/truckSearch.service */ "./src/app/truckSearch.service.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var TruckListComponent = /** @class */ (function () {
-    function TruckListComponent(route, router, searchService) {
-        this.route = route;
-        this.router = router;
-        this.searchService = searchService;
-    }
-    TruckListComponent.prototype.getTrucks = function () {
-        var _this = this;
-        this.searchService.getTrucks().subscribe(function (trucks) { return _this.trucks = trucks; });
-    };
-    TruckListComponent.prototype.ngOnInit = function () {
-        this.getTrucks();
-    };
-    TruckListComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-truck-list',
-            template: __webpack_require__(/*! ./truck-list.component.html */ "./src/app/consumer/truck-list/truck-list.component.html"),
-            styles: [__webpack_require__(/*! ./truck-list.component.css */ "./src/app/consumer/truck-list/truck-list.component.css")]
-        }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
-            src_app_truckSearch_service__WEBPACK_IMPORTED_MODULE_2__["SearchService"]])
-    ], TruckListComponent);
-    return TruckListComponent;
+        __metadata("design:paramtypes", [])
+    ], SearchDetailComponent);
+    return SearchDetailComponent;
 }());
 
 
@@ -548,7 +622,7 @@ module.exports = ".cuisine-card {\n    width: 150px;\n    height: 150px;\n    ma
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n  <div class=\"row\">\n      <div class=\"col-sm-12 col-md-3\">\n          <h5>What's Hot</h5>\n          <span><i class=\"hot text-danger fas fa-fire\"></i>\n            <i class=\"hot text-danger fas fa-fire\"></i>\n            <i class=\"hot text-danger fas fa-fire\"></i></span>\n        </div>\n    <div class=\"col-sm-12 col-md-9\">\n      <h5>Search by cuisine</h5>\n      <div class=\"card-deck\">\n        <div *ngFor=\"let cuisine of cuisines\" class=\"row \">\n          <div class=\"col-sm-4 justify-content-center\">\n            <div class=\"card p-3 cuisine-card\">\n              <a routerLink=\"{{cuisine.name}}\">\n                <img class=\"card-img-top cuisine-image\" src=\"{{cuisine.imgLink}}\" alt=\"{{cuisine.name}}\">\n                <div class=\"card-body p-0\">\n                  <p class=\"cuisine-name\">{{cuisine.name}}</p>\n                </div>\n\n              </a>\n            </div>\n          </div>\n        </div>\n      </div>\n      \n    </div>\n  </div>\n</div>\n<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <h3>Search by Map</h3>\n    \n    <app-map></app-map>\n  </div>\n\n</div>\n"
+module.exports = "<div class=\"container-fluid\">\n  <app-cuisine></app-cuisine>\n</div>\n<div class=\"container\">\n  <app-truck-list></app-truck-list>\n</div>\n<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <h3>Search by Map</h3>\n    \n    <app-map></app-map>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -563,7 +637,8 @@ module.exports = "<div class=\"container-fluid\">\n  <div class=\"row\">\n      
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TruckSearchComponent", function() { return TruckSearchComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _truckSearch_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../truckSearch.service */ "./src/app/truckSearch.service.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _trucks_truckSearch_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../trucks/truckSearch.service */ "./src/app/trucks/truckSearch.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -575,21 +650,28 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+// import { Cuisine } from '../../cuisine';
+// import { CUISINES } from '../../mock-cuisines';
+
 var TruckSearchComponent = /** @class */ (function () {
-    function TruckSearchComponent(searchService) {
+    function TruckSearchComponent(searchService, client) {
         this.searchService = searchService;
+        this.client = client;
     }
-    TruckSearchComponent.prototype.getCuisines = function () {
-        var _this = this;
-        this.searchService.getCuisines().subscribe(function (cuisines) { return _this.cuisines = cuisines; });
-    };
     TruckSearchComponent.prototype.getTrucks = function () {
-        var _this = this;
-        this.searchService.getTrucks().subscribe(function (trucks) { return _this.trucks = trucks; });
+        return this.searchService.getTrucks();
+        //.subscribe(trucks => this.trucks = trucks);
     };
+    // cuisines: Cuisine[];
+    // getCuisines(): void {
+    //  this.searchService.getCuisines().subscribe(cuisines => this.cuisines = cuisines);
+    // }
     TruckSearchComponent.prototype.ngOnInit = function () {
-        this.getCuisines();
+        //this.getCuisines();
         this.getTrucks();
+    };
+    TruckSearchComponent.prototype.onSelect = function (trucks) {
+        this.selectedTruck = trucks;
     };
     TruckSearchComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -597,7 +679,8 @@ var TruckSearchComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./truck-search.component.html */ "./src/app/consumer/truck-search/truck-search.component.html"),
             styles: [__webpack_require__(/*! ./truck-search.component.css */ "./src/app/consumer/truck-search/truck-search.component.css")]
         }),
-        __metadata("design:paramtypes", [_truckSearch_service__WEBPACK_IMPORTED_MODULE_1__["SearchService"]])
+        __metadata("design:paramtypes", [_trucks_truckSearch_service__WEBPACK_IMPORTED_MODULE_2__["SearchService"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
     ], TruckSearchComponent);
     return TruckSearchComponent;
 }());
@@ -639,7 +722,7 @@ module.exports = "<!-- <form #userForm=\"ngForm\"   (ngSubmit)=\"onSave(userForm
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserInfoComponent", function() { return UserInfoComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _common_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../common.service */ "./src/app/consumer/common.service.ts");
+/* harmony import */ var _consumer_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../consumer.service */ "./src/app/consumer/consumer.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -681,7 +764,7 @@ var UserInfoComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./user-info.component.html */ "./src/app/consumer/user-info/user-info.component.html"),
             styles: [__webpack_require__(/*! ./user-info.component.css */ "./src/app/consumer/user-info/user-info.component.css")]
         }),
-        __metadata("design:paramtypes", [_common_service__WEBPACK_IMPORTED_MODULE_1__["CommonService"]])
+        __metadata("design:paramtypes", [_consumer_service__WEBPACK_IMPORTED_MODULE_1__["ConsumerService"]])
     ], UserInfoComponent);
     return UserInfoComponent;
 }());
@@ -783,52 +866,42 @@ var MapComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/mock-cuisines.ts":
-/*!**********************************!*\
-  !*** ./src/app/mock-cuisines.ts ***!
-  \**********************************/
-/*! exports provided: CUISINES */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/trucks/truck-detail/truck-detail.component.css":
+/*!****************************************************************!*\
+  !*** ./src/app/trucks/truck-detail/truck-detail.component.css ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CUISINES", function() { return CUISINES; });
-var CUISINES = [
-    // {id: 1, name: 'American', imgLink: 'https://cdn.pixabay.com/photo/2012/04/14/15/37/cheeseburger-34314_1280.png '},
-    // {id: 2, name: 'BBQ', imgLink: 'https://cdn.pixabay.com/photo/2014/12/21/23/24/spare-ribs-575310_1280.png'},
-    // {id: 3, name: 'Italian', imgLink: 'https://cdn.pixabay.com/photo/2014/12/21/23/56/pasta-576417_1280.png'},
-    // {id: 4, name: 'Dessert', imgLink: 'https://cdn.pixabay.com/photo/2013/07/13/10/26/cake-157234_1280.png'},
-    // {id: 5, name: 'Asian', imgLink: 'https://cdn.pixabay.com/photo/2014/12/22/00/00/food-576547_1280.png'},
-    // {id: 5, name: 'Pizza', imgLink: 'https://cdn.pixabay.com/photo/2014/12/21/23/48/pizza-576085_1280.png'},
-    // {id: 5, name: 'Vegetarian', imgLink: 'https://cdn.pixabay.com/photo/2014/12/21/23/29/salad-575436_1280.png'},
-    { id: 1, name: 'American', imgLink: './assets/images/cuisineImages/' },
-    { id: 2, name: 'BBQ', imgLink: 'https://cdn.pixabay.com/photo/2014/12/21/23/24/spare-ribs-575310_1280.png' },
-    { id: 3, name: 'Italian', imgLink: 'https://cdn.pixabay.com/photo/2014/12/21/23/56/pasta-576417_1280.png' },
-    { id: 4, name: 'Dessert', imgLink: 'https://cdn.pixabay.com/photo/2013/07/13/10/26/cake-157234_1280.png' },
-    { id: 5, name: 'Asian', imgLink: 'https://cdn.pixabay.com/photo/2014/12/22/00/00/food-576547_1280.png' },
-    { id: 5, name: 'Pizza', imgLink: 'https://cdn.pixabay.com/photo/2014/12/21/23/48/pizza-576085_1280.png' },
-    { id: 5, name: 'Vegetarian', imgLink: 'https://cdn.pixabay.com/photo/2014/12/21/23/29/salad-575436_1280.png' },
-];
-
+module.exports = ""
 
 /***/ }),
 
-/***/ "./src/app/truckSearch.service.ts":
-/*!****************************************!*\
-  !*** ./src/app/truckSearch.service.ts ***!
-  \****************************************/
-/*! exports provided: SearchService */
+/***/ "./src/app/trucks/truck-detail/truck-detail.component.html":
+/*!*****************************************************************!*\
+  !*** ./src/app/trucks/truck-detail/truck-detail.component.html ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"truck\" class=\"row\">\n  <div class=\"col-md-12\">\n    <h2 *ngIf=\"truck._id\">Truck Details</h2>\n    <h2 *ngIf=\"!truck._id\">New Truck</h2>\n  </div>\n</div>\n<div *ngIf=\"truck\" class=\"row\">\n  <form class=\"col-md-12\">\n    <div class=\"form-group\">\n      <label for=\"truck-name\">Name</label>\n      <input class=\"form-control\" name=\"truck-name\" [(ngModel)]=\"truck.name\" placeholder=\"Name\"/>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"truck-imgLink\">Image</label>\n      <input class=\"form-control\" name=\"truck-imgLink\" [(ngModel)]=\"truck.truck-imgLink\" placeholder=\"image\"/>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"truck-cuisine\">Cuisine</label>\n      <input class=\"form-control\" name=\"truck-cuisine\" [(ngModel)]=\"truck.cuisine\" placeholder=\"cuisine\"/>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"truck-description\">Brief Description</label>\n      <input class=\"form-control\" name=\"truck-description\" [(ngModel)]=\"truck.description\" placeholder=\"description\"/>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"truck-menuLink\">Menu</label>\n      <input class=\"form-control\" name=\"truck-menuLink\" [(ngModel)]=\"truck.menuLink\" placeholder=\"menu\"/>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"truck-price\">Price</label>\n      <input class=\"form-control\" name=\"truck-price\" [(ngModel)]=\"truck.price\" placeholder=\"$$$\"/>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"truck-latitude\">Latitude</label>\n      <input class=\"form-control\" name=\"truck-latitude\" [(ngModel)]=\"truck.latitude\" placeholder=\"latitude\"/>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"truck-longitude\">Longitude</label>\n      <input class=\"form-control\" name=\"truck-longitude\" [(ngModel)]=\"truck.longitude\" placeholder=\"longitude\"/>\n    </div>\n    <button class=\"btn btn-primary\" *ngIf=\"!truck._id\" (click)=\"createtruck(truck)\">Create</button>\n    <button class=\"btn btn-info\" *ngIf=\"truck._id\" (click)=\"updatetruck(truck)\">Update</button>\n    <button class=\"btn btn-danger\" *ngIf=\"truck._id\" (click)=\"deletetruck(truck._id)\">Delete</button>\n  </form>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/trucks/truck-detail/truck-detail.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/trucks/truck-detail/truck-detail.component.ts ***!
+  \***************************************************************/
+/*! exports provided: TruckDetailComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchService", function() { return SearchService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TruckDetailComponent", function() { return TruckDetailComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var _message_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./message.service */ "./src/app/message.service.ts");
-/* harmony import */ var _mock_cuisines__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./mock-cuisines */ "./src/app/mock-cuisines.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _truck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../truck */ "./src/app/trucks/truck.ts");
+/* harmony import */ var src_app_trucks_truckSearch_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/trucks/truckSearch.service */ "./src/app/trucks/truckSearch.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -842,107 +915,220 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
-
-//import { TRUCKS } from './mock-trucks';
-var httpOptions = {
-    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({ 'Content-Type': 'application/json' })
-};
-var SearchService = /** @class */ (function () {
-    function SearchService(http, messageService) {
-        this.http = http;
-        this.messageService = messageService;
-        this.trucksUrl = 'api/trucks';
+var TruckDetailComponent = /** @class */ (function () {
+    function TruckDetailComponent(route, router, searchService) {
+        this.route = route;
+        this.router = router;
+        this.searchService = searchService;
     }
-    ;
-    /** GET trucks from the server */
-    SearchService.prototype.getTrucks = function () {
+    TruckDetailComponent.prototype.createTruck = function (truck) {
         var _this = this;
-        return this.http.get(this.trucksUrl)
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function (trucks) { return _this.log('fetched trucks'); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError('gettrucks', [])));
+        this.searchService.createTruck(truck).then(function (newTruck) {
+            _this.createHandler(newTruck);
+        });
     };
-    /** GET Truck by id. Return `undefined` when id not found */
-    SearchService.prototype.getTruckNo404 = function (id) {
+    TruckDetailComponent.prototype.updateTruck = function (truck) {
         var _this = this;
-        var url = this.trucksUrl + "/?id=" + id;
-        return this.http.get(url)
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (trucks) { return trucks[0]; }), // returns a {0|1} element array
-        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function (h) {
-            var outcome = h ? "fetched" : "did not find";
-            _this.log(outcome + " Truck id=" + id);
-        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError("getTruck id=" + id)));
+        this.searchService.updateTruck(truck).then(function (updatedTruck) {
+            _this.updateHandler(updatedTruck);
+        });
     };
-    /** GET Truck by id. Will 404 if id not found */
-    SearchService.prototype.getTruck = function (id) {
+    TruckDetailComponent.prototype.deleteTruck = function (TruckId) {
         var _this = this;
-        var url = this.trucksUrl + "/" + id;
-        return this.http.get(url).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function (_) { return _this.log("fetched Truck id=" + id); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError("getTruck id=" + id)));
+        this.searchService.deleteTruck(TruckId).then(function (deletedTruckId) {
+            _this.deleteHandler(deletedTruckId);
+        });
     };
-    /* GET trucks whose name contains search term */
-    SearchService.prototype.searchtrucks = function (term) {
-        var _this = this;
-        if (!term.trim()) {
-            // if not search term, return empty Truck array.
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])([]);
-        }
-        return this.http.get(this.trucksUrl + "/?name=" + term).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function (_) { return _this.log("found trucks matching \"" + term + "\""); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError('searchtrucks', [])));
+    TruckDetailComponent.prototype.ngOnInit = function () {
     };
-    //////// Save methods //////////
-    /** POST: add a new Truck to the server */
-    SearchService.prototype.addTruck = function (Truck) {
-        var _this = this;
-        return this.http.post(this.trucksUrl, Truck, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function (Truck) { return _this.log("added Truck w/ id=" + Truck.id); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError('addTruck')));
-    };
-    /** DELETE: delete the Truck from the server */
-    SearchService.prototype.deleteTruck = function (Truck) {
-        var _this = this;
-        var id = typeof Truck === 'number' ? Truck : Truck.id;
-        var url = this.trucksUrl + "/" + id;
-        return this.http.delete(url, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function (_) { return _this.log("deleted Truck id=" + id); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError('deleteTruck')));
-    };
-    /** PUT: update the Truck on the server */
-    SearchService.prototype.updateTruck = function (Truck) {
-        var _this = this;
-        return this.http.put(this.trucksUrl, Truck, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function (_) { return _this.log("updated Truck id=" + Truck.id); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError('updateTruck')));
-    };
-    /**
-     * Handle Http operation that failed.
-     * Let the app continue.
-     * @param operation - name of the operation that failed
-     * @param result - optional value to return as the observable result
-     */
-    SearchService.prototype.handleError = function (operation, result) {
-        var _this = this;
-        if (operation === void 0) { operation = 'operation'; }
-        return function (error) {
-            // TODO: send the error to remote logging infrastructure
-            console.error(error); // log to console instead
-            // TODO: better job of transforming error for user consumption
-            _this.log(operation + " failed: " + error.message);
-            // Let the app keep running by returning an empty result.
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(result);
-        };
-    };
-    /** Log a TruckService message with the MessageService */
-    SearchService.prototype.log = function (message) {
-        this.messageService.add("TruckService: " + message);
-    };
-    SearchService.prototype.getCuisines = function () {
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(_mock_cuisines__WEBPACK_IMPORTED_MODULE_5__["CUISINES"]);
-    };
-    SearchService.prototype.getCuisine = function (id) {
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(_mock_cuisines__WEBPACK_IMPORTED_MODULE_5__["CUISINES"].find(function (cuisine) { return cuisine.id === id; }));
-    };
-    SearchService = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
-            providedIn: 'root'
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", _truck__WEBPACK_IMPORTED_MODULE_2__["Truck"])
+    ], TruckDetailComponent.prototype, "truck", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Function)
+    ], TruckDetailComponent.prototype, "createHandler", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Function)
+    ], TruckDetailComponent.prototype, "updateHandler", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Function)
+    ], TruckDetailComponent.prototype, "deleteHandler", void 0);
+    TruckDetailComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-truck-detail',
+            template: __webpack_require__(/*! ./truck-detail.component.html */ "./src/app/trucks/truck-detail/truck-detail.component.html"),
+            styles: [__webpack_require__(/*! ./truck-detail.component.css */ "./src/app/trucks/truck-detail/truck-detail.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"],
-            _message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"]])
-    ], SearchService);
-    return SearchService;
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
+            src_app_trucks_truckSearch_service__WEBPACK_IMPORTED_MODULE_3__["SearchService"]])
+    ], TruckDetailComponent);
+    return TruckDetailComponent;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/trucks/truck-list/truck-list.component.css":
+/*!************************************************************!*\
+  !*** ./src/app/trucks/truck-list/truck-list.component.css ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/trucks/truck-list/truck-list.component.html":
+/*!*************************************************************!*\
+  !*** ./src/app/trucks/truck-list/truck-list.component.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-5\">\n    <h2>trucks</h2>\n    <ul class=\"list-group\">\n      <li class=\"list-group-item\"\n        *ngFor=\"let truck of trucks\"\n        (click)=\"selectTruck(truck)\"\n        [class.active]=\"truck === selectedTruck\">\n        {{truck.name}}\n      </li>\n    </ul>\n    <button class=\"btn btn-warning\" (click)=\"createNewTruck()\">New</button>\n  </div>\n  <div class=\"col-md-5 col-md-offset-2\">\n    <app-truck-detail\n      [truck]=\"selectedTruck\"\n      [createHandler]=\"addTruck\"\n      [updateHandler]=\"updateTruck\"\n      [deleteHandler]=\"deleteTruck\">\n    </app-truck-detail>\n  </div>\n</div>\n\n    \n    <!-- <div class=\"container\">\n        <div class=\"card-deck\"> -->\n          <!-- ngonit for gettrucks() -->\n            <!-- <div *ngFor=\"let truck of trucks\" class=\"row \">\n              <div class=\"col-sm-4 justify-content-center\">\n                <div class=\"card p-3 truck-card\">\n                  <a routerLink=\"{{cuisine.name}}/{{truck.id}}\">\n                  <img class=\"card-img-top truck-image\" src=\"{{truck.imgLink}}\" alt=\"{{truck.name}}\">\n                  <div class=\"card-body p-0\">\n                    <p class=\"text-center font-weight-bold\">{{truck.name}}\n                      <br>\n                      {{truck.price}}\n                      <br>\n                      <a href=\"{{truck.menuLink}}\">Website</a>\n                    </p>\n                  </div>\n          \n                  </a>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div> -->"
+
+/***/ }),
+
+/***/ "./src/app/trucks/truck-list/truck-list.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/trucks/truck-list/truck-list.component.ts ***!
+  \***********************************************************/
+/*! exports provided: TruckListComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TruckListComponent", function() { return TruckListComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var src_app_trucks_truckSearch_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/trucks/truckSearch.service */ "./src/app/trucks/truckSearch.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+//import { TruckDetailComponent } from '../trucks/truck-detail/truck-detail.component';
+var TruckListComponent = /** @class */ (function () {
+    function TruckListComponent(route, router, searchService) {
+        var _this = this;
+        this.route = route;
+        this.router = router;
+        this.searchService = searchService;
+        this.getIndexOfTruck = function (truckId) {
+            return _this.trucks.findIndex(function (truck) {
+                return truck._id === truckId;
+            });
+        };
+        this.deletetruck = function (truckId) {
+            var idx = _this.getIndexOfTruck(truckId);
+            if (idx !== -1) {
+                _this.trucks.splice(idx, 1);
+                _this.selectTruck(null);
+            }
+            return _this.trucks;
+        };
+        this.addtruck = function (truck) {
+            _this.trucks.push(truck);
+            _this.selectTruck(truck);
+            return _this.trucks;
+        };
+        this.updatetruck = function (truck) {
+            var idx = _this.getIndexOfTruck(truck._id);
+            if (idx !== -1) {
+                _this.trucks[idx] = truck;
+                _this.selectTruck(truck);
+            }
+            return _this.trucks;
+        };
+    }
+    // getTrucks(): void {
+    //   this.searchService.getTrucks().subscribe(trucks => this.trucks = trucks);
+    // }
+    TruckListComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        // this.getTrucks();
+        this.searchService
+            .getTrucks()
+            .then(function (trucks) {
+            _this.trucks = trucks.map(function (truck) {
+                if (!truck.location) {
+                    truck.location = {
+                        latitude: 39.7392,
+                        longitude: 104.9903
+                    };
+                }
+                return truck;
+            });
+        });
+    };
+    TruckListComponent.prototype.selectTruck = function (truck) {
+        this.selectedTruck = truck;
+    };
+    TruckListComponent.prototype.createNewtruck = function () {
+        var truck = {
+            name: '',
+            imgLink: '',
+            cuisine: '',
+            description: '',
+            menuLink: '',
+            price: '',
+            location: {
+                latitude: 0,
+                longitude: 0
+            }
+        };
+        // By default, a newly-created truck will have the selected state.
+        this.selectTruck(truck);
+    };
+    TruckListComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-truck-list',
+            template: __webpack_require__(/*! ./truck-list.component.html */ "./src/app/trucks/truck-list/truck-list.component.html"),
+            styles: [__webpack_require__(/*! ./truck-list.component.css */ "./src/app/trucks/truck-list/truck-list.component.css")],
+            providers: [src_app_trucks_truckSearch_service__WEBPACK_IMPORTED_MODULE_2__["SearchService"]]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
+            src_app_trucks_truckSearch_service__WEBPACK_IMPORTED_MODULE_2__["SearchService"]])
+    ], TruckListComponent);
+    return TruckListComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/trucks/truck.ts":
+/*!*********************************!*\
+  !*** ./src/app/trucks/truck.ts ***!
+  \*********************************/
+/*! exports provided: Truck */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Truck", function() { return Truck; });
+var Truck = /** @class */ (function () {
+    function Truck() {
+    }
+    return Truck;
+}());
+
+;
 
 
 /***/ })
