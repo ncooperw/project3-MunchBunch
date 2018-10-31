@@ -32,6 +32,21 @@ export class TruckListComponent implements OnInit {
   // }
   ngOnInit() {
   // this.getTrucks();
+<<<<<<< HEAD
+  // this.searchService
+  // .getTrucks()
+  // .then((trucks: Truck[]) => {
+  //   this.trucks = trucks.map((truck) => {
+  //     if (!truck.location) {
+  //       truck.location = {
+  //         latitude: 39.7392,
+  //         longitude: 104.9903
+  //       }
+  //     }
+  //     return truck;
+  //   });
+  // });
+=======
   this.commonService
   .getTrucks()
   .then((trucks: Truck[]) => {
@@ -45,6 +60,7 @@ export class TruckListComponent implements OnInit {
       return truck;
     });
   });
+>>>>>>> master
   }
   private getIndexOfTruck = (truckId: String) => {
     return this.trucks.findIndex((truck) => {
