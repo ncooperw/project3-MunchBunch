@@ -5436,6 +5436,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5445,12 +5446,13 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var appRoutes = [
     {
         path: 'consumer', loadChildren: './consumer/consumer.module#ConsumerModule',
     },
     { path: 'owner', loadChildren: './owner/owner.module#OwnerModule' },
-    { path: '', redirectTo: '', pathMatch: 'full' },
+    { path: '', component: _login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"], pathMatch: 'full' }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -5481,7 +5483,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\nbody{\n    /* background-image: linear-gradient(#f1676b,white);\n     */\n  }\n\n\n\nh1{\n    font-size: 89px;\n    font-family: 'Luckiest Guy', cursive;\n    text-align: center;\n}\n\n\n\nh6{\n    font-size: 40px;\n    font-family: 'Luckiest Guy', cursive;\n    text-align: center;\n}\n\n\n\n.card-img-top {\nheight: 100px;\nwidth: 100px;\ntext-align: center;\n}\n\n\n\n.card{\n    position: relative;\n    display: flex;\n    border: none;\n    min-width: 0;\n    word-wrap: break-word;\n    /* background-color: #e8ebef; */\n    border-radius: .25rem;\n    /* opacity: .4; */\n}\n\n\n\n.container,.conatinerheader{\n    align-content: center;\n}\n\n\n\n.jumbotron{\n   background-image: url('https://cdn.dribbble.com/users/76620/screenshots/1909179/foodpattern-drbl800.gif');\n   /* background-repeat: no-repeat; */\n   width: 100%;\n   -ms-grid-row-align: auto;\n       align-self: auto;\n}\n\n\n\n.animated{\n    /* animation-delay: 2s; */\n}\n\n"
+module.exports = "\n\n"
 
 /***/ }),
 
@@ -5492,7 +5494,7 @@ module.exports = "\nbody{\n    /* background-image: linear-gradient(#f1676b,whit
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"animated fadeInUp\">\n  <h1>Munch Bunch</h1>\n  <br>\n  <h6>What are you going to munch on today.</h6>\n</div>\n<br>\n<br>\n\n<div class=\"spacer\"></div>\n<div class=\"jumbotron jumbotron-fluid animated fadeInUp\">\n  <div class=\"container\">\n    <div class=\"row\">\n      \n      <div class=\"col-sm\">\n        <div class=\"card\" style=\"width: 6rem;\">\n          <img class=\"card-img-top\" src=\"../assets/images/pexels-photo-693267 (1).jpeg\" alt=\"Card image cap\">\n          <div class=\"card-body\">\n            <a routerLink=\"/consumer\" routerLinkActive=\"active\">Consumer Page</a>\n            \n            <!-- <button class=\"consumer\" routerLinkActive=\"active\" routerLink=\"./consumer\" ng-click=\"\">Consumer</button> -->\n          </div>\n        </div>\n      </div>\n      <div class=\"col sm\"></div>\n      <div class=\"col-sm\">\n        <div class=\"card\" style=\"width: 6rem;\">\n          <img class=\"card-img-top\" src=\"../assets/images/owner photo for munch bunch.jpeg\" alt=\"Card image cap\">\n          <div class=\"card-body\">\n            <a routerLink=\"/owner\" routerLinkActive=\"active\">Owner Page</a>\n            <!-- <button class=\"owner\" routerLink=\"./owner\">Owner</button> -->\n          </div>\n        </div>\n      </div>\n      <div class=\"col sm\"></div>\n      <div class=\"col-sm\">\n        <div class=\"card\" style=\"width: 6rem;\">\n          <img class=\"card-img-top\" src=\"https://thumbs.dreamstime.com/z/wallpaper-theme-fast-food-takeaway-every-taste-107879612.jpg\"\n            alt=\"Card image cap\">\n          <div class=\"card-body\">\n            <button class=\"home\" routerLink=\"\">Home</button>\n          <!-- </div> -->\n        </div>\n      </div>\n      <router-outlet></router-outlet>\n    </div>\n  </div>"
+module.exports = "\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -5557,14 +5559,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./auth.service */ "./src/app/auth.service.ts");
 /* harmony import */ var _messages_messages_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./messages/messages.component */ "./src/app/messages/messages.component.ts");
 /* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
-/* harmony import */ var _trucks_truckSearch_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./trucks/truckSearch.service */ "./src/app/trucks/truckSearch.service.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
 /* harmony import */ var _consumer_consumer_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./consumer/consumer.service */ "./src/app/consumer/consumer.service.ts");
+/* harmony import */ var _trucks_truckSearch_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./trucks/truckSearch.service */ "./src/app/trucks/truckSearch.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -5590,6 +5594,7 @@ var AppModule = /** @class */ (function () {
                 _auth_auth_component__WEBPACK_IMPORTED_MODULE_7__["AuthComponent"],
                 _callback_callback_component__WEBPACK_IMPORTED_MODULE_8__["CallbackComponent"],
                 _messages_messages_component__WEBPACK_IMPORTED_MODULE_10__["MessagesComponent"],
+                _login_login_component__WEBPACK_IMPORTED_MODULE_12__["LoginComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -5602,7 +5607,7 @@ var AppModule = /** @class */ (function () {
                 }),
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
             ],
-            providers: [_consumer_consumer_service__WEBPACK_IMPORTED_MODULE_13__["ConsumerService"], _auth_service__WEBPACK_IMPORTED_MODULE_9__["AuthService"], _trucks_truckSearch_service__WEBPACK_IMPORTED_MODULE_12__["SearchService"]],
+            providers: [_consumer_consumer_service__WEBPACK_IMPORTED_MODULE_13__["ConsumerService"], _auth_service__WEBPACK_IMPORTED_MODULE_9__["AuthService"], _trucks_truckSearch_service__WEBPACK_IMPORTED_MODULE_14__["SearchService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
@@ -5898,6 +5903,69 @@ var ConsumerService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/login/login.component.css":
+/*!*******************************************!*\
+  !*** ./src/app/login/login.component.css ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\nbody{\n    /* background-image: linear-gradient(#f1676b,white);\n     */\n  }\n\n\n\nh1{\n    font-size: 89px;\n    font-family: 'Luckiest Guy', cursive;\n    text-align: center;\n}\n\n\n\nh6{\n    font-size: 40px;\n    font-family: 'Luckiest Guy', cursive;\n    text-align: center;\n}\n\n\n\n.card-img-top {\nheight: 100px;\nwidth: 100px;\ntext-align: center;\n}\n\n\n\n.card{\n    position: relative;\n    display: flex;\n    border: none;\n    min-width: 0;\n    word-wrap: break-word;\n    /* background-color: #e8ebef; */\n    border-radius: .25rem;\n    /* opacity: .4; */\n}\n\n\n\n.container,.conatinerheader{\n    align-content: center;\n}\n\n\n\n.jumbotron{\n   background-image: url('https://cdn.dribbble.com/users/76620/screenshots/1909179/foodpattern-drbl800.gif');\n   /* background-repeat: no-repeat; */\n   width: 100%;\n   -ms-grid-row-align: auto;\n       align-self: auto;\n}\n\n\n\n.animated{\n    /* animation-delay: 2s; */\n}\n\n"
+
+/***/ }),
+
+/***/ "./src/app/login/login.component.html":
+/*!********************************************!*\
+  !*** ./src/app/login/login.component.html ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"animated fadeInUp\">\n  <h1>Munch Bunch</h1>\n  <br>\n  <h6>What are you going to munch on today?</h6>\n</div>\n<br>\n<br>\n\n<div class=\"spacer\"></div>\n<div class=\"jumbotron jumbotron-fluid animated fadeInUp\">\n  <div class=\"container\">\n    <div class=\"row\">\n      \n      <div class=\"col-sm\">\n        <div class=\"card\" style=\"width: 6rem;\">\n          <img class=\"card-img-top\" src=\"../assets/images/pexels-photo-693267 (1).jpeg\" alt=\"Card image cap\">\n          <div class=\"card-body\">\n            <button class=\"consumer\" routerLinkActive=\"active\" routerLink=\"./consumer\" ng-click=\"\">Consumer</button>\n          </div>\n        </div>\n      </div>\n      <div class=\"col sm\"></div>\n      <div class=\"col-sm\">\n        <div class=\"card\" style=\"width: 6rem;\">\n          <img class=\"card-img-top\" src=\"../assets/images/owner photo for munch bunch.jpeg\" alt=\"Card image cap\">\n          <div class=\"card-body\">\n            <button class=\"owner\" routerLink=\"/owner\">Owner</button>\n          </div>\n        </div>\n      </div>\n      <div class=\"col sm\"></div>\n      <div class=\"col-sm\">\n        <div class=\"card\" style=\"width: 6rem;\">\n          <img class=\"card-img-top\" src=\"https://thumbs.dreamstime.com/z/wallpaper-theme-fast-food-takeaway-every-taste-107879612.jpg\"\n            alt=\"Card image cap\">\n          <div class=\"card-body\">\n            <button class=\"home\" routerLink=\"\">Home</button>\n          <!-- </div> -->\n        </div>\n      </div>\n      <router-outlet></router-outlet>\n    </div>\n  </div>\n"
+
+/***/ }),
+
+/***/ "./src/app/login/login.component.ts":
+/*!******************************************!*\
+  !*** ./src/app/login/login.component.ts ***!
+  \******************************************/
+/*! exports provided: LoginComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var LoginComponent = /** @class */ (function () {
+    function LoginComponent() {
+    }
+    LoginComponent.prototype.ngOnInit = function () {
+    };
+    LoginComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-login',
+            template: __webpack_require__(/*! ./login.component.html */ "./src/app/login/login.component.html"),
+            styles: [__webpack_require__(/*! ./login.component.css */ "./src/app/login/login.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], LoginComponent);
+    return LoginComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/message.service.ts":
 /*!************************************!*\
   !*** ./src/app/message.service.ts ***!
@@ -6045,40 +6113,6 @@ var SearchService = /** @class */ (function () {
         this.trucksUrl = '/api/trucks';
     }
     ;
-    // get("/api/Truckss")
-    SearchService.prototype.getTrucks = function () {
-        return this.http.get(this.trucksUrl)
-            .toPromise()
-            .then(function (response) { return response.json(); })
-            .catch(this.handleError);
-    };
-    // post("/api/Trucks")
-    SearchService.prototype.createTruck = function (newTruck) {
-        return this.http.post(this.trucksUrl, newTruck)
-            .toPromise()
-            .then(function (response) { return response.json(); })
-            .catch(this.handleError);
-    };
-    // delete("/api/Trucks/:id")
-    SearchService.prototype.deleteTruck = function (delTruckId) {
-        return this.http.delete(this.trucksUrl + '/' + delTruckId)
-            .toPromise()
-            .then(function (response) { return response.json(); })
-            .catch(this.handleError);
-    };
-    // put("/api/Trucks/:id")
-    SearchService.prototype.updateTruck = function (putTruck) {
-        var putUrl = this.trucksUrl + '/' + putTruck._id;
-        return this.http.put(putUrl, putTruck)
-            .toPromise()
-            .then(function (response) { return response.json(); })
-            .catch(this.handleError);
-    };
-    SearchService.prototype.handleError = function (error) {
-        var errMsg = (error.message) ? error.message :
-            error.status ? error.status + " - " + error.statusText : 'Server error';
-        console.error(errMsg); // log to console instead
-    };
     SearchService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
@@ -6089,107 +6123,6 @@ var SearchService = /** @class */ (function () {
     return SearchService;
 }());
 
-// getCuisines(): Observable<Cuisine[]> {
-//   return of (CUISINES);
-// }
-// getCuisine(id: number):
-// Observable<Cuisine> {
-//   return of (CUISINES.find(cuisine => cuisine.id === id));
-// }
-/** GET trucks from the server */
-// getTrucks (): Observable<Truck[]> {
-//   return this.http.get<Truck[]>(this.trucksUrl)
-//     .pipe(
-//       tap(trucks => this.log('fetched trucks')),
-//       catchError(this.handleError('gettrucks', []))
-//     );
-// }
-/** GET Truck by id. Return `undefined` when id not found */
-// getTruckNo404<Data>(id: number): Observable<Truck> {
-//   const url = `${this.trucksUrl}/?id=${id}`;
-//   return this.http.get<Truck[]>(url)
-//     .pipe(
-//       map(trucks => trucks[0]), // returns a {0|1} element array
-//       tap(h => {
-//         const outcome = h ? `fetched` : `did not find`;
-//         this.log(`${outcome} Truck id=${id}`);
-//       }),
-//       catchError(this.handleError<Truck>(`getTruck id=${id}`))
-//     );
-// }
-// /** GET Truck by id. Will 404 if id not found */
-// getTruck(id: number): Observable<Truck> {
-//   const url = `${this.trucksUrl}/${id}`;
-//   return this.http.get<Truck>(url).pipe(
-//     tap(_ => this.log(`fetched Truck id=${id}`)),
-//     catchError(this.handleError<Truck>(`getTruck id=${id}`))
-//   );
-// }
-// /* GET trucks whose name contains search term */
-// searchtrucks(term: string): Observable<Truck[]> {
-//   if (!term.trim()) {
-//     // if not search term, return empty Truck array.
-//     return of([]);
-//   }
-//   return this.http.get<Truck[]>(`${this.trucksUrl}/?name=${term}`).pipe(
-//     tap(_ => this.log(`found trucks matching "${term}"`)),
-//     catchError(this.handleError<Truck[]>('searchtrucks', []))
-//   );
-// }
-// //////// Save methods //////////
-// /** POST: add a new Truck to the server */
-// addTruck (Truck: Truck): Observable<Truck> {
-//   return this.http.post<Truck>(this.trucksUrl, Truck, httpOptions).pipe(
-//     tap((Truck: Truck) => this.log(`added Truck w/ id=${Truck.id}`)),
-//     catchError(this.handleError<Truck>('addTruck'))
-//   );
-// }
-// /** DELETE: delete the Truck from the server */
-// deleteTruck (Truck: Truck | number): Observable<Truck> {
-//   const id = typeof Truck === 'number' ? Truck : Truck.id;
-//   const url = `${this.trucksUrl}/${id}`;
-//   return this.http.delete<Truck>(url, httpOptions).pipe(
-//     tap(_ => this.log(`deleted Truck id=${id}`)),
-//     catchError(this.handleError<Truck>('deleteTruck'))
-//   );
-// }
-// /** PUT: update the Truck on the server */
-// updateTruck (Truck: Truck): Observable<any> {
-//   return this.http.put(this.trucksUrl, Truck, httpOptions).pipe(
-//     tap(_ => this.log(`updated Truck id=${Truck.id}`)),
-//     catchError(this.handleError<any>('updateTruck'))
-//   );
-// }
-// /**
-//  * Handle Http operation that failed.
-//  * Let the app continue.
-//  * @param operation - name of the operation that failed
-//  * @param result - optional value to return as the observable result
-//  */
-// private handleError<T> (operation = 'operation', result?: T) {
-//   return (error: any): Observable<T> => {
-//     // TODO: send the error to remote logging infrastructure
-//     console.error(error); // log to console instead
-//     // TODO: better job of transforming error for user consumption
-//     this.log(`${operation} failed: ${error.message}`);
-//     // Let the app keep running by returning an empty result.
-//     return of(result as T);
-//   };
-// }
-// /** Log a TruckService message with the MessageService */
-// private log(message: string) {
-//   this.messageService.add(`TruckService: ${message}`);
-// }
-// getTrucks(): Observable<Truck[]> {
-//   return this.http.get<Truck[]>(
-//     this.trucksUrl, { observe: 'response'}
-//   );
-//   return of (TRUCKS);
-// }
-// getTruck(id: number): Observable<Truck>{
-//   return of (TRUCKS.find(truck => truck.id === id));
-// }
-//}
 
 
 /***/ }),
