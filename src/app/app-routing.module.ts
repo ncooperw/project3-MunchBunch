@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './auth/auth.component';
 import { CallbackComponent } from './callback/callback.component';
 import { AuthService } from './auth.service';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -17,8 +18,10 @@ const appRoutes: Routes = [
     //canActivate:[AuthGuard], 
   },
   { path: 'owner', loadChildren: './owner/owner.module#OwnerModule' },
-  { path: '', redirectTo: '', pathMatch: 'full' },
-  
+
+  { path: '', component: LoginComponent, pathMatch: 'full' }
+
+
 ];
 
 @NgModule({

@@ -19,10 +19,8 @@ import { AgmCoreModule } from '@agm/core';
 
 import { MapComponent } from './map/map.component';
 
-import { OwnerModule } from './owner/owner.module';
-import { ConsumerModule } from './consumer/consumer.module';
-import { SearchService } from './trucks/truckSearch.service';
-import { ConsumerService } from './consumer/consumer.service';
+import { ConsumerAccountComponent } from './consumer-account/consumer-account.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +28,10 @@ import { ConsumerService } from './consumer/consumer.service';
     AuthComponent,
     CallbackComponent,
     MessagesComponent,
-    
+
+    ConsumerAccountComponent,
+    LoginComponent
+
 
   ],
   imports: [
