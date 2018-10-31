@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Truck } from 'src/app/trucks/truck';
 import { SearchService } from 'src/app/trucks/truckSearch.service';
 import { Cuisine } from '../../consumer/cusines/cuisine';
+import { CommonService } from 'src/app/services/common.service';
 
 //import { TruckDetailComponent } from '../trucks/truck-detail/truck-detail.component';
 @Component({
@@ -23,7 +24,7 @@ export class TruckListComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private searchService: SearchService
+    private commonService: CommonService
   ) { }
 
   // getTrucks(): void {
@@ -31,6 +32,7 @@ export class TruckListComponent implements OnInit {
   // }
   ngOnInit() {
   // this.getTrucks();
+<<<<<<< HEAD
   // this.searchService
   // .getTrucks()
   // .then((trucks: Truck[]) => {
@@ -44,6 +46,21 @@ export class TruckListComponent implements OnInit {
   //     return truck;
   //   });
   // });
+=======
+  this.commonService
+  .getTrucks()
+  .then((trucks: Truck[]) => {
+    this.trucks = trucks.map((truck) => {
+      if (!truck.location) {
+        truck.location = {
+          latitude: 39.7392,
+          longitude: 104.9903
+        }
+      }
+      return truck;
+    });
+  });
+>>>>>>> master
   }
   private getIndexOfTruck = (truckId: String) => {
     return this.trucks.findIndex((truck) => {

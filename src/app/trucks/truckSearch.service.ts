@@ -26,46 +26,46 @@ export class SearchService {
     private messageService: MessageService
     ) { };
 
-// get("/api/Truckss")
-getTrucks(): Promise<void | Truck[]> {
-  return this.http.get(this.trucksUrl)
-             .toPromise()
-             .then(response => response.json() as Truck[])
-             .catch(this.handleError);
-}
+// get("/api/Trucks")
+// getTrucks(): Promise<void | Truck[]> {
+//   return this.http.get(this.trucksUrl)
+//              .toPromise()
+//              .then(response => response.json() as Truck[])
+//              .catch(this.handleError);
+// }
 
-// post("/api/Trucks")
-createTruck(newTruck: Truck): Promise<void | Truck> {
-  return this.http.post(this.trucksUrl, newTruck)
-             .toPromise()
-             .then(response => response.json() as Truck)
-             .catch(this.handleError);
-}
+// // post("/api/Trucks")
+// createTruck(newTruck: Truck): Promise<void | Truck> {
+//   return this.http.post(this.trucksUrl, newTruck)
+//              .toPromise()
+//              .then(response => response.json() as Truck)
+//              .catch(this.handleError);
+// }
 
 
-// delete("/api/Trucks/:id")
-deleteTruck(delTruckId: String): Promise<void | String> {
-  return this.http.delete(this.trucksUrl + '/' + delTruckId)
-             .toPromise()
-             .then(response => response.json() as String)
-             .catch(this.handleError);
-}
+// // delete("/api/Trucks/:id")
+// deleteTruck(delTruckId: String): Promise<void | String> {
+//   return this.http.delete(this.trucksUrl + '/' + delTruckId)
+//              .toPromise()
+//              .then(response => response.json() as String)
+//              .catch(this.handleError);
+// }
 
-// put("/api/Trucks/:id")
-updateTruck(putTruck: Truck): Promise<void | Truck> {
-  var putUrl = this.trucksUrl + '/' + putTruck._id;
-  return this.http.put(putUrl, putTruck)
-             .toPromise()
-             .then(response => response.json() as Truck)
-             .catch(this.handleError);
-}
+// // put("/api/Trucks/:id")
+// updateTruck(putTruck: Truck): Promise<void | Truck> {
+//   var putUrl = this.trucksUrl + '/' + putTruck._id;
+//   return this.http.put(putUrl, putTruck)
+//              .toPromise()
+//              .then(response => response.json() as Truck)
+//              .catch(this.handleError);
+// }
 
-private handleError (error: any) {
-  let errMsg = (error.message) ? error.message :
-  error.status ? `${error.status} - ${error.statusText}` : 'Server error';
-  console.error(errMsg); // log to console instead
-}
-}
+// private handleError (error: any) {
+//   let errMsg = (error.message) ? error.message :
+//   error.status ? `${error.status} - ${error.statusText}` : 'Server error';
+//   console.error(errMsg); // log to console instead
+// }
+// }
 
 
 // getCuisines(): Observable<Cuisine[]> {
@@ -189,4 +189,4 @@ private handleError (error: any) {
   // }
 
   
-//}
+}
