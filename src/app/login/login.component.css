@@ -1,0 +1,56 @@
+
+body{
+    /* background-image: linear-gradient(#f1676b,white);
+     */
+  }
+
+
+
+h1{
+    font-size: 89px;
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+}
+
+h6{
+    font-size: 40px;
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+}
+
+.card-img-top {
+height: 100px;
+width: 100px;
+text-align: center;
+}
+
+
+.card{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    border: none;
+    min-width: 0;
+    word-wrap: break-word;
+    /* background-color: #e8ebef; */
+    border-radius: .25rem;
+    /* opacity: .4; */
+}
+
+.container,.conatinerheader{
+    align-content: center;
+}
+
+
+.jumbotron{
+   background-image: url('https://cdn.dribbble.com/users/76620/screenshots/1909179/foodpattern-drbl800.gif');
+   /* background-repeat: no-repeat; */
+   width: 100%;
+   align-self: auto;
+}
+
+.animated{
+    /* animation-delay: 2s; */
+}
+
