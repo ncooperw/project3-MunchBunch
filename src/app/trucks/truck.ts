@@ -1,5 +1,5 @@
 export class Truck {
-    id: number;
+    _id?: string;
     name: string;
     imgLink: string;
     cuisine: string;

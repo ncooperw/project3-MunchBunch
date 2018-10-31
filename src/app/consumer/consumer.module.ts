@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import { ConsumerRoutingModule } from './consumer-routing.module';
 
@@ -11,13 +13,18 @@ import { ConsumerNavbarComponent } from './consumer-navbar/consumer-navbar.compo
 import { UserInfoComponent } from './user-info/user-info.component';
 
 import { TruckSearchComponent } from './truck-search/truck-search.component';
-import { TruckDetailComponent } from './truck-detail/truck-detail.component';
-import { TruckListComponent } from './truck-list/truck-list.component';
+
+
 import { AccountComponent } from './account/account.component';
 
-import { CommonService } from './common.service';
+import { ConsumerService } from './consumer.service';
 import { MapComponent } from '../map/map.component';
 import { AgmCoreModule } from '@agm/core';
+import { TruckListComponent } from '../trucks/truck-list/truck-list.component';
+import { TruckDetailComponent } from '../trucks/truck-detail/truck-detail.component';
+import { CuisineComponent } from './cusines/cuisine/cuisine.component';
+import { SearchDetailComponent } from './search-detail/search-detail.component';
+
 
 
 
@@ -26,10 +33,16 @@ import { AgmCoreModule } from '@agm/core';
     CommonModule,
     ConsumerRoutingModule,
     HttpClientModule,
-    AgmCoreModule
+    HttpModule,
+    AgmCoreModule,
+    FormsModule
   ],
-  declarations: [ConsumerPageComponent, ReviewComponent, ConsumerNavbarComponent, UserInfoComponent, TruckSearchComponent, TruckDetailComponent,  TruckListComponent, AccountComponent,
-  MapComponent ],
-  providers: [CommonService]
+  declarations: [
+    ConsumerPageComponent, ReviewComponent, ConsumerNavbarComponent, UserInfoComponent, TruckSearchComponent, TruckDetailComponent,  TruckListComponent, AccountComponent,
+  MapComponent,
+  CuisineComponent,
+  SearchDetailComponent 
+],
+  providers: [ConsumerService]
 })
 export class ConsumerModule { }

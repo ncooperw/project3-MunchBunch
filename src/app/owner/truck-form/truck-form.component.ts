@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
-import {CommonService} from '../../services/common.service';
+import { SearchService } from '../../trucks/truckSearch.service';
+
 @Component({
   selector: 'app-truck-form',
   templateUrl: './truck-form.component.html',

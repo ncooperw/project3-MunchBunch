@@ -280,7 +280,6 @@ var routes = [
     { path: '',
         component: _owner_home_owner_home_component__WEBPACK_IMPORTED_MODULE_2__["OwnerHomeComponent"] },
     { path: 'account', component: _owner_account_owner_account_component__WEBPACK_IMPORTED_MODULE_3__["OwnerAccountComponent"] },
-    { path: '' }
 ];
 var OwnerRoutingModule = /** @class */ (function () {
     function OwnerRoutingModule() {
@@ -344,7 +343,7 @@ var OwnerModule = /** @class */ (function () {
                 _owner_routing_module__WEBPACK_IMPORTED_MODULE_2__["OwnerRoutingModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ReactiveFormsModule"]
             ],
-            declarations: [_owner_account_owner_account_component__WEBPACK_IMPORTED_MODULE_3__["OwnerAccountComponent"], _owner_home_owner_home_component__WEBPACK_IMPORTED_MODULE_4__["OwnerHomeComponent"], _owner_navbar_owner_navbar_component__WEBPACK_IMPORTED_MODULE_5__["OwnerNavbarComponent"], _owner_create_account_owner_create_account_component__WEBPACK_IMPORTED_MODULE_6__["OwnerCreateAccountComponent"], _truck_form_truck_form_component__WEBPACK_IMPORTED_MODULE_7__["TruckFormComponent"], _update_location_update_location_component__WEBPACK_IMPORTED_MODULE_9__["UpdateLocationComponent"]]
+            declarations: [_owner_account_owner_account_component__WEBPACK_IMPORTED_MODULE_3__["OwnerAccountComponent"], _owner_home_owner_home_component__WEBPACK_IMPORTED_MODULE_4__["OwnerHomeComponent"], _owner_navbar_owner_navbar_component__WEBPACK_IMPORTED_MODULE_5__["OwnerNavbarComponent"], _owner_create_account_owner_create_account_component__WEBPACK_IMPORTED_MODULE_6__["OwnerCreateAccountComponent"], _truck_form_truck_form_component__WEBPACK_IMPORTED_MODULE_7__["TruckFormComponent"], _update_location_update_location_component__WEBPACK_IMPORTED_MODULE_9__["UpdateLocationComponent"]],
         })
     ], OwnerModule);
     return OwnerModule;
@@ -372,7 +371,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form [formGroup]=\"truckForm\" (ngSubmit)=\"onSubmit()\">\n\n  <label>\n    Truck Name:\n    <input type=\"text\" formControlName=\"truckName\" required>\n    <!-- <div *ngIf=\"truckName.invalid && (truckName.dirty || truckName.touched)\" class=\"alert alert-danger\">\n\n      <div *ngIf=\"truckName.errors.required\">\n       Truck Name is required.\n      </div>\n    </div> -->\n  </label>\n\n  <label>\n    Image Link:\n    <input type=\"text\" formControlName=\"imgLink\">\n  </label>\n\n  <label>\n    Type of Cuisine:\n    <input type=\"text\" formControlName=\"cuisine\" required>\n  </label>\n\n  <label>\n    Description\n    <input type=\"text\" formControlName=\"description\">\n  </label>\n\n  <label>\n    Menu Link\n    <input type=\"text\" formControlName=\"menuLink\">\n  </label>\n\n  <label>\n    Price:\n    <input type=\"text\" formControlName=\"price\" required>\n  </label>\n\n  <div formGroupName=\"location\">\n    <h3>Location</h3>\n\n    <label>\n      Latitude:\n      <input type=\"text\" formControlName=\"latitude\">\n    </label>\n\n    <label>\n      Longitude:\n      <input type=\"text\" formControlName=\"longitude\">\n    </label>\n\n\n  </div>\n  <button type=\"submit\" [disabled]=\"!truckForm.valid\">Submit</button>\n\n  <p>\n    Form Status: {{ truckForm.status }}\n  </p>\n\n</form>\n"
+module.exports = "<form [formGroup]=\"truckForm\" (ngSubmit)=\"onSubmit()\">\n\n  <label>\n    Truck Name:\n    <input [class.is-invalid]=\"truckForm.get('truckName').invalid && truckForm.get('truckName').touched\"type=\"text\" formControlName=\"truckName\" required>\n    <small [class.d-none]=\"truckForm.get('truckName').valid || truckForm.get('truckName').untouched\" class=text-danger>Truck name is required</small>\n    <!-- <div *ngIf=\"truckName.invalid && (truckName.dirty || truckName.touched)\" class=\"alert alert-danger\"> \n\n      <div *ngIf=\"truckName.errors.required\">\n       Truck Name is required.\n      </div>\n    </div> --> \n  </label>\n\n  <label>\n    Image Link:\n    <input type=\"text\" formControlName=\"imgLink\">\n  </label>\n\n  <label>\n    Type of Cuisine:\n    <input type=\"text\" formControlName=\"cuisine\" required>\n  </label>\n\n  <label>\n    Description\n    <input type=\"text\" formControlName=\"description\">\n  </label>\n\n  <label>\n    Menu Link\n    <input type=\"text\" formControlName=\"menuLink\">\n  </label>\n\n  <label>\n    Price:\n    <input type=\"text\" formControlName=\"price\" required>\n  </label>\n\n  <div formGroupName=\"location\">\n    <h3>Location</h3>\n\n    <label>\n      Latitude:\n      <input type=\"text\" formControlName=\"latitude\">\n    </label>\n\n    <label>\n      Longitude:\n      <input type=\"text\" formControlName=\"longitude\">\n    </label>\n\n\n  </div>\n  <button type=\"submit\" [disabled]=\"!truckForm.valid\">Submit</button>\n\n  <p>\n    Form Status: {{ truckForm.status }}\n  </p>\n\n</form>\n"
 
 /***/ }),
 
@@ -416,7 +415,7 @@ var TruckFormComponent = /** @class */ (function () {
     };
     TruckFormComponent.prototype.onSubmit = function () {
         // TODO: Use EventEmitter with form value
-        console.warn(this.truckForm.value);
+        console.log(this.truckForm.value);
     };
     TruckFormComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({

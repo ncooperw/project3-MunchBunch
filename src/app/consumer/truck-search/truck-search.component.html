@@ -1,31 +1,8 @@
 <div class="container-fluid">
-  <div class="row">
-      <div class="col-sm-12 col-md-3">
-          <h5>What's Hot</h5>
-          <span><i class="hot text-danger fas fa-fire"></i>
-            <i class="hot text-danger fas fa-fire"></i>
-            <i class="hot text-danger fas fa-fire"></i></span>
-        </div>
-    <div class="col-sm-12 col-md-9">
-      <h5>Search by cuisine</h5>
-      <div class="card-deck">
-        <div *ngFor="let cuisine of cuisines" class="row ">
-          <div class="col-sm-4 justify-content-center">
-            <div class="card p-3 cuisine-card">
-              <a routerLink="{{cuisine.name}}">
-                <img class="card-img-top cuisine-image" src="{{cuisine.imgLink}}" alt="{{cuisine.name}}">
-                <div class="card-body p-0">
-                  <p class="cuisine-name">{{cuisine.name}}</p>
-                </div>
-
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
+  <app-cuisine></app-cuisine>
+</div>
+<div class="container">
+  <app-truck-list></app-truck-list>
 </div>
 <div class="row">
   <div class="col-sm-12">
