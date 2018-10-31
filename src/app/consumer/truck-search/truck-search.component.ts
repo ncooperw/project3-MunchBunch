@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { OnDestroy } from '@angular/core';
 import { ISubscription } from 'rxjs/Subscription';
-// import { Cuisine } from '../../cuisine';
-// import { CUISINES } from '../../mock-cuisines';
 import { SearchService } from '../../trucks/truckSearch.service';
+import { CommonService } from '../../services/common.service';
 import { Truck } from 'src/app/trucks/truck';
 import { Observable } from 'rxjs';
 
@@ -22,12 +21,12 @@ export class TruckSearchComponent implements OnInit {
   trucks: Truck[];
 
 constructor(
-  private searchService: SearchService,
+  private commonService: CommonService,
   public client: HttpClient 
   ) { }
 
    getTrucks() {
-    return this.searchService.getTrucks()
+    return this.commonService.getTrucks()
     //.subscribe(trucks => this.trucks = trucks);
    }
   
