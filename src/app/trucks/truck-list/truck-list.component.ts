@@ -31,19 +31,19 @@ export class TruckListComponent implements OnInit {
   // }
   ngOnInit() {
   // this.getTrucks();
-  this.searchService
-  .getTrucks()
-  .then((trucks: Truck[]) => {
-    this.trucks = trucks.map((truck) => {
-      if (!truck.location) {
-        truck.location = {
-          latitude: 39.7392,
-          longitude: 104.9903
-        }
-      }
-      return truck;
-    });
-  });
+  // this.searchService
+  // .getTrucks()
+  // .then((trucks: Truck[]) => {
+  //   this.trucks = trucks.map((truck) => {
+  //     if (!truck.location) {
+  //       truck.location = {
+  //         latitude: 39.7392,
+  //         longitude: 104.9903
+  //       }
+  //     }
+  //     return truck;
+  //   });
+  // });
   }
   private getIndexOfTruck = (truckId: String) => {
     return this.trucks.findIndex((truck) => {
