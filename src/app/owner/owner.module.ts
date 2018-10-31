@@ -16,6 +16,7 @@ import { UpdateLocationComponent } from './update-location/update-location.compo
     OwnerRoutingModule, 
     ReactiveFormsModule
   ],
-  declarations: [OwnerAccountComponent, OwnerHomeComponent, OwnerNavbarComponent, OwnerCreateAccountComponent, TruckFormComponent, UpdateLocationComponent]
+  declarations: [OwnerAccountComponent, OwnerHomeComponent, OwnerNavbarComponent, OwnerCreateAccountComponent, TruckFormComponent, UpdateLocationComponent],
+  
 })
 export class OwnerModule { }

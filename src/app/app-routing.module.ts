@@ -17,7 +17,8 @@ const appRoutes: Routes = [
     //canActivate:[AuthGuard], 
   },
   { path: 'owner', loadChildren: './owner/owner.module#OwnerModule' },
-  { path: '', redirectTo: '', pathMatch: 'full' }
+  { path: '', redirectTo: '', pathMatch: 'full' },
+  { path: '/api/trucks', }
 ];
 
 @NgModule({
