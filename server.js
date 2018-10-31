@@ -45,16 +45,16 @@ if (process.env.MONGODB_URI){
   mongoose.connect(databaseUri,{ useNewUrlParser: true });
 }
 
-db = mongoose.connection;
+// db = mongoose.connection;
 
-db.on("error", function(err){
-  console.log("Mongoose Error: ", err);
-});
+// db.on("error", function(err){
+//   console.log("Mongoose Error: ", err);
+// });
 
 
-db.once("open", function(){
-  console.log("Mongoose connection successful.")
-});
+// db.once("open", function(){
+//   console.log("Mongoose connection successful.")
+// });
 app.get("/api/trucks", function(req,res){  
     console.log("Truck" + db.Truck);
     db.Truck.find({})

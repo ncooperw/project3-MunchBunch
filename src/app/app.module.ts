@@ -19,7 +19,7 @@ import { AgmCoreModule } from '@agm/core';
 
 import { MapComponent } from './map/map.component';
 
-import { ConsumerAccountComponent } from './consumer-account/consumer-account.component';
+
 import { LoginComponent } from './login/login.component';
 
 @NgModule({
@@ -28,8 +28,6 @@ import { LoginComponent } from './login/login.component';
     AuthComponent,
     CallbackComponent,
     MessagesComponent,
-
-    ConsumerAccountComponent,
     LoginComponent
 
 
