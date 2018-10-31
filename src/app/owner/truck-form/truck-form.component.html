@@ -2,13 +2,14 @@
 
   <label>
     Truck Name:
-    <input type="text" formControlName="truckName" required>
-    <!-- <div *ngIf="truckName.invalid && (truckName.dirty || truckName.touched)" class="alert alert-danger">
+    <input [class.is-invalid]="truckForm.get('truckName').invalid && truckForm.get('truckName').touched"type="text" formControlName="truckName" required>
+    <small [class.d-none]="truckForm.get('truckName').valid || truckForm.get('truckName').untouched" class=text-danger>Truck name is required</small>
+    <!-- <div *ngIf="truckName.invalid && (truckName.dirty || truckName.touched)" class="alert alert-danger"> 
 
       <div *ngIf="truckName.errors.required">
        Truck Name is required.
       </div>
-    </div> -->
+    </div> --> 
   </label>
 
   <label>
