@@ -5450,7 +5450,8 @@ var appRoutes = [
         path: 'consumer', loadChildren: './consumer/consumer.module#ConsumerModule',
     },
     { path: 'owner', loadChildren: './owner/owner.module#OwnerModule' },
-    { path: '', redirectTo: '', pathMatch: 'full' }
+    { path: '', redirectTo: '', pathMatch: 'full' },
+    { path: '/api/trucks', }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -5507,7 +5508,6 @@ module.exports = "<div class=\"animated fadeInUp\">\n  <h1>Munch Bunch</h1>\n  <
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _consumer_common_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./consumer/common.service */ "./src/app/consumer/common.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5518,11 +5518,8 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
 var AppComponent = /** @class */ (function () {
-    function AppComponent(newService) {
-        this.newService = newService;
-        this.valbutton = "Save";
+    function AppComponent() {
     }
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -5530,7 +5527,7 @@ var AppComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
         }),
-        __metadata("design:paramtypes", [_consumer_common_service__WEBPACK_IMPORTED_MODULE_1__["CommonService"]])
+        __metadata("design:paramtypes", [])
     ], AppComponent);
     return AppComponent;
 }());
@@ -5556,13 +5553,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _consumer_common_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./consumer/common.service */ "./src/app/consumer/common.service.ts");
-/* harmony import */ var _auth_auth_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./auth/auth.component */ "./src/app/auth/auth.component.ts");
-/* harmony import */ var _callback_callback_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./callback/callback.component */ "./src/app/callback/callback.component.ts");
-/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./auth.service */ "./src/app/auth.service.ts");
-/* harmony import */ var _messages_messages_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./messages/messages.component */ "./src/app/messages/messages.component.ts");
-/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
-/* harmony import */ var _consumer_account_consumer_account_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./consumer-account/consumer-account.component */ "./src/app/consumer-account/consumer-account.component.ts");
+/* harmony import */ var _auth_auth_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./auth/auth.component */ "./src/app/auth/auth.component.ts");
+/* harmony import */ var _callback_callback_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./callback/callback.component */ "./src/app/callback/callback.component.ts");
+/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./auth.service */ "./src/app/auth.service.ts");
+/* harmony import */ var _messages_messages_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./messages/messages.component */ "./src/app/messages/messages.component.ts");
+/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
+/* harmony import */ var _trucks_truckSearch_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./trucks/truckSearch.service */ "./src/app/trucks/truckSearch.service.ts");
+/* harmony import */ var _consumer_consumer_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./consumer/consumer.service */ "./src/app/consumer/consumer.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5571,10 +5568,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 
 
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 
 
 
@@ -5594,10 +5588,9 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-                _auth_auth_component__WEBPACK_IMPORTED_MODULE_8__["AuthComponent"],
-                _callback_callback_component__WEBPACK_IMPORTED_MODULE_9__["CallbackComponent"],
-                _messages_messages_component__WEBPACK_IMPORTED_MODULE_11__["MessagesComponent"],
-                _consumer_account_consumer_account_component__WEBPACK_IMPORTED_MODULE_13__["ConsumerAccountComponent"]
+                _auth_auth_component__WEBPACK_IMPORTED_MODULE_7__["AuthComponent"],
+                _callback_callback_component__WEBPACK_IMPORTED_MODULE_8__["CallbackComponent"],
+                _messages_messages_component__WEBPACK_IMPORTED_MODULE_10__["MessagesComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -5605,12 +5598,12 @@ var AppModule = /** @class */ (function () {
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_3__["HttpModule"],
-                _agm_core__WEBPACK_IMPORTED_MODULE_12__["AgmCoreModule"].forRoot({
+                _agm_core__WEBPACK_IMPORTED_MODULE_11__["AgmCoreModule"].forRoot({
                     apiKey: 'AIzaSyCX37S57WrEFKAJO02W493eHYHBQD_uTMQ'
                 }),
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
             ],
-            providers: [_consumer_common_service__WEBPACK_IMPORTED_MODULE_7__["CommonService"], _auth_service__WEBPACK_IMPORTED_MODULE_10__["AuthService"]],
+            providers: [_consumer_consumer_service__WEBPACK_IMPORTED_MODULE_13__["ConsumerService"], _auth_service__WEBPACK_IMPORTED_MODULE_9__["AuthService"], _trucks_truckSearch_service__WEBPACK_IMPORTED_MODULE_12__["SearchService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
@@ -5780,79 +5773,16 @@ var CallbackComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/consumer-account/consumer-account.component.css":
-/*!*****************************************************************!*\
-  !*** ./src/app/consumer-account/consumer-account.component.css ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/consumer-account/consumer-account.component.html":
-/*!******************************************************************!*\
-  !*** ./src/app/consumer-account/consumer-account.component.html ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<p>consumer account works!</p>"
-
-/***/ }),
-
-/***/ "./src/app/consumer-account/consumer-account.component.ts":
-/*!****************************************************************!*\
-  !*** ./src/app/consumer-account/consumer-account.component.ts ***!
-  \****************************************************************/
-/*! exports provided: ConsumerAccountComponent */
+/***/ "./src/app/consumer/consumer.service.ts":
+/*!**********************************************!*\
+  !*** ./src/app/consumer/consumer.service.ts ***!
+  \**********************************************/
+/*! exports provided: ConsumerService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConsumerAccountComponent", function() { return ConsumerAccountComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ConsumerAccountComponent = /** @class */ (function () {
-    function ConsumerAccountComponent() {
-    }
-    ConsumerAccountComponent.prototype.ngOnInit = function () {
-    };
-    ConsumerAccountComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-consumer-account',
-            template: __webpack_require__(/*! ./consumer-account.component.html */ "./src/app/consumer-account/consumer-account.component.html"),
-            styles: [__webpack_require__(/*! ./consumer-account.component.css */ "./src/app/consumer-account/consumer-account.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], ConsumerAccountComponent);
-    return ConsumerAccountComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/consumer/common.service.ts":
-/*!********************************************!*\
-  !*** ./src/app/consumer/common.service.ts ***!
-  \********************************************/
-/*! exports provided: CommonService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CommonService", function() { return CommonService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConsumerService", function() { return ConsumerService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
@@ -5875,20 +5805,20 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var httpOptions = {
     headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({ 'Content-Type': 'application/json' })
 };
-var CommonService = /** @class */ (function () {
-    function CommonService(http, messageService) {
+var ConsumerService = /** @class */ (function () {
+    function ConsumerService(http, messageService) {
         this.http = http;
         this.messageService = messageService;
         this.consumerUrl = 'api/account/consumer';
     }
     /** GET consumer from the server */
-    CommonService.prototype.getconsumer = function () {
+    ConsumerService.prototype.getconsumer = function () {
         var _this = this;
         return this.http.get(this.consumerUrl)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function (consumer) { return _this.log('fetched consumer'); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError('getconsumer', [])));
     };
     /** GET consumer by id. Return `undefined` when id not found */
-    CommonService.prototype.getconsumerNo404 = function (id) {
+    ConsumerService.prototype.getconsumerNo404 = function (id) {
         var _this = this;
         var url = this.consumerUrl + "/?id=" + id;
         return this.http.get(url)
@@ -5899,13 +5829,13 @@ var CommonService = /** @class */ (function () {
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError("getconsumer id=" + id)));
     };
     /** GET consumer by id. Will 404 if id not found */
-    CommonService.prototype.getConsumer = function (id) {
+    ConsumerService.prototype.getConsumer = function (id) {
         var _this = this;
         var url = this.consumerUrl + "/" + id;
         return this.http.get(url).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function (_) { return _this.log("fetched consumer id=" + id); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError("getconsumer id=" + id)));
     };
     /* GET consumer whose name contains search term */
-    CommonService.prototype.searchConsumer = function (term) {
+    ConsumerService.prototype.searchConsumer = function (term) {
         var _this = this;
         if (!term.trim()) {
             // if not search term, return empty consumer array.
@@ -5915,19 +5845,19 @@ var CommonService = /** @class */ (function () {
     };
     //////// Save methods //////////
     /** POST: add a new consumer to the server */
-    CommonService.prototype.addconsumer = function (consumer) {
+    ConsumerService.prototype.addconsumer = function (consumer) {
         var _this = this;
         return this.http.post(this.consumerUrl, consumer, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function (consumer) { return _this.log("added consumer w/ id=" + consumer.id); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError('addconsumer')));
     };
     /** DELETE: delete the consumer from the server */
-    CommonService.prototype.deleteconsumer = function (consumer) {
+    ConsumerService.prototype.deleteconsumer = function (consumer) {
         var _this = this;
         var id = typeof consumer === 'number' ? consumer : consumer.id;
         var url = this.consumerUrl + "/" + id;
         return this.http.delete(url, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function (_) { return _this.log("deleted consumer id=" + id); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError('deleteconsumer')));
     };
     /** PUT: update the consumer on the server */
-    CommonService.prototype.updateconsumer = function (consumer) {
+    ConsumerService.prototype.updateconsumer = function (consumer) {
         var _this = this;
         return this.http.put(this.consumerUrl, consumer, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function (_) { return _this.log("updated consumer id=" + consumer.id); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError('updateconsumer')));
     };
@@ -5937,7 +5867,7 @@ var CommonService = /** @class */ (function () {
      * @param operation - name of the operation that failed
      * @param result - optional value to return as the observable result
      */
-    CommonService.prototype.handleError = function (operation, result) {
+    ConsumerService.prototype.handleError = function (operation, result) {
         var _this = this;
         if (operation === void 0) { operation = 'operation'; }
         return function (error) {
@@ -5950,10 +5880,10 @@ var CommonService = /** @class */ (function () {
         };
     };
     /** Log a consumerService message with the MessageService */
-    CommonService.prototype.log = function (message) {
+    ConsumerService.prototype.log = function (message) {
         this.messageService.add("consumerService: " + message);
     };
-    CommonService = __decorate([
+    ConsumerService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         })
@@ -5961,8 +5891,8 @@ var CommonService = /** @class */ (function () {
         ,
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"],
             _message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"]])
-    ], CommonService);
-    return CommonService;
+    ], ConsumerService);
+    return ConsumerService;
 }());
 
 
@@ -6075,6 +6005,192 @@ var MessagesComponent = /** @class */ (function () {
     return MessagesComponent;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/trucks/truckSearch.service.ts":
+/*!***********************************************!*\
+  !*** ./src/app/trucks/truckSearch.service.ts ***!
+  \***********************************************/
+/*! exports provided: SearchService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchService", function() { return SearchService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _message_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../message.service */ "./src/app/message.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({ 'Content-Type': 'application/json' })
+};
+var SearchService = /** @class */ (function () {
+    function SearchService(http, messageService) {
+        this.http = http;
+        this.messageService = messageService;
+        this.trucksUrl = '/api/trucks';
+    }
+    ;
+    // get("/api/Truckss")
+    SearchService.prototype.getTrucks = function () {
+        return this.http.get(this.trucksUrl)
+            .toPromise()
+            .then(function (response) { return response.json(); })
+            .catch(this.handleError);
+    };
+    // post("/api/Trucks")
+    SearchService.prototype.createTruck = function (newTruck) {
+        return this.http.post(this.trucksUrl, newTruck)
+            .toPromise()
+            .then(function (response) { return response.json(); })
+            .catch(this.handleError);
+    };
+    // delete("/api/Trucks/:id")
+    SearchService.prototype.deleteTruck = function (delTruckId) {
+        return this.http.delete(this.trucksUrl + '/' + delTruckId)
+            .toPromise()
+            .then(function (response) { return response.json(); })
+            .catch(this.handleError);
+    };
+    // put("/api/Trucks/:id")
+    SearchService.prototype.updateTruck = function (putTruck) {
+        var putUrl = this.trucksUrl + '/' + putTruck._id;
+        return this.http.put(putUrl, putTruck)
+            .toPromise()
+            .then(function (response) { return response.json(); })
+            .catch(this.handleError);
+    };
+    SearchService.prototype.handleError = function (error) {
+        var errMsg = (error.message) ? error.message :
+            error.status ? error.status + " - " + error.statusText : 'Server error';
+        console.error(errMsg); // log to console instead
+    };
+    SearchService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_http__WEBPACK_IMPORTED_MODULE_1__["Http"],
+            _message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"]])
+    ], SearchService);
+    return SearchService;
+}());
+
+// getCuisines(): Observable<Cuisine[]> {
+//   return of (CUISINES);
+// }
+// getCuisine(id: number):
+// Observable<Cuisine> {
+//   return of (CUISINES.find(cuisine => cuisine.id === id));
+// }
+/** GET trucks from the server */
+// getTrucks (): Observable<Truck[]> {
+//   return this.http.get<Truck[]>(this.trucksUrl)
+//     .pipe(
+//       tap(trucks => this.log('fetched trucks')),
+//       catchError(this.handleError('gettrucks', []))
+//     );
+// }
+/** GET Truck by id. Return `undefined` when id not found */
+// getTruckNo404<Data>(id: number): Observable<Truck> {
+//   const url = `${this.trucksUrl}/?id=${id}`;
+//   return this.http.get<Truck[]>(url)
+//     .pipe(
+//       map(trucks => trucks[0]), // returns a {0|1} element array
+//       tap(h => {
+//         const outcome = h ? `fetched` : `did not find`;
+//         this.log(`${outcome} Truck id=${id}`);
+//       }),
+//       catchError(this.handleError<Truck>(`getTruck id=${id}`))
+//     );
+// }
+// /** GET Truck by id. Will 404 if id not found */
+// getTruck(id: number): Observable<Truck> {
+//   const url = `${this.trucksUrl}/${id}`;
+//   return this.http.get<Truck>(url).pipe(
+//     tap(_ => this.log(`fetched Truck id=${id}`)),
+//     catchError(this.handleError<Truck>(`getTruck id=${id}`))
+//   );
+// }
+// /* GET trucks whose name contains search term */
+// searchtrucks(term: string): Observable<Truck[]> {
+//   if (!term.trim()) {
+//     // if not search term, return empty Truck array.
+//     return of([]);
+//   }
+//   return this.http.get<Truck[]>(`${this.trucksUrl}/?name=${term}`).pipe(
+//     tap(_ => this.log(`found trucks matching "${term}"`)),
+//     catchError(this.handleError<Truck[]>('searchtrucks', []))
+//   );
+// }
+// //////// Save methods //////////
+// /** POST: add a new Truck to the server */
+// addTruck (Truck: Truck): Observable<Truck> {
+//   return this.http.post<Truck>(this.trucksUrl, Truck, httpOptions).pipe(
+//     tap((Truck: Truck) => this.log(`added Truck w/ id=${Truck.id}`)),
+//     catchError(this.handleError<Truck>('addTruck'))
+//   );
+// }
+// /** DELETE: delete the Truck from the server */
+// deleteTruck (Truck: Truck | number): Observable<Truck> {
+//   const id = typeof Truck === 'number' ? Truck : Truck.id;
+//   const url = `${this.trucksUrl}/${id}`;
+//   return this.http.delete<Truck>(url, httpOptions).pipe(
+//     tap(_ => this.log(`deleted Truck id=${id}`)),
+//     catchError(this.handleError<Truck>('deleteTruck'))
+//   );
+// }
+// /** PUT: update the Truck on the server */
+// updateTruck (Truck: Truck): Observable<any> {
+//   return this.http.put(this.trucksUrl, Truck, httpOptions).pipe(
+//     tap(_ => this.log(`updated Truck id=${Truck.id}`)),
+//     catchError(this.handleError<any>('updateTruck'))
+//   );
+// }
+// /**
+//  * Handle Http operation that failed.
+//  * Let the app continue.
+//  * @param operation - name of the operation that failed
+//  * @param result - optional value to return as the observable result
+//  */
+// private handleError<T> (operation = 'operation', result?: T) {
+//   return (error: any): Observable<T> => {
+//     // TODO: send the error to remote logging infrastructure
+//     console.error(error); // log to console instead
+//     // TODO: better job of transforming error for user consumption
+//     this.log(`${operation} failed: ${error.message}`);
+//     // Let the app keep running by returning an empty result.
+//     return of(result as T);
+//   };
+// }
+// /** Log a TruckService message with the MessageService */
+// private log(message: string) {
+//   this.messageService.add(`TruckService: ${message}`);
+// }
+// getTrucks(): Observable<Truck[]> {
+//   return this.http.get<Truck[]>(
+//     this.trucksUrl, { observe: 'response'}
+//   );
+//   return of (TRUCKS);
+// }
+// getTruck(id: number): Observable<Truck>{
+//   return of (TRUCKS.find(truck => truck.id === id));
+// }
+//}
 
 
 /***/ }),
