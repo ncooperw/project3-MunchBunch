@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
-import { TruckService } from '../../trucks/truckSearch.service';
+import { SearchService } from '../../trucks/truckSearch.service';
 
 @Component({
   selector: 'app-truck-form',
@@ -9,6 +9,8 @@ import { TruckService } from '../../trucks/truckSearch.service';
   styleUrls: ['./truck-form.component.css']
 
 })
+
+
 export class TruckFormComponent implements OnInit {
 
   truckForm = new FormGroup({
@@ -30,8 +32,6 @@ export class TruckFormComponent implements OnInit {
   }
   onSubmit() {
     // TODO: Use EventEmitter with form value
-
-    console.warn(this.truckForm.value);
-
+    console.log(this.truckForm.value);
   }
 }
