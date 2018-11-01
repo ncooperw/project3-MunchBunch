@@ -31,6 +31,11 @@ export class TruckListComponent implements OnInit {
   getTrucks(): void {
     this.commonService.getTrucks().subscribe(trucks => this.truck = trucks);
   }
+  private getIndexOfTruck = (truckId: String) => {
+    return this.trucks.findIndex((truck) => {
+      return truck._id === truckId;
+    });
+  }
 
   ngOnInit() {
   this.getTrucks();
