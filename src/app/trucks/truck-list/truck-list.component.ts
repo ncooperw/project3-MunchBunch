@@ -14,6 +14,7 @@ import { CommonService } from 'src/app/services/common.service';
   providers: [SearchService]
 })
 export class TruckListComponent implements OnInit {
+  [x: string]: Object;
 
   //@Input() cuisine: Cuisine;
 
@@ -27,14 +28,18 @@ export class TruckListComponent implements OnInit {
     private commonService: CommonService
   ) { }
 
-  // getTrucks(): void {
-  //   this.searchService.getTrucks().subscribe(trucks => this.trucks = trucks);
-  // }
+  getTrucks(): void {
+    this.commonService.getTrucks().subscribe(trucks => this.truck = trucks);
+  }
+  private getIndexOfTruck = (truckId: String) => {
+    return this.trucks.findIndex((truck) => {
+      return truck._id === truckId;
+    });
+  }
+
   ngOnInit() {
-  // this.getTrucks();
-<<<<<<< HEAD
-  // this.searchService
-  // .getTrucks()
+  this.getTrucks();
+ // this.commonService.getTrucks(); 
   // .then((trucks: Truck[]) => {
   //   this.trucks = trucks.map((truck) => {
   //     if (!truck.location) {
@@ -43,30 +48,16 @@ export class TruckListComponent implements OnInit {
   //         longitude: 104.9903
   //       }
   //     }
-  //     return truck;
-  //   });
+      //return Truck;
+    //};
   // });
-=======
-  this.commonService
-  .getTrucks()
-  .then((trucks: Truck[]) => {
-    this.trucks = trucks.map((truck) => {
-      if (!truck.location) {
-        truck.location = {
-          latitude: 39.7392,
-          longitude: 104.9903
-        }
-      }
-      return truck;
-    });
-  });
->>>>>>> master
-  }
-  private getIndexOfTruck = (truckId: String) => {
-    return this.trucks.findIndex((truck) => {
-      return truck._id === truckId;
-    });
-  }
+  };
+  
+  // private getIndexOfTruck = (truckId: String) => {
+  //   return this.trucks.findIndex((truck) => {
+  //     return truck._id === truckId;
+  //   });
+  // }
 
   selectTruck(truck: Truck) {
     this.selectedTruck = truck
@@ -91,28 +82,28 @@ export class TruckListComponent implements OnInit {
     this.selectTruck(truck);
   }
 
-  deletetruck = (truckId: String) => {
-    var idx = this.getIndexOfTruck(truckId);
-    if (idx !== -1) {
-      this.trucks.splice(idx, 1);
-      this.selectTruck(null);
-    }
-    return this.trucks;
-  }
+  // deletetruck = (truckId: String) => {
+  //   var idx = this.getIndexOfTruck(truckId);
+  //   if (idx !== -1) {
+  //     this.trucks.splice(idx, 1);
+  //     this.selectTruck(null);
+  //   }
+  //   return this.trucks;
+  // }
 
-  addtruck = (truck: Truck) => {
-    this.trucks.push(truck);
-    this.selectTruck(truck);
-    return this.trucks;
-  }
+  // addtruck = (truck: Truck) => {
+  //   this.trucks.push(truck);
+  //   this.selectTruck(truck);
+  //   return this.trucks;
+  // }
 
-  updatetruck = (truck: Truck) => {
-    var idx = this.getIndexOfTruck(truck._id);
-    if (idx !== -1) {
-      this.trucks[idx] = truck;
-      this.selectTruck(truck);
-    }
-    return this.trucks;
-  }
+  // updatetruck = (truck: Truck) => {
+  //   var idx = this.getIndexOfTruck(truck._id);
+  //   if (idx !== -1) {
+  //     this.trucks[idx] = truck;
+  //     this.selectTruck(truck);
+  //   }
+  //   return this.trucks;
+  // }
 
 }

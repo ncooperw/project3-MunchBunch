@@ -4,7 +4,6 @@ import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 
 import { catchError, map, tap } from 'rxjs/operators';
 
-
 import { MessageService } from '../message.service';
 
 import { Truck } from './truck';
