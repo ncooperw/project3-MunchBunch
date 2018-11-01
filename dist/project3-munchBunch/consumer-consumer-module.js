@@ -388,7 +388,7 @@ var CuisineService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".cuisine-card {\n    width: 150px;\n    height: 150px;\n    margin: 3px;\n    border: solid 1px red;\n    box-shadow: 0 10px 18px 0 rgba(0,0,0,0.2), 0 8px 22px 0 rgba(0,0,0,0.19);\n    cursor: pointer;\n}\n.cuisine-card:hover {\n    background-color: red;\n    color: white;\n}\n.cuisine-name {\n    text-align: center;\n    font-size: 20px;\n    font-size-adjust: inherit;\n    \n}\n.cuisine-image {\n    height: 100px;\n\n}\n.hot {\n    padding: 3px;\n    font-size: 24px;\n}\n@media screen and (min-width: 300px) and (max-width: 600px) {\n.cuisine-card{\n    height: auto;\n    width: auto;\n}\nimg{\n    height: auto;\n    width: auto;\n    align-content: center;\n}\n.cuisine-name{\n    display: none;\n}\n}"
+module.exports = ".cuisine-card {\n    width: 150px;\n    height: 150px;\n    margin: 3px;\n    border: solid 5px black;\n    box-shadow: 0 10px 18px 0 rgba(0,0,0,0.2), 0 8px 22px 0 rgba(0,0,0,0.19);\n    cursor: pointer;\n}\n.cuisine-card:hover {\n    background-color:#f39cc3;\n    color: white;\n}\n.cuisine-name {\n    text-align: center;\n    font-size: 20px;\n    font-size-adjust: inherit;\n    \n}\n.cuisine-image {\n    height: 100px;\n\n}\n.hot {\n    padding: 3px;\n    font-size: 24px;\n}\n@media screen and (min-width: 300px) and (max-width: 600px) {\n.cuisine-card{\n    height: auto;\n    width: auto;\n}\nimg{\n    height: auto;\n    width: auto;\n    align-content: center;\n}\n.cuisine-name{\n    display: none;\n}\n}"
 
 /***/ }),
 
@@ -399,7 +399,7 @@ module.exports = ".cuisine-card {\n    width: 150px;\n    height: 150px;\n    ma
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-12 col-md-9\">\n      <h5>Search by cuisine</h5>\n      <div class=\"card-deck\">\n        <div class=\"row\" *ngFor=\"let cuisine of cuisines\" [class.selected]=\"cuisine === selectedCuisine\" (click)=\"onSelect(cuisine)\" >\n          <div class=\"col-sm-4 justify-content-center\">\n            <div class=\"card p-3 cuisine-card\">\n              <a routerLink=\"{{cuisine.name}}\">\n                <img class=\"card-img-top cuisine-image\" src=\"{{cuisine.imgLink}}\" alt=\"{{cuisine.name}}\">\n                <div class=\"card-body p-0\">\n                  <p class=\"cuisine-name\">{{cuisine.name}}</p>\n                </div>\n\n              </a>\n            </div>\n          </div>\n        </div>\n      </div>\n      \n    </div>\n  </div>\n</div>\n<!-- <a routerLink=\"{{cuisine.name}}\">\n  <img class=\"card-img-top cuisine-image\" src=\"../cuisineImages/salad.png\" alt=\"\">\n  <div class=\"card-body p-0\">\n    <p class=\"cuisine-name\">{{cuisine.name}}</p>\n  </div> -->\n"
+module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-12 col-md-9\">\n      <h5>Search by cuisine</h5>\n      <div class=\"card-deck\">\n        <div *ngFor=\"let cuisine of cuisines\" [class.selected]=\"cuisine === selectedCuisine\" (click)=\"onSelect(cuisine)\" class=\"row\">\n          <div class=\"col-sm-4 justify-content-center\">\n            <div class=\"card p-3 cuisine-card\">\n              <a routerLink=\"{{cuisine.name}}\">\n                <img class=\"card-img-top cuisine-image\" src=\"{{cuisine.imgLink}}\" alt=\"{{cuisine.name}}\">\n                <div class=\"card-body p-0\">\n                  <p class=\"cuisine-name\">{{cuisine.name}}</p>\n                </div>\n              </a>\n            </div>\n          </div>\n        </div>\n      </div>\n      \n    </div>\n  </div>\n</div>\n<!-- <a routerLink=\"{{cuisine.name}}\">\n  <img class=\"card-img-top cuisine-image\" src=\"../cuisineImages/salad.png\" alt=\"\">\n  <div class=\"card-body p-0\">\n    <p class=\"cuisine-name\">{{cuisine.name}}</p>\n  </div> -->\n"
 
 /***/ }),
 
@@ -466,13 +466,13 @@ var CuisineComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CUISINES", function() { return CUISINES; });
 var CUISINES = [
-    { id: 1, name: 'American', imgLink: '../cuisineImages/american.png' },
-    { id: 2, name: 'BBQ', imgLink: '../cuisineImages/bbq.jpg' },
-    { id: 3, name: 'Italian', imgLink: '../cuisineImages/spaghetti.jpg' },
-    { id: 4, name: 'Dessert', imgLink: '../cuisineImages/cupcake.png' },
-    { id: 5, name: 'Asian', imgLink: '../cuisineImages/asian.png' },
-    { id: 5, name: 'Pizza', imgLink: '../cuisineImages/pizza.png' },
-    { id: 5, name: 'Vegetarian', imgLink: '../cuisineImages/salad.png' },
+    { id: 1, name: 'American', imgLink: '../../../../assets/cuisineImages/american.png' },
+    { id: 2, name: 'BBQ', imgLink: '../../../../assets/cuisineImages/bbq.jpg' },
+    { id: 3, name: 'Italian', imgLink: '../../../../assets/cuisineImages/spaghetti.jpeg' },
+    { id: 4, name: 'Dessert', imgLink: '../../../../assets/cuisineImages/cupcake.png' },
+    { id: 5, name: 'Asian', imgLink: '../../../../assets/cuisineImages/asian.png' },
+    { id: 5, name: 'Pizza', imgLink: '../../../../assets/cuisineImages/pizza.png' },
+    { id: 5, name: 'Vegetarian', imgLink: '../../../../assets/cuisineImages/salad.png' },
 ];
 
 
@@ -887,16 +887,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({ 'Content-Type': 'application/json' })
+};
 var CommonService = /** @class */ (function () {
     function CommonService(http) {
         this.http = http;
+        this.trucksUrl = '/api/trucks';
         this._url = 'http://localhost:8080/account';
     }
     CommonService.prototype.getTrucks = function () {
         return this.http.get('api/trucks');
-    };
-    CommonService.prototype.registerTruck = function (truckData) {
-        return this.http.post(this._url, truckData);
     };
     CommonService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
@@ -1070,57 +1071,35 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 //import { TruckDetailComponent } from '../trucks/truck-detail/truck-detail.component';
 var TruckListComponent = /** @class */ (function () {
     function TruckListComponent(route, router, commonService) {
-        var _this = this;
         this.route = route;
         this.router = router;
         this.commonService = commonService;
-        this.getIndexOfTruck = function (truckId) {
-            return _this.trucks.findIndex(function (truck) {
-                return truck._id === truckId;
-            });
-        };
-        this.deletetruck = function (truckId) {
-            var idx = _this.getIndexOfTruck(truckId);
-            if (idx !== -1) {
-                _this.trucks.splice(idx, 1);
-                _this.selectTruck(null);
-            }
-            return _this.trucks;
-        };
-        this.addtruck = function (truck) {
-            _this.trucks.push(truck);
-            _this.selectTruck(truck);
-            return _this.trucks;
-        };
-        this.updatetruck = function (truck) {
-            var idx = _this.getIndexOfTruck(truck._id);
-            if (idx !== -1) {
-                _this.trucks[idx] = truck;
-                _this.selectTruck(truck);
-            }
-            return _this.trucks;
-        };
     }
-    // getTrucks(): void {
-    //   this.searchService.getTrucks().subscribe(trucks => this.trucks = trucks);
-    // }
-    TruckListComponent.prototype.ngOnInit = function () {
+    TruckListComponent.prototype.getTrucks = function () {
         var _this = this;
-        // this.getTrucks();
-        this.commonService
-            .getTrucks()
-            .then(function (trucks) {
-            _this.trucks = trucks.map(function (truck) {
-                if (!truck.location) {
-                    truck.location = {
-                        latitude: 39.7392,
-                        longitude: 104.9903
-                    };
-                }
-                return truck;
-            });
-        });
+        this.commonService.getTrucks().subscribe(function (trucks) { return _this.truck = trucks; });
     };
+    TruckListComponent.prototype.ngOnInit = function () {
+        this.getTrucks();
+        // this.commonService.getTrucks(); 
+        // .then((trucks: Truck[]) => {
+        //   this.trucks = trucks.map((truck) => {
+        //     if (!truck.location) {
+        //       truck.location = {
+        //         latitude: 39.7392,
+        //         longitude: 104.9903
+        //       }
+        //     }
+        //return Truck;
+        //};
+        // });
+    };
+    ;
+    // private getIndexOfTruck = (truckId: String) => {
+    //   return this.trucks.findIndex((truck) => {
+    //     return truck._id === truckId;
+    //   });
+    // }
     TruckListComponent.prototype.selectTruck = function (truck) {
         this.selectedTruck = truck;
     };

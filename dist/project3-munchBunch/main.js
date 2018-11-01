@@ -5560,8 +5560,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _messages_messages_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./messages/messages.component */ "./src/app/messages/messages.component.ts");
 /* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
 /* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _consumer_consumer_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./consumer/consumer.service */ "./src/app/consumer/consumer.service.ts");
-/* harmony import */ var _trucks_truckSearch_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./trucks/truckSearch.service */ "./src/app/trucks/truckSearch.service.ts");
+/* harmony import */ var _trucks_truckSearch_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./trucks/truckSearch.service */ "./src/app/trucks/truckSearch.service.ts");
+/* harmony import */ var _consumer_consumer_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./consumer/consumer.service */ "./src/app/consumer/consumer.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5607,7 +5607,7 @@ var AppModule = /** @class */ (function () {
                 }),
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
             ],
-            providers: [_consumer_consumer_service__WEBPACK_IMPORTED_MODULE_13__["ConsumerService"], _auth_service__WEBPACK_IMPORTED_MODULE_9__["AuthService"], _trucks_truckSearch_service__WEBPACK_IMPORTED_MODULE_14__["SearchService"]],
+            providers: [_consumer_consumer_service__WEBPACK_IMPORTED_MODULE_14__["ConsumerService"], _auth_service__WEBPACK_IMPORTED_MODULE_9__["AuthService"], _trucks_truckSearch_service__WEBPACK_IMPORTED_MODULE_13__["SearchService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
@@ -6272,7 +6272,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\nwhit\Desktop\project\project3-munchBunch\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\nwhit\desktop\project\project3-munchBunch\src\main.ts */"./src/main.ts");
 
 
 /***/ })
