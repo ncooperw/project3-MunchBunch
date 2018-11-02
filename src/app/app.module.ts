@@ -21,12 +21,9 @@ import { MapComponent } from './map/map.component';
 
 
 import { LoginComponent } from './login/login.component';
+import { CommonService } from './services/common.service';
 
-import { SearchService } from './trucks/truckSearch.service';
-
-// import { CommonService } from './services/common.service';
-
-import { ConsumerService } from './consumer/consumer.service';
+import { ConsumerService } from './services/consumer.service';
 
 
 @NgModule({
@@ -53,7 +50,7 @@ import { ConsumerService } from './consumer/consumer.service';
     ReactiveFormsModule,
   
   ],
-  providers: [ConsumerService, AuthService, SearchService],
+  providers: [ConsumerService, AuthService, CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

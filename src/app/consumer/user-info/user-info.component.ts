@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConsumerService } from '../consumer.service';
+import { ConsumerService } from '../../services/consumer.service';
 import { FormGroup, FormControl, Validators, FormsModule } from '@angular/forms';
 
 import { Http, Response, Headers, RequestOptions } from '@angular/http';

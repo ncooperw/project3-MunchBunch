@@ -17,11 +17,11 @@ import { TruckSearchComponent } from './truck-search/truck-search.component';
 
 import { AccountComponent } from './account/account.component';
 
-import { ConsumerService } from './consumer.service';
+import { ConsumerService } from '../services/consumer.service';
 import { MapComponent } from '../map/map.component';
 import { AgmCoreModule } from '@agm/core';
-import { TruckListComponent } from '../trucks/truck-list/truck-list.component';
-import { TruckDetailComponent } from '../trucks/truck-detail/truck-detail.component';
+//import { TruckListComponent } from '../trucks/truck-list/truck-list.component';
+//import { TruckDetailComponent } from '../trucks/truck-detail/truck-detail.component';
 import { CuisineComponent } from './cusines/cuisine/cuisine.component';
 import { SearchDetailComponent } from './search-detail/search-detail.component';
 import { DisplayTrucksComponent } from './display-trucks/display-trucks.component';
@@ -39,7 +39,7 @@ import { DisplayTrucksComponent } from './display-trucks/display-trucks.componen
     FormsModule
   ],
   declarations: [
-    ConsumerPageComponent, ReviewComponent, ConsumerNavbarComponent, UserInfoComponent, TruckSearchComponent, TruckDetailComponent,  TruckListComponent, AccountComponent,
+    ConsumerPageComponent, ReviewComponent, ConsumerNavbarComponent, UserInfoComponent, TruckSearchComponent, AccountComponent,
   MapComponent,
   CuisineComponent,
   SearchDetailComponent,
