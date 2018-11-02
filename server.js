@@ -84,9 +84,9 @@ app.post("/api/trucks", function(req, res) {
     });
 });
 
-router.use("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
+// router.use("*", function(req, res) {
+//   res.sendFile(path.join(__dirname, "../client/build/index.html"));
+// });
 
 
 //NEED HELP WITH THIS!!
