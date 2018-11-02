@@ -1,8 +1,8 @@
 
 var express = require("express");
 var bodyParser = require("body-parser");
-// var logger = require("morgan");
 var mongoose = require("mongoose");
+var cors = require ('cors')
 
 var PORT = 5000;
 
@@ -12,30 +12,21 @@ var app = express();
 // Require all models
 var db = require("./models");
 //Serve static files
-// app.use(express.static( './dist/project3-munchBunch'));
 
 // Create link to Angular build directory
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
 
-// Create link to Angular build directory
-var distDir = __dirname + "/dist/";
-app.use(express.static(distDir));
-
-
-
-// Configure middleware
-
-// Use morgan logger for logging requests
-// app.use(logger("dev"));
 // Use body-parser for handling form submissions
 app.use(bodyParser.urlencoded({ extended: true }));
 // Use express.static to serve the public folder as a static directory
 app.use(express.static("public"));
 
-// Connect to the Mongo DB
-// mongoose.connect("mongodb://localhost/MunchBunchTrucks", { useNewUrlParser: true });
+//Middleware
+app.use(express.json())
+app.use(cors())
 
+// Connect to the Mongo DB
 let databaseUri = "mongodb://localhost/MunchBunchTrucks";
 
 if (process.env.MONGODB_URI){
@@ -45,202 +36,70 @@ if (process.env.MONGODB_URI){
   mongoose.connect(databaseUri,{ useNewUrlParser: true });
 }
 
-// db = mongoose.connection;
+const database = mongoose.connection;
 
-// db.on("error", function(err){
-//   console.log("Mongoose Error: ", err);
-// });
+database.on("error", function(err){
+  console.log("Mongoose Error: ", err);
+});
 
 
-// db.once("open", function(){
-//   console.log("Mongoose connection successful.")
-// });
-app.get("/api/trucks", function(req,res){  
-    console.log("Truck" + db.Truck);
-    db.Truck.find({})
+database.once("open", function(){
+  console.log("Mongoose connection successful.")
+});
 
-    .then(function(dbTruck) {
-        console.log("db" + dbTruck);
-      // If any Trucks are found, send them to the client
-      res.json(dbTruck);
-     
-    })
-    .catch(function(err) {
-      // If an error occurs, send it back to the client
-      res.json(err);
-    });
+// Routes
+// db.Truck.create({
+//     name = req.body
+// })
+// app.post("api/new", function(req,res){
+ // });
+ app.get("/api/trucks", function(req,res){  
+  console.log("Truck" + db.Truck);
+  db.Truck.find({})
+   .then(function(dbTruck) {
+      console.log("db" + dbTruck);
+    // If any Books are found, send them to the client
+    res.json(dbTruck);
+   
+  })
+  .catch(function(err) {
+    // If an error occurs, send it back to the client
+    res.json(err);
+  });
 })
 
-// Generic error handler used by all endpoints.
-function handleError(res, reason, message, code) {
-  console.log("ERROR: " + reason);
-  res.status(code || 500).json({"error": message});
-}
-
-app.get("/api/trucks", function(req, res) {
-  db.collection(TRUCKS_COLLECTION).find({}).toArray(function(err, docs) {
-    if (err) {
-      handleError(res, err.message, "Failed to get trucks.");
-    } else {
-      res.status(200).json(docs);
-    }
-  });
-});
-
+//For a new Truck owner to add their info to the database
 app.post("/api/trucks", function(req, res) {
-  var newTruck = req.body;
-  newTruck.createDate = new Date();
-
-  if (!req.body.name) {
-    handleError(res, "Invalid user input", "Must provide a name.", 400);
-  } else {
-    db.collection(TRUCKS_COLLECTION).insertOne(newTruck, function(err, doc) {
-      if (err) {
-        handleError(res, err.message, "Failed to create new Truck.");
-      } else {
-        res.status(201).json(doc.ops[0]);
-      }
+  // Create a new Truck using req.body
+  db.Truck.create(req.body)
+    .then(function(dbTruck) {
+      // If saved successfully, send the the new User document to the client
+      res.json(dbTruck);
+    })
+    .catch(function(err) {
+      // If an error occurs, send the error to the client
+      res.json(err);
     });
-  }
 });
-app.get("/api/trucks/:id", function(req, res) {
-  db.collection(trucks_COLLECTION).findOne({ _id: new ObjectID(req.params.id) }, function(err, doc) {
-    if (err) {
-      handleError(res, err.message, "Failed to get truck");
-    } else {
-      res.status(200).json(doc);
-    }
-  });
-});
-  app.post("/api/trucks", function(req, res) {
-    var newTruck = req.body;
-    newTruck.createDate = new Date();
-  
-    if (!req.body.name) {
-      handleError(res, "Invalid user input", "Must provide a name.", 400);
-    } else {
-      db.collection(TRUCKS_COLLECTION).insertOne(newTruck, function(err, doc) {
-        if (err) {
-          handleError(res, err.message, "Failed to create new Truck.");
-        } else {
-          res.status(201).json(doc.ops[0]);
-        }
-      });
-    }
-  });
-  app.get("/api/trucks/:id", function(req, res) {
-    db.collection(trucks_COLLECTION).findOne({ _id: new ObjectID(req.params.id) }, function(err, doc) {
-      if (err) {
-        handleError(res, err.message, "Failed to get truck");
-      } else {
-        res.status(200).json(doc);
-      }
-    });
-  });
-  
-  app.put("/api/trucks/:id", function(req, res) {
-    var updateDoc = req.body;
-    delete updateDoc._id;
-  
-    db.collection(TRUCKS_COLLECTION).updateOne({_id: new ObjectID(req.params.id)}, updateDoc, function(err, doc) {
-      if (err) {
-        handleError(res, err.message, "Failed to update truck");
-      } else {
-        updateDoc._id = req.params.id;
-        res.status(200).json(updateDoc);
-      }
-    });
-  });
-  
-  app.delete("/api/trucks/:id", function(req, res) {
-    db.collection(TRUCKS_COLLECTION).deleteOne({_id: new ObjectID(req.params.id)}, function(err, result) {
-      if (err) {
-        handleError(res, err.message, "Failed to delete truck");
-      } else {
-        res.status(200).json(req.params.id);
-      }
-    });
-  });
 
-  
+//NEED HELP WITH THIS!!
 
-//    app.post("/api/saveConsumer",function(req,res){   
-//     var mod = new model(req.body);  
-//     if(req.body.mode =="Save")  
-//     {  
-//        mod.save(function(err,data){  
-//          if(err){  
-//             res.send(err);                
-//          }  
-//          else{        
-//              res.send({data:"Record has been Inserted..!!"});  
-//          }  
-//     });  
-//    }  
-//    else   
-//    {  
-//     model.findByIdAndUpdate(req.body.id, { name: req.body.name, address: req.body.address},  
-//       function(err,data) {  
-//       if (err) {  
-//       res.send(err);         
-//       }  
-//       else{        
-//              res.send({data:"Record has been Updated..!!"});  
-//         }  
-//     });  
-     
-     
-//    }  
-//     })  
-     
-//     app.post("/api/deleteConsumer",function(req,res){      
-//        model.remove({ _id: req.body.id }, function(err) {    
-//         if(err){    
-//             res.send(err);    
-//         }    
-//         else{      
-//                res.send({data:"Record has been Deleted..!!"});               
-//            }    
-//     });    
-//       })  
-     
-     
-     
-//     app.get("/api/getConsumer",function(req,res){  
-//        model.find({},function(err,data){  
-//                  if(err){  
-//                      res.send(err);  
-//                  }  
-//                  else{                
-//                      res.send(data);  
-//                      }  
-//              });  
-//      })  
-     
+// // Route for updating a Truck's location
+// app.post("/api/location", function(req, res) {
+//   // Update the location where the truck name matches the name of the truck the user enters
+//   db.Truck.findOneAndUpdate({ name: req.params.name } 
+//     // { note: dbNote._id }, { new: true }
+//      );
+//     })
+//     .then(function(dbLocation) {
+//       // If we were able to successfully update the location, send it back to the client
+//       res.json(dbLocation);
+//     })
+//     .catch(function(err) {
+//       // If an error occurred, send it to the client
+//       res.json(err);
+//     });
 
-// app.put("/api/trucks/:id", function(req, res) {
-//   var updateDoc = req.body;
-//   delete updateDoc._id;
-
-//   db.collection(TRUCKS_COLLECTION).updateOne({_id: new ObjectID(req.params.id)}, updateDoc, function(err, doc) {
-//     if (err) {
-//       handleError(res, err.message, "Failed to update truck");
-//     } else {
-//       updateDoc._id = req.params.id;
-//       res.status(200).json(updateDoc);
-//     }
-//   });
-// });
-
-// app.delete("/api/trucks/:id", function(req, res) {
-//   db.collection(TRUCKS_COLLECTION).deleteOne({_id: new ObjectID(req.params.id)}, function(err, result) {
-//     if (err) {
-//       handleError(res, err.message, "Failed to delete truck");
-//     } else {
-//       res.status(200).json(req.params.id);
-//     }
-//   });
-// });
 
 // Start the server
 app.listen(PORT, function() {
