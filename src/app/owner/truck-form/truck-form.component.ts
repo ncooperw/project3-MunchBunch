@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
-import { SearchService } from '../../trucks/truckSearch.service';
+import {CommonService} from '../../services/common.service';
 
 @Component({
   selector: 'app-truck-form',
@@ -14,7 +14,7 @@ import { SearchService } from '../../trucks/truckSearch.service';
 export class TruckFormComponent implements OnInit {
 
   truckForm = new FormGroup({
-    truckName: new FormControl('', Validators.required),
+    name: new FormControl('', Validators.required),
     imgLink: new FormControl(''),
     cuisine: new FormControl('', Validators.required),
     description: new FormControl(''),
@@ -28,10 +28,17 @@ export class TruckFormComponent implements OnInit {
 
   });
 
+  constructor(private _commonService: CommonService ) { }
+  
   ngOnInit() {
   }
   onSubmit() {
     // TODO: Use EventEmitter with form value
     console.log(this.truckForm.value);
+    this._commonService.registerTruck(this.truckForm.value)
+    .subscribe(
+      response => console.log ("Success!!!", response), 
+      error => console.error("Error Here!", error)
+    );
   }
 }

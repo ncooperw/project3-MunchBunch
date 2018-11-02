@@ -21,8 +21,10 @@ import { MapComponent } from './map/map.component';
 
 
 import { LoginComponent } from './login/login.component';
-import { ConsumerService } from './consumer/consumer.service';
-import { SearchService } from './trucks/truckSearch.service';
+import { CommonService } from './services/common.service';
+
+import { ConsumerService } from './services/consumer.service';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { SearchService } from './trucks/truckSearch.service';
     AuthComponent,
     CallbackComponent,
     MessagesComponent,
-    LoginComponent
+    LoginComponent,
+    
 
 
   ],
@@ -40,13 +43,14 @@ import { SearchService } from './trucks/truckSearch.service';
     AppRoutingModule,
     HttpClientModule,
     HttpModule,
+   
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCX37S57WrEFKAJO02W493eHYHBQD_uTMQ'
     }),
     ReactiveFormsModule,
   
   ],
-  providers: [ConsumerService, AuthService, SearchService],
+  providers: [ConsumerService, AuthService, CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
