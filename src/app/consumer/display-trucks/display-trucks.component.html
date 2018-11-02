@@ -1,0 +1,17 @@
+<!-- <div class="container"> -->
+<div class="row mt-5 mb-5">
+  <div class="col-md-4 mb-3" *ngFor="let truck of trucks">
+  
+    <div class="card text-center">
+          <img class="card-img-top pic" [src]="truck.imgLink" alt="Card image cap">
+      <div class="card-body">
+        <h2 class="card-title">{{truck.name}}</h2> 
+        <P class=card-text>{{truck.description}}</P>
+        <a [href]="truck.menuLink" class="card-text link">Menu: {{truck.menuLink}}</a>
+        <P class=card-text>Price: {{truck.price}}</P>
+        <a href="#" class="btn btn-light">Find This Truck</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
