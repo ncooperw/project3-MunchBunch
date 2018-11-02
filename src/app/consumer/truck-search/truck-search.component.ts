@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { OnDestroy } from '@angular/core';
 import { ISubscription } from 'rxjs/Subscription';
-import { SearchService } from '../../trucks/truckSearch.service';
 import { CommonService } from '../../services/common.service';
 import { Truck } from 'src/app/trucks/truck';
 import { Observable } from 'rxjs';

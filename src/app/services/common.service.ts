@@ -22,9 +22,11 @@ export class CommonService {
 
   
   constructor(private http: HttpClient) { }
-getTrucks(){
-  return this.http.get('api/trucks');
-}
+
+//   getTrucks(){
+//   return this.http.get('api/trucks');
+// }
+
  // get("/api/truck")
 //  gettruck(): Promise<void | Truck[]> {
 //   return this.http.get(this.trucksUrl)

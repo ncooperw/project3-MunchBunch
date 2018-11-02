@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
-import { SearchService } from '../../trucks/truckSearch.service';
 import {CommonService} from '../../services/common.service';
 
 @Component({
