@@ -1,14 +1,23 @@
-<form [formGroup]="locationForm" (ngSubmit)="onSubmit()">
-  <h4>Location:</h4>
+<form [formGroup]="updateLocationForm" (ngSubmit)="onSubmit()">
   <label>
-    Latitude:
-    <input type="text" formControlName="latitude">
+    Truck Name:
+    <input [class.is-invalid]="updateLocationForm.get('truckName').invalid && updateLocationForm.get('truckName').touched"type="text" formControlName="truckName" required>
+    <small [class.d-none]="updateLocationForm.get('truckName').valid || updateLocationForm.get('truckName').untouched" class=text-danger>Truck name is required</small>
   </label>
+
+  <div formGroupName="location">
+    <h3>Location</h3>
+
+    <label>
+      Latitude:
+      <input type="text" formControlName="latitude">
+    </label>
+
+    <label>
+      Longitude:
+      <input type="text" formControlName="longitude">
+    </label>
+  </div>
 <br>
-  <label>
-    Longitude:
-    <input type="text" formControlName="longitude">
-  </label>
-<br>
-  <button type="submit" [disabled]="!locationForm.valid">Submit</button>
+  <button type="submit" [disabled]  ="!updateLocationForm.valid">Submit</button>
 </form>

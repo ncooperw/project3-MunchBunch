@@ -24,6 +24,7 @@ import { TruckListComponent } from '../trucks/truck-list/truck-list.component';
 import { TruckDetailComponent } from '../trucks/truck-detail/truck-detail.component';
 import { CuisineComponent } from './cusines/cuisine/cuisine.component';
 import { SearchDetailComponent } from './search-detail/search-detail.component';
+import { DisplayTrucksComponent } from './display-trucks/display-trucks.component';
 
 
 
@@ -41,7 +42,8 @@ import { SearchDetailComponent } from './search-detail/search-detail.component';
     ConsumerPageComponent, ReviewComponent, ConsumerNavbarComponent, UserInfoComponent, TruckSearchComponent, TruckDetailComponent,  TruckListComponent, AccountComponent,
   MapComponent,
   CuisineComponent,
-  SearchDetailComponent 
+  SearchDetailComponent,
+  DisplayTrucksComponent 
 ],
   providers: [ConsumerService]
 })

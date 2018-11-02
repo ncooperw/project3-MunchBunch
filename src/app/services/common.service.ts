@@ -18,9 +18,8 @@ const httpOptions = {
 })
 export class CommonService {
 
-  private trucksUrl = '/api/trucks';
+  _url = 'http://localhost:5000/api/trucks'
 
-  _url = 'http://localhost:8080/account'
   
   constructor(private http: HttpClient) { }
 getTrucks(){
@@ -44,13 +43,11 @@ getTrucks(){
 
 // // get("/api/truck/:id") endpoint not used by Angular app
 
-// // delete("/api/truck/:id")
-// deleteTruck(delTruckId: String): Promise<void | String> {
-//   return this.http.delete(this.trucksUrl + '/' + delTruckId)
-//              .toPromise()
-//              .then(response => httpOptions)
-//              .catch(this.handleError);
-// }
+
+    getTrucks(){
+      return this.http.get<any>(this._url);
+    }
+
 
 // // put("/api/truck/:id")
 // updateTruck(putTruck: Truck): Promise<void | Truck> {
@@ -68,4 +65,12 @@ getTrucks(){
 // }
    
 
-  }
+    registerTruck(truckData){
+return this.http.post<any>(this._url, truckData);
+    }
+
+    changeLocation(newLocation){
+      return this.http.post<any>(this._url, newLocation);
+    }
+}
+

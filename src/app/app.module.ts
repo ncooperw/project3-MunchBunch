@@ -23,7 +23,11 @@ import { MapComponent } from './map/map.component';
 import { LoginComponent } from './login/login.component';
 
 import { SearchService } from './trucks/truckSearch.service';
+
+// import { CommonService } from './services/common.service';
+
 import { ConsumerService } from './consumer/consumer.service';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +35,8 @@ import { ConsumerService } from './consumer/consumer.service';
     AuthComponent,
     CallbackComponent,
     MessagesComponent,
-    LoginComponent
+    LoginComponent,
+    
 
 
   ],
@@ -41,6 +46,7 @@ import { ConsumerService } from './consumer/consumer.service';
     AppRoutingModule,
     HttpClientModule,
     HttpModule,
+   
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCX37S57WrEFKAJO02W493eHYHBQD_uTMQ'
     }),

@@ -28,8 +28,26 @@ export class TruckListComponent implements OnInit {
     private commonService: CommonService
   ) { }
 
-  getTrucks(): void {
-    this.commonService.getTrucks().subscribe(trucks => this.truck = trucks);
+
+  // getTrucks(): void {
+  //   this.searchService.getTrucks().subscribe(trucks => this.trucks = trucks);
+  // }
+  ngOnInit() {
+  // this.getTrucks();
+  this.commonService
+  .getTrucks()
+  // .then((trucks: Truck[]) => {
+  //   this.trucks = trucks.map((truck) => {
+  //     if (!truck.location) {
+  //       truck.location = {
+  //         latitude: 39.7392,
+  //         longitude: 104.9903
+  //       }
+  //     }
+  //     return truck;
+  //   });
+  // });
+
   }
   private getIndexOfTruck = (truckId: String) => {
     return this.trucks.findIndex((truck) => {

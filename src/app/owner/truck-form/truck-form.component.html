@@ -2,14 +2,8 @@
 
   <label>
     Truck Name:
-    <input [class.is-invalid]="truckForm.get('truckName').invalid && truckForm.get('truckName').touched"type="text" formControlName="truckName" required>
-    <small [class.d-none]="truckForm.get('truckName').valid || truckForm.get('truckName').untouched" class=text-danger>Truck name is required</small>
-    <!-- <div *ngIf="truckName.invalid && (truckName.dirty || truckName.touched)" class="alert alert-danger"> 
-
-      <div *ngIf="truckName.errors.required">
-       Truck Name is required.
-      </div>
-    </div> --> 
+    <input [class.is-invalid]="truckForm.get('name').invalid && truckForm.get('name').touched"type="text" formControlName="name" required>
+    <small [class.d-none]="truckForm.get('name').valid || truckForm.get('name').untouched" class=text-danger>Truck name is required</small>
   </label>
 
   <label>
@@ -54,8 +48,8 @@
   </div>
   <button type="submit" [disabled]="!truckForm.valid">Submit</button>
 
-  <p>
+  <!-- <p>
     Form Status: {{ truckForm.status }}
-  </p>
+  </p> -->
 
 </form>
