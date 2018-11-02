@@ -13,7 +13,7 @@ const consumerRoutes: Routes = [
   { path: '', pathMatch: 'full',
   component: ConsumerPageComponent },
   { path: 'reviews', component: ReviewComponent },
-  { path: 'truck-search', component: TruckSearchComponent},
+  { path: 'search', component: TruckSearchComponent},
   { path: 'account', component: UserInfoComponent },
   
 ];

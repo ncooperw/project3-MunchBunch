@@ -49,12 +49,7 @@ database.once("open", function(){
   console.log("Mongoose connection successful.")
 });
 
-// Routes
-// db.Truck.create({
-//     name = req.body
-// })
-// app.post("api/new", function(req,res){
- // });
+
  app.get("/api/trucks", function(req,res){  
   console.log("Truck" + db.Truck);
   db.Truck.find({})
@@ -84,9 +79,9 @@ app.post("/api/trucks", function(req, res) {
     });
 });
 
-router.use("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
+// router.use("*", function(req, res) {
+//   res.sendFile(path.join(__dirname, "../client/build/index.html"));
+// });
 
 
 //NEED HELP WITH THIS!!

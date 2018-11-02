@@ -1,0 +1,31 @@
+.main-container {
+    background-image: url('https://cdn.dribbble.com/users/76620/screenshots/1909179/foodpattern-drbl800.gif');
+   background-repeat: repeat-y;
+   width: 100%;
+   height: 812px;
+   align-self: auto;
+}
+.button-container {
+    margin: 10px;
+    box-align: center
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 0px;
+}
+.search-button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    float: left;
+    margin: 5px;
+    width: 300px;
+}
+p {
+    
+}
