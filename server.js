@@ -2,7 +2,8 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
-var cors = require ('cors')
+var cors = require ('cors');
+const path = require('path');
 
 const PORT = process.env.PORT || 5000;
 
@@ -28,6 +29,7 @@ app.use(cors())
 
 // Connect to the Mongo DB
 let databaseUri = "mongodb://localhost/MunchBunchTrucks";
+
 
 if (process.env.MONGODB_URI){
   
@@ -81,6 +83,11 @@ app.post("/api/trucks", function(req, res) {
       res.json(err);
     });
 });
+
+router.use("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
+
 
 //NEED HELP WITH THIS!!
 
