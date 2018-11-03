@@ -1,3 +1,17 @@
+.welcome {
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    margin-top: 15px;
+}
+.title {
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    font-size: 72px;
+  background: -webkit-linear-gradient(#fa1846, #777777);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    padding-bottom: 10px;
+}
 .main-container {
     background-image: url('https://cdn.dribbble.com/users/76620/screenshots/1909179/foodpattern-drbl800.gif');
    background-repeat: repeat-y;
@@ -18,15 +32,33 @@
     margin: 0px;
 }
 .search-button {
+    position:relative;
+    display: inline-block;
     background-color: black;
+    background-image: linear-gradient(black,rgb(92, 82, 82));
+    cursor: pointer;
     color: white;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
-    float: left;
     margin: 5px;
     width: 300px;
+    text-decoration: none;
+    /* border: 2px solid #999999; */
+    border-radius: 16px;
+    box-shadow: rgba(192,192,192,0.75) 0px 8px 24px;
+    cursor: pointer;
 }
+.search-button:hover {
+    background-color: rgb(167, 98, 98);
+    
+}
+
+
 p {
+    font-size: 36px;
     font-family: 'Luckiest Guy', cursive;
     text-align: center;
+}
+i {
+    font-size: 50px;
 }

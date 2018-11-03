@@ -6,6 +6,8 @@ import { TruckSearchComponent } from './truck-search/truck-search.component';
 
 import { UserInfoComponent } from './user-info/user-info.component';
 import { ConsumerPageComponent } from './consumer-page/consumer-page.component';
+import { AccountComponent } from './account/account.component';
+import { WhatsHotComponent } from './whats-hot/whats-hot.component';
 
 
 
@@ -14,7 +16,8 @@ const consumerRoutes: Routes = [
   component: ConsumerPageComponent },
   { path: 'reviews', component: ReviewComponent },
   { path: 'search', component: TruckSearchComponent},
-  { path: 'account', component: UserInfoComponent },
+  { path: 'account', component: AccountComponent },
+  { path: 'whatsHot', component: WhatsHotComponent}
   
 ];
 
