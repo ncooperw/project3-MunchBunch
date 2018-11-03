@@ -25,6 +25,7 @@ import { AgmCoreModule } from '@agm/core';
 import { CuisineComponent } from './cusines/cuisine/cuisine.component';
 import { SearchDetailComponent } from './search-detail/search-detail.component';
 import { DisplayTrucksComponent } from './display-trucks/display-trucks.component';
+import { WhatsHotComponent } from './whats-hot/whats-hot.component';
 
 
 
@@ -43,7 +44,8 @@ import { DisplayTrucksComponent } from './display-trucks/display-trucks.componen
   MapComponent,
   CuisineComponent,
   SearchDetailComponent,
-  DisplayTrucksComponent 
+  DisplayTrucksComponent,
+  WhatsHotComponent 
 ],
   providers: [ConsumerService]
 })

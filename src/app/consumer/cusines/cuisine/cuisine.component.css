@@ -1,10 +1,17 @@
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
 .cuisine-card {
-    width: 150px;
-    height: 150px;
+    /* width: 150px;
+    height: 150px; */
     margin: 3px;
     border: solid 5px black;
     box-shadow: 0 10px 18px 0 rgba(0,0,0,0.2), 0 8px 22px 0 rgba(0,0,0,0.19);
     cursor: pointer;
+    padding: 10px;
 }
 .cuisine-card:hover {
     background-color:#f39cc3;
@@ -17,7 +24,8 @@
     
 }
 .cuisine-image {
-    height: 100px;
+    height: 200px;
+    align-self: center
 
 }
 .hot {

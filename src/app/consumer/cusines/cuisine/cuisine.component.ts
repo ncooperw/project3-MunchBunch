@@ -13,6 +13,7 @@ export class CuisineComponent implements OnInit {
   selectedCuisine: Cuisine;
 
   cuisines: Cuisine[];
+  display = true;
 
   constructor(
     private cuisineService: CuisineService
@@ -28,5 +29,7 @@ export class CuisineComponent implements OnInit {
   OnSelect(cuisines: Cuisine): void{
     this.selectedCuisine = cuisines;
   }
-
+  onToggleDisplay(){
+    this.display = !this.display;
+  }
 }
