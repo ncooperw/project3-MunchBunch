@@ -5796,7 +5796,7 @@ var CallbackComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\nbody{\n    /* background-image: linear-gradient(#f1676b,white);\n     */\n  }\n\n\n\nh1{\n    font-size: 89px;\n    font-family: 'Luckiest Guy', cursive;\n    text-align: center;\n}\n\n\n\nh6{\n    font-size: 40px;\n    font-family: 'Luckiest Guy', cursive;\n    text-align: center;\n}\n\n\n\n.card-img-top {\nheight: 100px;\nwidth: 100px;\ntext-align: center;\n}\n\n\n\n.card{\n    position: relative;\n    display: flex;\n    border: none;\n    min-width: 0;\n    word-wrap: break-word;\n    /* background-color: #e8ebef; */\n    border-radius: .25rem;\n    /* opacity: .4; */\n}\n\n\n\n.container,.conatinerheader{\n    align-content: center;\n}\n\n\n\n.jumbotron{\n   background-image: url('https://cdn.dribbble.com/users/76620/screenshots/1909179/foodpattern-drbl800.gif');\n   /* background-repeat: no-repeat; */\n   width: 100%;\n   -ms-grid-row-align: auto;\n       align-self: auto;\n}\n\n\n\n.animated{\n    /* animation-delay: 2s; */\n}\n\n"
+module.exports = "\nbody{\n    background-image: linear-gradient(#f1676b,white);\n    \n  }\n\n\n\nh1{\n    font-size: 89px;\n    font-family: 'Luckiest Guy', cursive;\n    text-align: center;\n}\n\n\n\nh6{\n    font-size: 40px;\n    font-family: 'Luckiest Guy', cursive;\n    text-align: center;\n}\n\n\n\n.card-img-top {\nheight: 100px;\nwidth: 100px;\ntext-align: center;\n}\n\n\n\n.card{\n    position: relative;\n    display: flex;\n    border: none;\n    min-width: 0;\n    word-wrap: break-word;\n    /* background-color: #e8ebef; */\n    border-radius: .25rem;\n    /* opacity: .4; */\n}\n\n\n\n.container,.conatinerheader{\n    align-content: center;\n}\n\n\n\n.jumbotron{\n   background-image: url('https://cdn.dribbble.com/users/76620/screenshots/1909179/foodpattern-drbl800.gif');\n   /* background-repeat: no-repeat; */\n   width: 100%;\n   -ms-grid-row-align: auto;\n       align-self: auto;\n}\n\n\n\n.animated{\n    /* animation-delay: 2s; */\n}\n\n"
 
 /***/ }),
 
@@ -6317,7 +6317,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\nwhit\desktop\project\project3-munchBunch\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/tessawilliams/Desktop/code/project3-MunchBunch/src/main.ts */"./src/main.ts");
 
 
 /***/ })

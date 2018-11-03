@@ -88,19 +88,25 @@ app.post("/api/trucks", function(req, res) {
 
 // // Route for updating a Truck's location
 // app.post("/api/location", function(req, res) {
-//   // Update the location where the truck name matches the name of the truck the user enters
-//   db.Truck.findOneAndUpdate({ name: req.params.name } 
-//     // { note: dbNote._id }, { new: true }
-//      );
-//     })
-//     .then(function(dbLocation) {
-//       // If we were able to successfully update the location, send it back to the client
-//       res.json(dbLocation);
-//     })
-//     .catch(function(err) {
-//       // If an error occurred, send it to the client
-//       res.json(err);
-//     });
+/// Route for updating a Truck's location
+app.put("/api/trucks", function(req, res) {
+  // Update the location where the truck name matches the name of the truck the user enters
+  db.Truck.findOneAndUpdate(
+    { name: req.body.truckName }, 
+    {location: req.body.location}, 
+    // { note: dbNote._id },
+    { new: true }
+     )
+    
+    .then(function(dbLocation) {
+      // If we were able to successfully update the location, send it back to the client
+      res.json(dbLocation);
+    })
+    .catch(function(err) {
+      // If an error occurred, send it to the client
+      res.json(err);
+    });
+  })
 
 
 // Start the server
