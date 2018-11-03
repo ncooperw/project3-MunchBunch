@@ -1,7 +1,7 @@
 <div class="container flex-container">
   <div class="col-sm-12 col-md-9">
     <h5>Search by cuisine</h5>
-    <div class="card-deck">
+    <!-- <div class="card-deck"> -->
       <div *ngFor="let cuisine of cuisines" [class.selected]="cuisine === selectedCuisine" (click)="onSelect(cuisine)">
 
         <div class="card cuisine-card" (click)="onToggleDisplay()">
@@ -13,13 +13,12 @@
           </a>
         </div>
       </div>
-    </div>
   </div>
 </div>
-<div class="row">
+<!-- <div class="row">
   <div class="col">
     <div *ngIf="display">
         <app-whats-hot></app-whats-hot>
     </div>
   </div>
-</div>
+</div> -->
