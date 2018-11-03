@@ -72,7 +72,7 @@ return this.http.post<any>(this._url, truckData);
     }
 
     changeLocation(newLocation){
-      return this.http.post<any>(this._url, newLocation);
+      return this.http.put<any>(this._url, newLocation);
     }
 }
 
